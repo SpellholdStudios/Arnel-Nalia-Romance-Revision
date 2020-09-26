@@ -4,9 +4,9 @@ THEN
   RESPONSE #100
     CutSceneId("ISAEAX")
     Wait(1)
-    DisplayStringHead(Myself,@12)
+    DisplayStringHead(Myself,@41)
     Wait(2)
-    DisplayStringHead(Myself,@13)
+    DisplayStringHead(Myself,@42)
     SmallWait(5)
     ForceSpell("CSCOWL1",WIZARD_FLAME_ARROW)
     Wait(1)
@@ -19,7 +19,7 @@ THEN
   RESPONSE #100
     CutSceneId("CSCOWL1")
     Wait(2)
-    DisplayStringHead(Myself,@14)
+    DisplayStringHead(Myself,@43)
     Wait(2)
     ApplySpell(Myself,WIZARD_SPELL_TRAP)
     ForceSpell("ISAEAX",WIZARD_MAGIC_MISSILE)

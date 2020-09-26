@@ -6,7 +6,7 @@ THEN
     SmallWait(1)
     ReallyForceSpellPoint([4700.3300],WIZARD_DIMENSION_DOOR)
     Wait(4)
-    DisplayStringHead(Myself,@15)
+    DisplayStringHead(Myself,@51)
     Wait(2)
     ForceSpell(Myself,DRYAD_TELEPORT)
     Wait(3)

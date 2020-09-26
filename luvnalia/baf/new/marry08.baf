@@ -4,27 +4,27 @@ THEN
   RESPONSE #100
     CutSceneId(Player1)
     SmallWait(5)
-    DisplayStringHead("Priestyr",@16)
+    DisplayStringHead("Priestyr",@61)
     Wait(4)
-    DisplayStringNoNameHead("Priestyr",@17)
+    DisplayStringNoNameHead("Priestyr",@62)
     Wait(3)
-    DisplayStringHead("kpdomo01",@18)
-    DisplayStringHead("kpbutl01",@18)
-    DisplayStringHead("kpmaid02",@18)
-    DisplayStringHead("kpmaid01",@18)
+    DisplayStringHead("kpdomo01",@63)
+    DisplayStringHead("kpbutl01",@63)
+    DisplayStringHead("kpmaid02",@63)
+    DisplayStringHead("kpmaid01",@63)
     Wait(3)
-    DisplayStringHead("Priestyr",@19)
+    DisplayStringHead("Priestyr",@64)
     Wait(3)
-    DisplayStringHead(Myself,@18)
-    DisplayStringHead("Nalia",@18)
+    DisplayStringHead(Myself,@63)
+    DisplayStringHead("Nalia",@63)
     Wait(3)
-    DisplayStringHead("Priestyr",@20)
+    DisplayStringHead("Priestyr",@65)
     Wait(3)
-    DisplayStringHead("Priestyr",@21)
+    DisplayStringHead("Priestyr",@66)
     Wait(3)
     CreateVisualEffect("SPGRWHRL",[2470.447])
     Wait(1)
-    DisplayStringHead("Priestyr",@22)
+    DisplayStringHead("Priestyr",@67)
     Wait(3)
     FadeToColor([30.0],0)
     Wait(3)
@@ -40,7 +40,7 @@ THEN
     CutSceneId("Minsc")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -50,7 +50,7 @@ THEN
     CutSceneId("Anomen")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -60,7 +60,7 @@ THEN
     CutSceneId("Jaheira")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -70,7 +70,7 @@ THEN
     CutSceneId("Yoshimo")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -80,7 +80,7 @@ THEN
     CutSceneId("Imoen2")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -90,7 +90,7 @@ THEN
     CutSceneId("Edwin")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -100,7 +100,7 @@ THEN
     CutSceneId("Aerie")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -110,7 +110,7 @@ THEN
     CutSceneId("Cernd")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -120,7 +120,7 @@ THEN
     CutSceneId("Keldorn")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -130,7 +130,7 @@ THEN
     CutSceneId("Korgan")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -140,7 +140,7 @@ THEN
     CutSceneId("Mazzy")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -150,7 +150,7 @@ THEN
     CutSceneId("Valygar")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -160,7 +160,7 @@ THEN
     CutSceneId("Jan")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -170,7 +170,7 @@ THEN
     CutSceneId("Viconia")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 
 IF
@@ -180,6 +180,6 @@ THEN
     CutSceneId("Haerdalis")
     SmallWait(5)
     Wait(7)
-    DisplayStringHead(Myself,@18)
+    DisplayStringHead(Myself,@63)
 END
 

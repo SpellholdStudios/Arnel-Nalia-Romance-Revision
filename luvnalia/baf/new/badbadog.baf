@@ -13,7 +13,7 @@ IF
   HasItem("potn55",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn55",Myself)
     Continue()
 END
@@ -23,7 +23,7 @@ IF
   HasItem("potn52",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn52",Myself)
     Continue()
 END
@@ -34,7 +34,7 @@ IF
   HasItem("potn14",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn14",Myself)
     Continue()
 END
@@ -46,7 +46,7 @@ IF
   HasItem("potn10",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn10",Myself)
     Continue()
 END
@@ -57,7 +57,7 @@ IF
   HasItem("potn03",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn03",Myself)
     Continue()
 END
@@ -68,7 +68,7 @@ IF
   HasItem("potn04",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn04",Myself)
     Continue()
 END
@@ -79,7 +79,7 @@ IF
   HasItem("potn04",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn03",Myself)
     Continue()
 END
@@ -90,7 +90,7 @@ IF
   HasItem("potn12",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@9)
+    DisplayStringHead(Myself,@21)
     UseItem("potn12",Myself)
     Continue()
 END
@@ -107,7 +107,7 @@ IF
   HasItem("wand02",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand02",NearestEnemyOf(Myself))
     Continue()
 END
@@ -123,7 +123,7 @@ IF
   HasItem("wand04",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand04",NearestEnemyOf(Myself))
     Continue()
 END
@@ -138,7 +138,7 @@ IF
   HasItem("wand06",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand06",NearestEnemyOf(Myself))
     Continue()
 END
@@ -155,7 +155,7 @@ IF
   HasItem("wand08",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand08",NearestEnemyOf(Myself))
     Continue()
 END
@@ -171,7 +171,7 @@ IF
   HasItem("wand09",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand09",NearestEnemyOf(Myself))
     Continue()
 END
@@ -185,7 +185,7 @@ IF
   HasItem("wand10",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand10",Myself)
     Continue()
 END
@@ -200,7 +200,7 @@ IF
   HasItem("wand11",Myself)
 THEN
   RESPONSE #100
-    DisplayStringHead(Myself,@10)
+    DisplayStringHead(Myself,@22)
     UseItem("wand11",NearestEnemyOf(Myself))
     Continue()
 END

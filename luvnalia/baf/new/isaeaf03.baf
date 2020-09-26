@@ -58,7 +58,7 @@ THEN
     CutSceneId("Nalia")
     Wait(7)
     ActionOverride(Player1,PlayDead(200))
-    DisplayStringHead(Myself,@11)
+    DisplayStringHead(Myself,@31)
     MoveToPointNoInterrupt([816.386])
     SmallWait(5)
     ClearAllActions()

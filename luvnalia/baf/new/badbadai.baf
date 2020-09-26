@@ -20,19 +20,19 @@ IF
 THEN
   RESPONSE #50
     SetGlobal("whined","LOCALS",1)
-    DisplayStringHead(Myself,@2)
+    DisplayStringHead(Myself,@11)
     Shout(153)
   RESPONSE #50
     SetGlobal("whined","LOCALS",1)
-    DisplayStringHead(Myself,@3)
+    DisplayStringHead(Myself,@12)
     Shout(153)
   RESPONSE #50
     SetGlobal("whined","LOCALS",1)
-    DisplayStringHead(Myself,@4)
+    DisplayStringHead(Myself,@13)
     Shout(153)
   RESPONSE #50
     SetGlobal("whined","LOCALS",1)
-    DisplayStringHead(Myself,@5)
+    DisplayStringHead(Myself,@14)
     Shout(153)
 END
 
@@ -52,13 +52,13 @@ IF
 THEN
   RESPONSE #50
     SetGlobal("Panic","LOCALS",1)
-    DisplayStringHead(Myself,@6)
+    DisplayStringHead(Myself,@15)
   RESPONSE #50
     SetGlobal("Panic","LOCALS",1)
-    DisplayStringHead(Myself,@7)
+    DisplayStringHead(Myself,@16)
   RESPONSE #50
     SetGlobal("Panic","LOCALS",1)
-    DisplayStringHead(Myself,@8)
+    DisplayStringHead(Myself,@17)
 END
 
 IF
