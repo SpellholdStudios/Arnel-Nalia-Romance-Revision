@@ -1,21 +1,6 @@
-@0    = ~Install Weidu version of Arnel's Nalia Romance 1.06~
-@1    = ~Installing items~
-@2    = ~Captain Arat~
-@3    = ~ISAEASW~
-@4    = ~Isea's documents~
-@5    = ~These documents contain lots of information about Isea, the slavers, and their association with the twisted rune. It also proves that it was Isea who organized the troll invasion at De'Arnise keep.
-This should be enough to convict Isea if given to the Chief Inspector Brega at the Government district.~
-@6    = ~Nalia's Body~
-@7    = ~Nalia was captured by Bodhi and infected with vampirism, forcing you to slay her. There may be some way to revive her, though you don't know what it would be.~
-@8    = ~Tattered note~
-@9    = ~This tattered note carries the description and the guide how to access the Twisted Rune in the Bridge District. Most of the text is unreadable, but you are able to understand a few lines
+@0    = ~Arnel's Nalia Romance Revision~
 
-...find the house to the south-west of Delosar's inn. Use the rogue stone to pass the wards. Don't worry, we know when you...
-
-The further text is unreadable~
-@10   = ~Installing creatures~
-@11   = ~John~
-@12   = ~Azamantes~
-@13   = ~Priest of Tyr~
-@14   = ~Installing Dialogs~
-@15   = ~Installing scripts~
+@11   = ~Installing items~
+@12   = ~Installing creatures~
+@13   = ~Installing dialogues~
+@14   = ~Installing scripts~

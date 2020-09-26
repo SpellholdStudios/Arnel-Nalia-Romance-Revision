@@ -1,0 +1,40 @@
+
+/* ----------- *
+ *  Creatures  *
+ * ----------- */
+@1001 = ~Captain Arat~
+@1002 = ~John~
+@1003 = ~Azamantes~
+@1004 = ~Priest of Tyr~
+
+
+/* ------- *
+ *  Items  *
+ * ------- */
+@1021 = ~ISAEASW~
+
+@1023 = ~Isea's documents~
+@1024  = ~These documents contain lots of information about Isea, the slavers, and their association with the twisted rune. It also proves that it was Isea who organized the troll invasion at De'Arnise keep.
+This should be enough to convict Isea if given to the Chief Inspector Brega at the Government district.
+
+STATISTICS:
+
+Weight: 1~
+
+@1025 = ~Nalia's Body~
+@1026  = ~Nalia was captured by Bodhi and infected with vampirism, forcing you to slay her. There may be some way to revive her, though you don't know what it would be.
+
+STATISTICS:
+
+Weight: 135~
+
+@1027 = ~Tattered note~
+@1028 = ~This tattered note carries the description and the guide how to access the Twisted Rune in the Bridge District. Most of the text is unreadable, but you are able to understand a few lines.
+
+...find the house to the south-west of Delosar's inn. Use the rogue stone to pass the wards. Don't worry, we know when you...
+
+The further text is unreadable.
+
+STATISTICS:
+
+Weight: 1~
