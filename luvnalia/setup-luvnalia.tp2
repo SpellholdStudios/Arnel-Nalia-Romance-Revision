@@ -1,39 +1,71 @@
 //tp2 Instructions
-BACKUP ~LuvNalia/backup~ 
+BACKUP ~luvnalia/backup~ 
 AUTHOR ~Sir_BillyBob~
 
-AUTO_TRA ~LuvNalia/Language/%s/D~
+ALWAYS
+
+	/* -------------------------------- *
+	 *    Loads macros and functions    *
+	 * -------------------------------- */
+
+
+	/* --------------------------------------------------------------------------------------------- *
+	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
+	 *    No exception, everything needs to be converted                                             *
+	 *    setup.tra contains in game texts as well as installation texts and need to be converted    *
+	 * -----------------------------------------------------------------------*--------------------- */
+	ACTION_DEFINE_ARRAY sh#noconvert BEGIN END
+	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	ACTION_DEFINE_ARRAY sh#reload BEGIN setup END
+
+	LAF HANDLE_CHARSETS
+		INT_VAR
+			infer_charsets = 1
+		STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/language~
+			noconvert_array = sh#noconvert
+			reload_array = sh#reload
+	END
+
+END
+
+
+AUTO_TRA ~luvnalia/language/%s/d~
 
 LANGUAGE ~English~
          ~english~
-         ~LuvNalia/Language/english/setup.tra~
+         ~luvnalia/language/english/setup.tra~
 
-LANGUAGE ~Russian(translation Lessar & aerie.ru)~
+LANGUAGE ~Russian (translation Lessar & aerie.ru)~
          ~russian~
-         ~LuvNalia/Language/russian/setup.tra~
+         ~luvnalia/language/russian/setup.tra~
 
+
+/* ======================================== *
+ *  Arnel's Nalia Romance Revision for ToB  *
+ * ======================================== */
 BEGIN @0
 
 PRINT @1
 
-COPY ~LuvNalia\ITM/DEARNISE.sto~            ~override~       
+COPY ~luvnalia\ITM/DEARNISE.sto~            ~override~       
   SAY NAME2 @2 
 
-COPY ~LuvNalia\ITM/ISAEASW.itm~             ~override~        
+COPY ~luvnalia\ITM/ISAEASW.itm~             ~override~        
   SAY NAME1 @3 
   SAY NAME2 @3 
 
-COPY ~LuvNalia\ITM/ISEAPROF.itm~            ~override~       
+COPY ~luvnalia\ITM/ISEAPROF.itm~            ~override~       
   SAY NAME1 @4 
   SAY NAME2 @4 
   SAY UNIDENTIFIED_DESC @5 
 
-COPY ~LuvNalia\ITM/NALBDY.itm~              ~override~         
+COPY ~luvnalia\ITM/NALBDY.itm~              ~override~         
   SAY NAME1 @6 
   SAY NAME2 @6 
   SAY UNIDENTIFIED_DESC @7 
 
-COPY ~LuvNalia\ITM/RUNENOTE.itm~            ~override~       
+COPY ~luvnalia\ITM/RUNENOTE.itm~            ~override~       
   SAY NAME1 @8 
   SAY NAME2 @8 
   SAY UNIDENTIFIED_DESC @9 
@@ -51,101 +83,101 @@ COPY_EXISTING ~HLSION.cre~ ~override~
 
 // Copy over new creatures
 
-COPY ~LuvNalia\CRE/BADBAD01.cre~            ~override~       
+COPY ~luvnalia\CRE/BADBAD01.cre~            ~override~       
   SAY NAME1 @11 
   SAY NAME2 @11 
 
-COPY ~LuvNalia\CRE/BADBAD02.cre~            ~override~       
+COPY ~luvnalia\CRE/BADBAD02.cre~            ~override~       
   SAY NAME1 @12 
   SAY NAME2 @12 
 
-COPY ~LuvNalia\CRE/BADBAD03.cre~            ~override~       
+COPY ~luvnalia\CRE/BADBAD03.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/BADBAD04.cre~            ~override~       
+COPY ~luvnalia\CRE/BADBAD04.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/BADBAD05.cre~            ~override~       
+COPY ~luvnalia\CRE/BADBAD05.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/BADBAD06.cre~            ~override~       
+COPY ~luvnalia\CRE/BADBAD06.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/BOO2.cre~                ~override~           
+COPY ~luvnalia\CRE/BOO2.cre~                ~override~           
 
-COPY ~LuvNalia\CRE/ISAEAAS1.CRE~            ~override~       
+COPY ~luvnalia\CRE/ISAEAAS1.CRE~            ~override~       
 
-COPY ~LuvNalia\CRE/ISAEAAS2.CRE~            ~override~       
+COPY ~luvnalia\CRE/ISAEAAS2.CRE~            ~override~       
 
-COPY ~LuvNalia\CRE/ISAEAAS3.cre~            ~override~       
+COPY ~luvnalia\CRE/ISAEAAS3.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/ISAEAAS4.cre~            ~override~       
+COPY ~luvnalia\CRE/ISAEAAS4.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/ISAEAAS5.cre~            ~override~       
+COPY ~luvnalia\CRE/ISAEAAS5.cre~            ~override~       
 
-COPY ~LuvNalia\CRE/ISAEAX.cre~              ~override~         
+COPY ~luvnalia\CRE/ISAEAX.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/ISAEAXX.cre~             ~override~        
+COPY ~luvnalia\CRE/ISAEAXX.cre~             ~override~        
 
-COPY ~LuvNalia\CRE/JOS01.cre~               ~override~          
+COPY ~luvnalia\CRE/JOS01.cre~               ~override~          
 
-COPY ~LuvNalia\CRE/JOSE01.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSE01.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/JOSE02.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSE02.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/JOSE03.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSE03.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/JOSE04.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSE04.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/JOSG01.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSG01.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/JOSG02.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSG02.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/JOSG03.cre~              ~override~         
+COPY ~luvnalia\CRE/JOSG03.cre~              ~override~         
 
-COPY ~LuvNalia\CRE/KPCAPT04.CRE~            ~override~       
+COPY ~luvnalia\CRE/KPCAPT04.CRE~            ~override~       
 
-COPY ~LuvNalia\CRE/Priestyr.cre~            ~override~       
+COPY ~luvnalia\CRE/Priestyr.cre~            ~override~       
   SAY NAME1 @13 
   SAY NAME2 @13 
 
-COPY ~LuvNalia\CRE/VAMPNAL.CRE~             ~override~        
+COPY ~luvnalia\CRE/VAMPNAL.CRE~             ~override~        
 
 
 PRINT @14
 
-COMPILE ~LuvNalia\D~ 
+COMPILE ~luvnalia\D~ 
 
 PRINT @15
 
 COPY_EXISTING ~AR2904.bcs~ ~Override/AR2904.bcs~  //Add Nalia to some conditions
- REPLACE_BCS_BLOCK ~LuvNalia\BAF\BCS\AR2904A.BCS~ ~LuvNalia\BAF\BCS\AR2904B.BCS~
- REPLACE_BCS_BLOCK ~LuvNalia\BAF\BCS\AR2904C.BCS~ ~LuvNalia\BAF\BCS\AR2904D.BCS~
- REPLACE_BCS_BLOCK ~LuvNalia\BAF\BCS\AR2904E.BCS~ ~LuvNalia\BAF\BCS\AR2904F.BCS~
+ REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\AR2904A.BCS~ ~luvnalia\BAF\BCS\AR2904B.BCS~
+ REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\AR2904C.BCS~ ~luvnalia\BAF\BCS\AR2904D.BCS~
+ REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\AR2904E.BCS~ ~luvnalia\BAF\BCS\AR2904F.BCS~
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~ISAEA.bcs~ ~Override/ISAEA.bcs~  //Add Nalia to some conditions
- REPLACE_BCS_BLOCK ~LuvNalia\BAF\BCS\ISAEAA.BCS~ ~LuvNalia\BAF\BCS\ISAEAB.BCS~
+ REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\ISAEAA.BCS~ ~luvnalia\BAF\BCS\ISAEAB.BCS~
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~NALIA.bcs~ ~Override/NALIA.bcs~  //Add Nalia to some conditions
- REPLACE_BCS_BLOCK ~LuvNalia\BAF\BCS\NALIAA.BCS~ ~LuvNalia\BAF\BCS\NALIAB.BCS~
+ REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\NALIAA.BCS~ ~luvnalia\BAF\BCS\NALIAB.BCS~
 BUT_ONLY_IF_IT_CHANGES
 
-EXTEND_BOTTOM ~AR0809.bcs~ ~LuvNalia\BAF/AR0809.BAF~
- USING  ~LuvNalia\Language/%s/BAF.TRA~
+EXTEND_BOTTOM ~AR0809.bcs~ ~luvnalia\BAF/AR0809.BAF~
+ USING  ~luvnalia\Language/%s/BAF.TRA~
 
 COPY_EXISTING ~AR1009.are~ ~override/AR1009.are~
 WRITE_ASCII 0x94 ~AR1009~
-EXTEND_BOTTOM ~AR1009.BCS~ ~LuvNalia\BAF/AR1009.BAF~
+EXTEND_BOTTOM ~AR1009.BCS~ ~luvnalia\BAF/AR1009.BAF~
 
-EXTEND_BOTTOM ~AR1306.bcs~   ~LuvNalia\BAF/AR1306.BAF~
-EXTEND_BOTTOM ~AR2904.bcs~   ~LuvNalia\BAF/AR2904.BAF~
-EXTEND_BOTTOM ~BALDUR.bcs~   ~LuvNalia\BAF/BALDUR.BAF~
-EXTEND_BOTTOM ~BODHIAMB.bcs~ ~LuvNalia\BAF/BODHIAMB.BAF~
-EXTEND_BOTTOM ~CLEANSE.bcs~  ~LuvNalia\BAF/CLEANSE.BAF~
-EXTEND_BOTTOM ~EDWIN.bcs~    ~LuvNalia\BAF/EDWIN.BAF~
-EXTEND_BOTTOM ~NALIA.BCS~    ~LuvNalia\BAF/NALIA.BAF~
- USING  ~LuvNalia\Language/%s/BAF.TRA~
-EXTEND_BOTTOM ~VAMPAMB.BCS~  ~LuvNalia\BAF/VAMPAMB.BAF~
+EXTEND_BOTTOM ~AR1306.bcs~   ~luvnalia\BAF/AR1306.BAF~
+EXTEND_BOTTOM ~AR2904.bcs~   ~luvnalia\BAF/AR2904.BAF~
+EXTEND_BOTTOM ~BALDUR.bcs~   ~luvnalia\BAF/BALDUR.BAF~
+EXTEND_BOTTOM ~BODHIAMB.bcs~ ~luvnalia\BAF/BODHIAMB.BAF~
+EXTEND_BOTTOM ~CLEANSE.bcs~  ~luvnalia\BAF/CLEANSE.BAF~
+EXTEND_BOTTOM ~EDWIN.bcs~    ~luvnalia\BAF/EDWIN.BAF~
+EXTEND_BOTTOM ~NALIA.BCS~    ~luvnalia\BAF/NALIA.BAF~
+ USING  ~luvnalia\Language/%s/BAF.TRA~
+EXTEND_BOTTOM ~VAMPAMB.BCS~  ~luvnalia\BAF/VAMPAMB.BAF~
 
-COMPILE ~LuvNalia\BAF\New~
- USING  ~LuvNalia\Language/%s/BAF.TRA~
+COMPILE ~luvnalia\BAF\New~
+ USING  ~luvnalia\Language/%s/BAF.TRA~
 
-AT_INTERACTIVE_EXIT ~View LuvNalia\Readme-LuvNalia.txt~
+AT_INTERACTIVE_EXIT ~View luvnalia\Readme-luvnalia.txt~

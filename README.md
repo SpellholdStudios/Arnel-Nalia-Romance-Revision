@@ -1,9 +1,9 @@
 
 ![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Arnel-Nalia-Romance-Revision?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macos%20%7C%20linux&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English20Russian&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20Russian&color=limegreen)
 
-<div align="center"><h1></a>Arnel's Nalia Romance Revision (WIP)</h1>
+<div align="center"><h1></a>Arnel's Nalia Romance Revision for ToB (WIP)</h1>
 
 <h3>A mod hosted by Spellhold Studios for Baldur's Gate II and ToB (classical and EE games),<br>
 Baldur's Gate Trilogy and EET<h3>
@@ -86,7 +86,7 @@ http://www.shsforums.net/user/3046-sir-billybob/
 - TODO Added *luvnalia.ini* metadata file to support AL|EN's "Project Infinity".
 - TODO Renamed *setup-luvnalia.tp2* -> *luvnalia.tp2* and moved it to mod top folder to support AL|EN's "Project Infinity".
 - TODO Replaced `AUTHOR` keyword with `SUPPORT`.
-- TODO Added `HANDLE_CHARSETS` function to convert string entries for EE games.
+- Added `HANDLE_CHARSETS` function to convert string entries for EE games.
 - TODO Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
 - TODO Added component `DESIGNATED` number and "*armel_nalia_romance*" `LABEL`.
 - TODO Added native BG2:EE and EET compatibility.
@@ -99,7 +99,7 @@ http://www.shsforums.net/user/3046-sir-billybob/
 - TODO Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
 - TODO Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
-- TODO Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
+- Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - TODO Updated WeiDU installer to v246.
 - TODO Uploaded mod to official Spellhold Studios GitHub mirror account.
 
