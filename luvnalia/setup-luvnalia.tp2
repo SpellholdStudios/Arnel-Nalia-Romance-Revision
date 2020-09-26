@@ -1,5 +1,5 @@
 //tp2 Instructions
-BACKUP ~luvnalia/backup~ 
+BACKUP ~luvnalia/backup~
 AUTHOR ~Sir_BillyBob~
 
 ALWAYS
@@ -7,22 +7,21 @@ ALWAYS
 	/* -------------------------------- *
 	 *    Loads macros and functions    *
 	 * -------------------------------- */
-
+	INCLUDE ~luvnalia/lib/functions.tph~
 
 	/* --------------------------------------------------------------------------------------------- *
 	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
 	 *    No exception, everything needs to be converted                                             *
-	 *    setup.tra contains in game texts as well as installation texts and need to be converted    *
 	 * -----------------------------------------------------------------------*--------------------- */
 	ACTION_DEFINE_ARRAY sh#noconvert BEGIN END
 	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-	ACTION_DEFINE_ARRAY sh#reload BEGIN setup END
+	ACTION_DEFINE_ARRAY sh#reload BEGIN setup misc END
 
 	LAF HANDLE_CHARSETS
 		INT_VAR
 			infer_charsets = 1
 		STR_VAR
-			tra_path = EVAL ~%MOD_FOLDER%/language~
+			tra_path = EVAL ~%MOD_FOLDER%/lang~
 			noconvert_array = sh#noconvert
 			reload_array = sh#reload
 	END
@@ -30,15 +29,17 @@ ALWAYS
 END
 
 
-AUTO_TRA ~luvnalia/language/%s/d~
+AUTO_TRA ~luvnalia/language/%s~
 
 LANGUAGE ~English~
          ~english~
-         ~luvnalia/language/english/setup.tra~
+         ~luvnalia/lang/english/setup.tra~
+         ~luvnalia/lang/english/misc.tra~
 
-LANGUAGE ~Russian (translation Lessar & aerie.ru)~
+LANGUAGE ~Russian (Translation : Lessar & aerie.ru)~
          ~russian~
-         ~luvnalia/language/russian/setup.tra~
+         ~luvnalia/lang/russian/setup.tra~
+         ~luvnalia/lang/russian/misc.tra~
 
 
 /* ======================================== *
@@ -46,138 +47,233 @@ LANGUAGE ~Russian (translation Lessar & aerie.ru)~
  * ======================================== */
 BEGIN @0
 
-PRINT @1
+/* ------------------ *
+ *  Installing items  *
+ * ------------------ */
+PRINT @11
+SILENT
 
-COPY ~luvnalia\ITM/DEARNISE.sto~            ~override~       
-  SAY NAME2 @2 
+COPY ~luvnalia/itm/dearnise.sto~ ~override~
+	SAY NAME2 @1001
 
-COPY ~luvnalia\ITM/ISAEASW.itm~             ~override~        
-  SAY NAME1 @3 
-  SAY NAME2 @3 
+COPY ~luvnalia/itm/isaeasw.itm~ ~override~
+	SAY NAME1 @1021
+	SAY NAME2 @1021
 
-COPY ~luvnalia\ITM/ISEAPROF.itm~            ~override~       
-  SAY NAME1 @4 
-  SAY NAME2 @4 
-  SAY UNIDENTIFIED_DESC @5 
+COPY ~luvnalia/itm/iseaprof.itm~ ~override~
+	SAY NAME1 @1023
+	SAY NAME2 @1023
+	SAY UNIDENTIFIED_DESC @1024
 
-COPY ~luvnalia\ITM/NALBDY.itm~              ~override~         
-  SAY NAME1 @6 
-  SAY NAME2 @6 
-  SAY UNIDENTIFIED_DESC @7 
+COPY ~luvnalia/itm/nalbdy.itm~ ~override~
+	SAY NAME1 @1025
+	SAY NAME2 @1025
+	SAY UNIDENTIFIED_DESC @1026
 
-COPY ~luvnalia\ITM/RUNENOTE.itm~            ~override~       
-  SAY NAME1 @8 
-  SAY NAME2 @8 
-  SAY UNIDENTIFIED_DESC @9 
+COPY ~luvnalia/itm/runenote.itm~ ~override~
+	SAY NAME1 @1027
+	SAY NAME2 @1027
+	SAY UNIDENTIFIED_DESC @1028
 
 
-PRINT @10
+/* ---------------------- *
+ *  Installing creatures  *
+ * ---------------------- */
+PRINT @12
+SILENT
 
 // Modify existing creatures first
+// -------------------------------
+COPY_EXISTING ~hlshang.cre~ ~override~
+	ADD_CRE_ITEM ~ISEAPROF~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
 
-COPY_EXISTING ~HLSHANG.cre~ ~override~ 
-  ADD_CRE_ITEM ~ISEAPROF~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
-
-COPY_EXISTING ~HLSION.cre~ ~override~ 
-  ADD_CRE_ITEM ~RUNENOTE~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
+COPY_EXISTING ~hlsion.cre~ ~override~
+	ADD_CRE_ITEM ~RUNENOTE~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
 
 // Copy over new creatures
+// -----------------------
+COPY ~luvnalia/cre/badbad01.cre~ ~override~
+	SAY NAME1 @1002 // John
+	SAY NAME2 @1002
 
-COPY ~luvnalia\CRE/BADBAD01.cre~            ~override~       
-  SAY NAME1 @11 
-  SAY NAME2 @11 
+COPY ~luvnalia/cre/badbad02.cre~ ~override~
+	SAY NAME1 @1003 // Azamantes
+	SAY NAME2 @1003
 
-COPY ~luvnalia\CRE/BADBAD02.cre~            ~override~       
-  SAY NAME1 @12 
-  SAY NAME2 @12 
-
-COPY ~luvnalia\CRE/BADBAD03.cre~            ~override~       
-
-COPY ~luvnalia\CRE/BADBAD04.cre~            ~override~       
-
-COPY ~luvnalia\CRE/BADBAD05.cre~            ~override~       
-
-COPY ~luvnalia\CRE/BADBAD06.cre~            ~override~       
-
-COPY ~luvnalia\CRE/BOO2.cre~                ~override~           
-
-COPY ~luvnalia\CRE/ISAEAAS1.CRE~            ~override~       
-
-COPY ~luvnalia\CRE/ISAEAAS2.CRE~            ~override~       
-
-COPY ~luvnalia\CRE/ISAEAAS3.cre~            ~override~       
-
-COPY ~luvnalia\CRE/ISAEAAS4.cre~            ~override~       
-
-COPY ~luvnalia\CRE/ISAEAAS5.cre~            ~override~       
-
-COPY ~luvnalia\CRE/ISAEAX.cre~              ~override~         
-
-COPY ~luvnalia\CRE/ISAEAXX.cre~             ~override~        
-
-COPY ~luvnalia\CRE/JOS01.cre~               ~override~          
-
-COPY ~luvnalia\CRE/JOSE01.cre~              ~override~         
-
-COPY ~luvnalia\CRE/JOSE02.cre~              ~override~         
-
-COPY ~luvnalia\CRE/JOSE03.cre~              ~override~         
-
-COPY ~luvnalia\CRE/JOSE04.cre~              ~override~         
-
-COPY ~luvnalia\CRE/JOSG01.cre~              ~override~         
-
-COPY ~luvnalia\CRE/JOSG02.cre~              ~override~         
-
-COPY ~luvnalia\CRE/JOSG03.cre~              ~override~         
-
-COPY ~luvnalia\CRE/KPCAPT04.CRE~            ~override~       
-
-COPY ~luvnalia\CRE/Priestyr.cre~            ~override~       
-  SAY NAME1 @13 
-  SAY NAME2 @13 
-
-COPY ~luvnalia\CRE/VAMPNAL.CRE~             ~override~        
+COPY ~luvnalia/cre/badbad03.cre~ ~override~
+COPY ~luvnalia/cre/badbad04.cre~ ~override~
+COPY ~luvnalia/cre/badbad05.cre~ ~override~
+COPY ~luvnalia/cre/badbad06.cre~ ~override~
+COPY ~luvnalia/cre/boo2.cre~     ~override~
+COPY ~luvnalia/cre/isaeaas1.cre~ ~override~
+COPY ~luvnalia/cre/isaeaas2.cre~ ~override~
+COPY ~luvnalia/cre/isaeaas3.cre~ ~override~
+COPY ~luvnalia/cre/isaeaas4.cre~ ~override~
+COPY ~luvnalia/cre/isaeaas5.cre~ ~override~
+COPY ~luvnalia/cre/isaeax.cre~   ~override~
+COPY ~luvnalia/cre/isaeaxx.cre~  ~override~
+COPY ~luvnalia/cre/jos01.cre~    ~override~
+COPY ~luvnalia/cre/jose01.cre~   ~override~
+COPY ~luvnalia/cre/jose02.cre~   ~override~
+COPY ~luvnalia/cre/jose03.cre~   ~override~
+COPY ~luvnalia/cre/jose04.cre~   ~override~
+COPY ~luvnalia/cre/josg01.cre~   ~override~
+COPY ~luvnalia/cre/josg02.cre~   ~override~
+COPY ~luvnalia/cre/josg03.cre~   ~override~
+COPY ~luvnalia/cre/kpcapt04.cre~ ~override~
+COPY ~luvnalia/cre/priestyr.cre~ ~override~
+	SAY NAME1 @1004 // Priest of Tyr
+	SAY NAME2 @1004
+COPY ~luvnalia/cre/vampnal.cre~  ~override~
 
 
+/* ---------------------- *
+ *  Installing dialogues  *
+ * ---------------------- */
+PRINT @13
+SILENT
+COMPILE ~luvnalia/d~
+
+
+/* -------------------- *
+ *  Installing scripts  *
+ * -------------------- */
 PRINT @14
+SILENT
 
-COMPILE ~luvnalia\D~ 
+// Add Nalia to some conditions
+// ----------------------------
+COPY_EXISTING ~ar2904.bcs~ ~override~
+/*	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\AR2904A.BCS~ ~luvnalia/baf\BCS\AR2904B.BCS~
+	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\AR2904C.BCS~ ~luvnalia/baf\BCS\AR2904D.BCS~
+	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\AR2904E.BCS~ ~luvnalia/baf\BCS\AR2904F.BCS~*/
+	DECOMPILE_AND_PATCH BEGIN
+		LPF GET_SCRIPT_BLOCK
+			STR_VAR search_regexp = ~ReallyForceSpell(Player2,HELL_DAMAGE_HALF)~
+			RET script_block start_offset end_offset
+		END
+		PATCH_IF ( start_offset >= 0 ) BEGIN
+			DELETE_BYTES start_offset ( end_offset - start_offset )
+			SET end_offset = start_offset
+			INNER_PATCH_SAVE block_final ~%script_block%~ BEGIN
+				REPLACE_TEXTUALLY ~NumInPartyGT(1)~ ~!Global("NaliaTaken","AR2904",1) NumInPartyGT(1)~
+			END
+			SET len = STRING_LENGTH ~%block_final%~
+			INSERT_BYTES start_offset len
+			WRITE_ASCIIE start_offset ~%block_final%~ (len)
+			INSERT_BYTES start_offset 1
+			WRITE_ASCIIE start_offset ~%LNL%~ (1)
+			SET end_offset += len + 1
+		END
 
-PRINT @15
+		LPF GET_SCRIPT_BLOCK
+			INT_VAR start_offset = end_offset
+			STR_VAR search_regexp = ~ReallyForceSpell(Player2,HELL_DAMAGE_HALF)~
+			RET script_block start_offset end_offset
+		END
+		PATCH_IF ( start_offset >= 0 ) BEGIN
+			DELETE_BYTES start_offset ( end_offset - start_offset )
+			SET end_offset = start_offset
+			INNER_PATCH_SAVE block_final ~%script_block%~ BEGIN
+				REPLACE_TEXTUALLY ~NumInPartyGT(1)~ ~!Global("NaliaTaken","AR2904",1) NumInPartyGT(1)~
+			END
+			SET len = STRING_LENGTH ~%block_final%~
+			INSERT_BYTES start_offset len
+			WRITE_ASCIIE start_offset ~%block_final%~ (len)
+			INSERT_BYTES start_offset 1
+			WRITE_ASCIIE start_offset ~%LNL%~ (1)
+			SET end_offset += len + 1
+		END
+    
+		LPF GET_SCRIPT_BLOCK
+			INT_VAR start_offset = end_offset
+			STR_VAR search_regexp = ~ReallyForceSpell(Player2,HELL_EXPLODE)~
+			RET script_block start_offset end_offset
+		END
+		PATCH_IF ( start_offset >= 0 ) BEGIN
+			DELETE_BYTES start_offset ( end_offset - start_offset )
+			SET end_offset = start_offset
+			INNER_PATCH_SAVE block_final ~%script_block%~ BEGIN
+				REPLACE_TEXTUALLY ~NumInPartyGT(1)~ ~!Global("NaliaTaken","AR2904",1) NumInPartyGT(1)~
+			END
+			SET len = STRING_LENGTH ~%block_final%~
+			INSERT_BYTES start_offset len
+			WRITE_ASCIIE start_offset ~%block_final%~ (len)
+			INSERT_BYTES start_offset 1
+			WRITE_ASCIIE start_offset ~%LNL%~ (1)
+			SET end_offset += len + 1
+		END
+	END
+BUT_ONLY
 
-COPY_EXISTING ~AR2904.bcs~ ~Override/AR2904.bcs~  //Add Nalia to some conditions
- REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\AR2904A.BCS~ ~luvnalia\BAF\BCS\AR2904B.BCS~
- REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\AR2904C.BCS~ ~luvnalia\BAF\BCS\AR2904D.BCS~
- REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\AR2904E.BCS~ ~luvnalia\BAF\BCS\AR2904F.BCS~
-BUT_ONLY_IF_IT_CHANGES
+//A dd Nalia to some conditions
+// ----------------------------
+COPY_EXISTING ~isaea.bcs~ ~override~
+/*	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\ISAEAA.BCS~ ~luvnalia/baf\BCS\ISAEAB.BCS~*/
+	DECOMPILE_AND_PATCH BEGIN
+	 	LPF GET_SCRIPT_BLOCK
+			STR_VAR search_regexp = ~Global("NaliaArrested","GLOBAL",0)~
+			RET script_block start_offset end_offset
+	    END
+	    PATCH_IF ( start_offset >= 0 ) BEGIN
+	    	DELETE_BYTES start_offset ( end_offset - start_offset )
+	    	SET end_offset = start_offset
+	    	INNER_PATCH_SAVE block_final ~%script_block%~ BEGIN
+				REPLACE_TEXTUALLY ~Global("NaliaArrested","GLOBAL",0)~ ~Global("NaliaArrested","GLOBAL",0) !Global("NaliaRomanceActive","GLOBAL",1)~
+	        END
+	        SET len = STRING_LENGTH ~%block_final%~
+	        INSERT_BYTES start_offset len
+	        WRITE_ASCIIE start_offset ~%block_final%~ (len)
+	        INSERT_BYTES start_offset 1
+	        WRITE_ASCIIE start_offset ~%LNL%~ (1)
+	        SET end_offset += len + 1
+	    END
+    END
+BUT_ONLY
 
-COPY_EXISTING ~ISAEA.bcs~ ~Override/ISAEA.bcs~  //Add Nalia to some conditions
- REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\ISAEAA.BCS~ ~luvnalia\BAF\BCS\ISAEAB.BCS~
-BUT_ONLY_IF_IT_CHANGES
+// Add Nalia to some conditions
+// ----------------------------
+COPY_EXISTING ~nalia.bcs~ ~override~
+/*	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\NALIAA.BCS~ ~luvnalia/baf\BCS\NALIAB.BCS~*/
+	DECOMPILE_AND_PATCH BEGIN
+	 	LPF GET_SCRIPT_BLOCK
+			STR_VAR search_regexp = ~SetGlobal("NaliaJamie","GLOBAL",1)~
+			RET script_block start_offset end_offset
+	    END
+	    PATCH_IF ( start_offset >= 0 ) BEGIN
+	    	DELETE_BYTES start_offset ( end_offset - start_offset )
+	    	SET end_offset = start_offset
+	    	INNER_PATCH_SAVE block_final ~%script_block%~ BEGIN
+				REPLACE_TEXTUALLY ~CombatCounter(0)~ ~CombatCounter(0) !Global("NaliaRomanceActive","GLOBAL",1) !Global("NaliaRomanceActive","GLOBAL",2)~
+	        END
+	        SET len = STRING_LENGTH ~%block_final%~
+	        INSERT_BYTES start_offset len
+	        WRITE_ASCIIE start_offset ~%block_final%~ (len)
+	        INSERT_BYTES start_offset 1
+	        WRITE_ASCIIE start_offset ~%LNL%~ (1)
+	        SET end_offset += len + 1
+	    END
+    END
+BUT_ONLY
 
-COPY_EXISTING ~NALIA.bcs~ ~Override/NALIA.bcs~  //Add Nalia to some conditions
- REPLACE_BCS_BLOCK ~luvnalia\BAF\BCS\NALIAA.BCS~ ~luvnalia\BAF\BCS\NALIAB.BCS~
-BUT_ONLY_IF_IT_CHANGES
+// Expend existing scripts
+// -----------------------
+EXTEND_BOTTOM ~ar0809.bcs~ ~luvnalia/baf/ar0809.baf~ USING ~luvnalia/lang/%s/baf.tra~
 
-EXTEND_BOTTOM ~AR0809.bcs~ ~luvnalia\BAF/AR0809.BAF~
- USING  ~luvnalia\Language/%s/BAF.TRA~
+COPY_EXISTING ~ar1009.are~ ~override~
+	WRITE_ASCII 0x94 ~AR1009~
+BUT_ONLY
+EXTEND_BOTTOM ~ar1009.bcs~ ~luvnalia/baf/ar1009.baf~
 
-COPY_EXISTING ~AR1009.are~ ~override/AR1009.are~
-WRITE_ASCII 0x94 ~AR1009~
-EXTEND_BOTTOM ~AR1009.BCS~ ~luvnalia\BAF/AR1009.BAF~
+EXTEND_BOTTOM ~ar1306.bcs~   ~luvnalia/baf/ar1306.baf~
+EXTEND_BOTTOM ~ar2904.bcs~   ~luvnalia/baf/ar2904.baf~
+EXTEND_BOTTOM ~baldur.bcs~   ~luvnalia/baf/baldur.baf~
+EXTEND_BOTTOM ~bodhiamb.bcs~ ~luvnalia/baf/bodhiamb.baf~
+EXTEND_BOTTOM ~cleanse.bcs~  ~luvnalia/baf/cleanse.baf~
+EXTEND_BOTTOM ~edwin.bcs~    ~luvnalia/baf/edwin.baf~
+EXTEND_BOTTOM ~nalia.bcs~    ~luvnalia/baf/nalia.baf~ USING ~luvnalia/lang/%s/baf.tra~
+EXTEND_BOTTOM ~vampamb.bcs~  ~luvnalia/baf/vampamb.baf~
 
-EXTEND_BOTTOM ~AR1306.bcs~   ~luvnalia\BAF/AR1306.BAF~
-EXTEND_BOTTOM ~AR2904.bcs~   ~luvnalia\BAF/AR2904.BAF~
-EXTEND_BOTTOM ~BALDUR.bcs~   ~luvnalia\BAF/BALDUR.BAF~
-EXTEND_BOTTOM ~BODHIAMB.bcs~ ~luvnalia\BAF/BODHIAMB.BAF~
-EXTEND_BOTTOM ~CLEANSE.bcs~  ~luvnalia\BAF/CLEANSE.BAF~
-EXTEND_BOTTOM ~EDWIN.bcs~    ~luvnalia\BAF/EDWIN.BAF~
-EXTEND_BOTTOM ~NALIA.BCS~    ~luvnalia\BAF/NALIA.BAF~
- USING  ~luvnalia\Language/%s/BAF.TRA~
-EXTEND_BOTTOM ~VAMPAMB.BCS~  ~luvnalia\BAF/VAMPAMB.BAF~
-
-COMPILE ~luvnalia\BAF\New~
- USING  ~luvnalia\Language/%s/BAF.TRA~
+COMPILE ~luvnalia/baf/new~ USING ~luvnalia/lang/%s/baf.tra~
 
 AT_INTERACTIVE_EXIT ~View luvnalia\Readme-luvnalia.txt~

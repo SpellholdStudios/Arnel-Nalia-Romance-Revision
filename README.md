@@ -191,15 +191,16 @@ In addition to the methods above for removing individual components, you can com
 - Included BWP Fixpack patch <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements `!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`</a> (badbadai.baf and badbadog.baf).
 - AR2904.bcs patching: Included BWP Fixpack compatibility issues with "BG2 Fixpack".
 - BG2:EE compatibility: Replaced script patching with `GET_SCRIPT_BLOCK` WeiDU function (courtesy of Argent77). @74337 @74394
+- Hardcoded items' names.
 - Fixed typos.
 - Split setup.tra files into separate thematic files for more comfortable readability.
 - TODO Updated and renamed readme file to *luvnalia-readme-english.txt*, then moved it into new "*readme*" folder.
 - TODO Removed useless files and "*backup*" folder.
-- TODO Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
+- Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
 - TODO Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
-- TODO Updated WeiDU installer to v246.
+- Updated WeiDU installer to v246.
 - TODO Uploaded mod to official Spellhold Studios GitHub mirror account.
 
 ## 
