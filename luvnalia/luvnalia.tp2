@@ -1,4 +1,3 @@
-//tp2 Instructions
 BACKUP ~luvnalia/backup~
 //AUTHOR ~Sir_BillyBob~
 SUPPORT ~Spellhold Studios at TODO link~
@@ -53,7 +52,7 @@ LANGUAGE ~Russian (Translation : Lessar & aerie.ru)~
  * ======================================== */
 BEGIN @0
 DESIGNATED 0 LABEL "arnel_nalia_romance"
-REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @101	// ~This mod is not available for your game.~
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @1	// ~You must have ToB, BGT, BG2:EE or EET installed to install this mod.~
 
 
 /* ------------------ *

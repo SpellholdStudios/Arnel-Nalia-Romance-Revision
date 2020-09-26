@@ -34,15 +34,11 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## <a name="intro" id="intro"></a>Overview
 
-This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions. Having Minsc in the party is recommended... :wink:
+This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions.
 
-<details><summary><strong><ins>Yeslick's Dispel Magic ability</ins></strong></summary>
-<br><p>
-For people who remember Yeslick in Baldur's Gate, the authors have made the decision that the dwarf may still cast his Dispel Magic ability in SoA-ToB. :smile:
-</p>
-</details><br>
+Having Minsc in the party is recommended... :wink:<br>
 
-<details><summary>Original note from the author</summary>
+<details><summary><strong><ins>Original note from the author</ins></strong></summary>
 <p>
 
 ###### The idea here is that older mods, whether TeamBG's TBG format or IAP or even older Weidu mods, will get a refresh to become more compatible with other mods.
@@ -144,7 +140,7 @@ In addition to the methods above for removing individual components, you can com
 - TheWizard for also hosting this mod.
 - Arnel, where ever you are, for creating this mod.
 - Russian translation: Lessar & aerie.ru.
-- Native EE compatibility: and Gwendolyne.
+- Native EE compatibility: tipun and Austin (Arcanecoast Team), and Gwendolyne.
 - Argent77: WeiDU library to dynamically patch scripts.
 - ...
 - Everyone else from <a href="https://www.gibberlings3.net/forums/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a> forums, and the other Infinity Engine gaming and modding communities who offered their help and support.
@@ -187,13 +183,13 @@ In addition to the methods above for removing individual components, you can com
 
 - Added *luvnalia.ini* metadata file to support AL|EN's "Project Infinity".
 - Renamed *setup-luvnalia.tp2* -> *luvnalia.tp2* and moved it to mod top folder to support AL|EN's "Project Infinity".
-- TODO Replaced `AUTHOR` keyword with `SUPPORT`.
-- TODO Added `VERSION` flag.
-- TODO Replaced `AT_INTERACTIVE_EXIT` deprecated command with `README`.
+- Replaced `AUTHOR` keyword with `SUPPORT`.
+- Added `VERSION` flag.
+- Replaced `AT_INTERACTIVE_EXIT` deprecated command with `README`.
 - Added `HANDLE_CHARSETS` function to convert string entries for EE games.
-- TODO Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
-- TODO Added component `DESIGNATED` number and "*arnel_nalia_romance*" `LABEL`.
-- TODO Added native BG2:EE and EET compatibility.
+- Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
+- Added component `DESIGNATED` number and "*arnel_nalia_romance*" `LABEL`.
+- Added native BG2:EE and EET compatibility.
 - Commented code as much as possible.
 - *badbadai.baf* and *badbadog.baf*: Included BWP Fixpack <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements patch</a> (`!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`).
 - *AR2904.bcs* patching: Included BWP Fixpack compatibility issues with "BG2 Fixpack".
