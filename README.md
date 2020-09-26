@@ -13,7 +13,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 **Original Author:** Armel  
 **Mod Website:** <a href="TODO link">Spellhold Studios</a>  
-**Mod Forum:** <a href="TODO link">Rupert the Dye Merchant</a>  
+**Mod Forum:** <a href="TODO link">TODO</a>  
 
 
 [Read the mod's readme](https://spellholdstudios.github.io/readmes/luvnalia-readme-english.txt)
@@ -23,7 +23,7 @@ Baldur's Gate Trilogy and EET<h3>
 &nbsp;
 
 <div align="center">
-<a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#components">Components</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#versions">Versions History</a></br>
+<a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#versions">Versions History</a></br>
 </div>
 
 <hr>
@@ -91,9 +91,9 @@ http://www.shsforums.net/user/3046-sir-billybob/
 - TODO Added component `DESIGNATED` number and "*armel_nalia_romance*" `LABEL`.
 - TODO Added native BG2:EE and EET compatibility.
 - TODO Commented code as much as possible.
-- TODO Included BWP Fixpack patch: .
+- Included BWP Fixpack patch <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements `!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`</a> (badbadai.baf and badbadog.baf).
 - TODO Added Russian translation (BWP Russian Textpack team).
-- TODO Fixed typos in English .tra files.
+- Fixed typos in English .tra files.
 - TODO Updated and renamed readme file to *luvnalia-readme-english.txt*, then moved it into new "*readme*" folder.
 - TODO Removed useless files and "*backup*" folder.
 - TODO Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
