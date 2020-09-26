@@ -11,11 +11,11 @@ Baldur's Gate Trilogy and EET<h3>
 </div><br />
 
 
-**Original Author:** Armel  
-**Mod Website:** <a href="TODO link">Spellhold Studios</a>  
+**Original Author:** Arnel  
+**Mod Website:** <a href="http://www.shsforums.net/forum/278-sir-bbs-revisions/">Spellhold Studios</a>  
 **Mod Forum:** <a href="TODO link">TODO</a><br>
 
-**Note:** This mod was first released at <a href=http://web.starman.ee/arnel/nalia/">starman</a> and has been officially mirrored at <a href="TODO link">Spellhold Studios Clan DLAN mirror</a> by <a href="http://www.shsforums.net/user/3046-sir-billybob/">Sir BillyBob</a>.<br>
+**Note:** This mod was first released at <a href="http://web.starman.ee/arnel/nalia/">starman</a> and has been officially mirrored at <a href="TODO link">Spellhold Studios Clan DLAN mirror</a> by <a href="http://www.shsforums.net/user/3046-sir-billybob/">Sir BillyBob</a>.<br>
 
 ## 
 
@@ -145,8 +145,8 @@ In addition to the methods above for removing individual components, you can com
 - Arnel, where ever you are, for creating this mod.
 - Russian translation: Lessar & aerie.ru.
 - Native EE compatibility: and Gwendolyne.
-- Native EE compatibility: and Gwendolyne.
-- Native EE compatibility: and Gwendolyne.
+- Argent77: WeiDU library to dynamically patch scripts.
+- ...
 - Everyone else from <a href="https://www.gibberlings3.net/forums/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a> forums, and the other Infinity Engine gaming and modding communities who offered their help and support.
 
 ## 
@@ -185,7 +185,7 @@ In addition to the methods above for removing individual components, you can com
 
 ##### Version 2.0.0 (September nn, 2020)
 
-- TODO Added *luvnalia.ini* metadata file to support AL|EN's "Project Infinity".
+- Added *luvnalia.ini* metadata file to support AL|EN's "Project Infinity".
 - Renamed *setup-luvnalia.tp2* -> *luvnalia.tp2* and moved it to mod top folder to support AL|EN's "Project Infinity".
 - TODO Replaced `AUTHOR` keyword with `SUPPORT`.
 - TODO Added `VERSION` flag.
