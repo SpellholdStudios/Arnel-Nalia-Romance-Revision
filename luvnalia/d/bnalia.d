@@ -1,0 +1,1888 @@
+APPEND ~BNALIA~
+
+IF ~Global("NaliaBranch1","LOCALS",2)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N53
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO N54
+  IF ~~ THEN REPLY @2 GOTO N62
+  IF ~~ THEN REPLY @3 GOTO N54
+  IF ~~ THEN REPLY @4 GOTO N63
+END
+
+IF ~~ THEN BEGIN N54
+  SAY @5
+  IF ~~ THEN GOTO N55
+END
+
+IF ~~ THEN BEGIN N55
+  SAY @6
+  IF ~~ THEN REPLY @7 GOTO N56
+  IF ~~ THEN REPLY @8 GOTO N58
+  IF ~~ THEN REPLY @9 GOTO N59
+  IF ~~ THEN REPLY @10 GOTO N61
+END
+
+IF ~~ THEN BEGIN N56
+  SAY @11
+  IF ~~ THEN REPLY @12 GOTO N57
+  IF ~~ THEN REPLY @13 GOTO N58
+END
+
+IF ~~ THEN BEGIN N57
+  SAY @14
+  IF ~~ THEN REPLY @15 GOTO N58
+END
+
+IF ~~ THEN BEGIN N58
+  SAY @16
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N59
+  SAY @17
+  IF ~~ THEN REPLY @18 GOTO N60
+  IF ~~ THEN REPLY @19 DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N60
+  SAY @20
+  IF ~~ THEN REPLY @21 GOTO N56
+END
+
+IF ~~ THEN BEGIN N61
+  SAY @22
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N62
+  SAY @23
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N63
+  SAY @24
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",-1)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",4)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N64
+  SAY @25
+  IF ~~ THEN REPLY @26 GOTO N65
+  IF ~~ THEN REPLY @27 GOTO N75
+  IF ~~ THEN REPLY @28 GOTO N65
+END
+
+IF ~~ THEN BEGIN N65
+  SAY @29
+  IF ~~ THEN GOTO N66
+END
+
+IF ~~ THEN BEGIN N66
+  SAY @30
+  IF ~~ THEN REPLY @31 GOTO N67
+  IF ~~ THEN REPLY @32 GOTO N73
+  IF ~~ THEN REPLY @33 GOTO N74
+END
+
+IF ~~ THEN BEGIN N67
+  SAY @34
+  IF ~~ THEN GOTO N68
+END
+
+IF ~~ THEN BEGIN N68
+  SAY @35
+  IF ~~ THEN REPLY @36 GOTO N69
+  IF ~~ THEN REPLY @37 GOTO N71
+  IF ~~ THEN REPLY @38 GOTO N72
+END
+
+IF ~~ THEN BEGIN N69
+  SAY @39
+  IF ~~ THEN REPLY @40 GOTO N70
+END
+
+IF ~~ THEN BEGIN N70
+  SAY @41
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N71
+  SAY @42
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N72
+  SAY @43
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N73
+  SAY @44
+  IF ~~ THEN REPLY @31 GOTO N67
+  IF ~~ THEN REPLY @45 GOTO N71
+END
+
+IF ~~ THEN BEGIN N74
+  SAY @46
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N75
+  SAY @47
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",6)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N76
+  SAY @48
+  IF ~~ THEN GOTO N77
+END
+
+IF ~~ THEN BEGIN N77
+  SAY @49
+  IF ~~ THEN REPLY @50 GOTO N78
+  IF ~~ THEN REPLY @51 GOTO N78
+  IF ~~ THEN REPLY @52 GOTO N78
+  IF ~~ THEN REPLY @53 GOTO N82
+  IF ~~ THEN REPLY @54 GOTO N82
+  IF ~~ THEN REPLY @55 GOTO N82
+END
+
+IF ~~ THEN BEGIN N78
+  SAY @56
+  IF ~~ THEN REPLY @57 GOTO N79
+  IF ~~ THEN REPLY @58 GOTO N81
+END
+
+IF ~~ THEN BEGIN N79
+  SAY @59
+  IF ~~ THEN REPLY @60 GOTO N80
+  IF ~~ THEN REPLY @61 GOTO N80
+END
+
+IF ~~ THEN BEGIN N80
+  SAY @62
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N81
+  SAY @63
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N82
+  SAY @64
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",8)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N83
+  SAY @65
+  IF ~~ THEN REPLY @66 GOTO N84
+  IF ~~ THEN REPLY @67 GOTO N85
+END
+
+IF ~~ THEN BEGIN N84
+  SAY @68
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N85
+  SAY @69
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",10)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N86
+  SAY @70
+  IF ~~ THEN GOTO N87
+END
+
+IF ~~ THEN BEGIN N87
+  SAY @71
+  IF ~~ THEN REPLY @72 GOTO N88
+  IF ~~ THEN REPLY @73 GOTO N92
+  IF ~~ THEN REPLY @74 GOTO N95
+  IF ~~ THEN REPLY @75 GOTO N96
+END
+
+IF ~~ THEN BEGIN N88
+  SAY @76
+  IF ~~ THEN REPLY @77 GOTO N89
+END
+
+IF ~~ THEN BEGIN N89
+  SAY @78
+  IF ~~ THEN REPLY @79 GOTO N90
+  IF ~~ THEN REPLY @80 GOTO N91
+END
+
+IF ~~ THEN BEGIN N90
+  SAY @81
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N91
+  SAY @82
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N92
+  SAY @83
+  IF ~~ THEN REPLY @84 GOTO N88
+  IF ~~ THEN REPLY @85 GOTO N93
+  IF ~~ THEN REPLY @86 GOTO N94
+END
+
+IF ~~ THEN BEGIN N93
+  SAY @87
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N94
+  SAY @88
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N95
+  SAY @89
+  IF ~~ THEN REPLY @90 GOTO N88
+  IF ~~ THEN REPLY @91 GOTO N93
+  IF ~~ THEN REPLY @92 GOTO N94
+END
+
+IF ~~ THEN BEGIN N96
+  SAY @93
+  IF ~~ THEN REPLY @94 GOTO N93
+  IF ~~ THEN REPLY @95 GOTO N94
+END
+
+IF ~Global("NaliaBranch1","LOCALS",12)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N97
+  SAY @96
+  IF ~~ THEN GOTO N98
+END
+
+IF ~~ THEN BEGIN N98
+  SAY @97
+  IF ~~ THEN REPLY @98 GOTO N99
+  IF ~~ THEN REPLY @99 GOTO N101
+  IF ~~ THEN REPLY @100 GOTO N104
+END
+
+IF ~~ THEN BEGIN N99
+  SAY @101
+  IF ~~ THEN REPLY @102 GOTO N100
+END
+
+IF ~~ THEN BEGIN N100
+  SAY @103
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N101
+  SAY @104
+  IF ~~ THEN REPLY @105 GOTO N102
+  IF ~~ THEN REPLY @106 GOTO N103
+END
+
+IF ~~ THEN BEGIN N102
+  SAY @107
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N103
+  SAY @108
+  IF ~~ THEN REPLY @109 GOTO N99
+  IF ~~ THEN REPLY @110 GOTO N104
+END
+
+IF ~~ THEN BEGIN N104
+  SAY @111
+  IF ~~ THEN REPLY @112 GOTO N99
+  IF ~~ THEN REPLY @113 GOTO N105
+END
+
+IF ~~ THEN BEGIN N105
+  SAY @114
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",14)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N106
+  SAY @115
+  IF ~~ THEN GOTO N107
+END
+
+IF ~~ THEN BEGIN N107
+  SAY @116
+  IF ~~ THEN REPLY @117 GOTO N108
+  IF ~~ THEN REPLY @118 GOTO N111
+  IF ~~ THEN REPLY @119 GOTO N114
+END
+
+IF ~~ THEN BEGIN N108
+  SAY @120
+  IF ~~ THEN REPLY @121 GOTO N109
+  IF ~~ THEN REPLY @122 GOTO N110
+END
+
+IF ~~ THEN BEGIN N109
+  SAY @123
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N110
+  SAY @124
+  IF ~~ THEN REPLY @125 GOTO N112
+  IF ~~ THEN REPLY @126 GOTO N114
+END
+
+IF ~~ THEN BEGIN N111
+  SAY @127
+  IF ~~ THEN REPLY @125 GOTO N112
+  IF ~~ THEN REPLY @128 GOTO N113
+END
+
+IF ~~ THEN BEGIN N112
+  SAY @129
+  IF ~~ THEN REPLY @121 GOTO N109
+END
+
+IF ~~ THEN BEGIN N113
+  SAY @130
+  IF ~~ THEN REPLY @125 GOTO N112
+  IF ~~ THEN REPLY @131 GOTO N114
+END
+
+IF ~~ THEN BEGIN N114
+  SAY @132
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",16)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N115
+  SAY @133
+  IF ~~ THEN GOTO N116
+END
+
+IF ~~ THEN BEGIN N116
+  SAY @134
+  IF ~~ THEN REPLY @135 GOTO N117
+  IF ~~ THEN REPLY @136 GOTO N127
+  IF ~~ THEN REPLY @137 GOTO N120
+END
+
+IF ~~ THEN BEGIN N117
+  SAY @138
+  IF ~~ THEN REPLY @139 GOTO N118
+  IF ~~ THEN REPLY @140 GOTO N119
+  IF ~~ THEN REPLY @141 GOTO N122
+  IF ~~ THEN REPLY @142 GOTO N127
+END
+
+IF ~~ THEN BEGIN N118
+  SAY @143
+  IF ~~ THEN REPLY @140 GOTO N119
+  IF ~~ THEN REPLY @144 GOTO N119
+  IF ~~ THEN REPLY @145 GOTO N127
+END
+
+IF ~~ THEN BEGIN N119
+  SAY @146
+  IF ~~ THEN REPLY @147 GOTO N120
+  IF ~~ THEN REPLY @148 GOTO N122
+END
+
+IF ~~ THEN BEGIN N120
+  SAY @149
+  IF ~~ THEN REPLY @150 GOTO N121
+  IF ~~ THEN REPLY @151 GOTO N121
+  IF ~~ THEN REPLY @152 GOTO N127
+END
+
+IF ~~ THEN BEGIN N121
+  SAY @153
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N122
+  SAY @154
+  IF ~~ THEN REPLY @155 GOTO N123
+  IF ~~ THEN REPLY @156 GOTO N124
+  IF ~~ THEN REPLY @157 GOTO N126
+  IF ~~ THEN REPLY @158 GOTO N127
+END
+
+IF ~~ THEN BEGIN N123
+  SAY @159
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N124
+  SAY @160
+  IF ~~ THEN REPLY @161 GOTO N125
+  IF ~~ THEN REPLY @155 GOTO N123
+END
+
+IF ~~ THEN BEGIN N125
+  SAY @162
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N126
+  SAY @163
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N127
+  SAY @164
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",18)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N129
+  SAY @165
+  IF ~~ THEN REPLY @166 GOTO N130
+  IF ~~ THEN REPLY @167 GOTO N131
+END
+
+IF ~~ THEN BEGIN N130
+  SAY @23
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N131
+  SAY @168
+  IF ~~ THEN GOTO N132
+END
+
+IF ~~ THEN BEGIN N132
+  SAY @169
+  IF ~~ THEN REPLY @170 GOTO N133
+  IF ~~ THEN REPLY @171 GOTO N138
+END
+
+IF ~~ THEN BEGIN N133
+  SAY @172
+  IF ~~ THEN REPLY @173 GOTO N134
+  IF ~~ THEN REPLY @174 GOTO N135
+  IF ~~ THEN REPLY @175 GOTO N137
+END
+
+IF ~~ THEN BEGIN N134
+  SAY @176
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N135
+  SAY @177
+  IF ~~ THEN REPLY @178 GOTO N134
+  IF ~~ THEN REPLY @179 GOTO N136
+  IF ~~ THEN REPLY @180 GOTO N137
+END
+
+IF ~~ THEN BEGIN N136
+  SAY @181
+  IF ~~ THEN REPLY @173 GOTO N134
+  IF ~~ THEN REPLY @175 GOTO N137
+END
+
+IF ~~ THEN BEGIN N137
+  SAY @182
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N138
+  SAY @183
+  IF ~~ THEN REPLY @184 GOTO N136
+  IF ~~ THEN REPLY @185 GOTO N139
+END
+
+IF ~~ THEN BEGIN N139
+  SAY @186
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",20)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N140
+  SAY @187
+  IF ~~ THEN REPLY @188 GOTO N141
+  IF ~~ THEN REPLY @189 GOTO N144
+  IF ~~ THEN REPLY @190 GOTO N145
+END
+
+IF ~~ THEN BEGIN N141
+  SAY @191
+  IF ~~ THEN REPLY @192 GOTO N142
+END
+
+IF ~~ THEN BEGIN N142
+  SAY @193
+  IF ~~ THEN REPLY @194 GOTO N143
+END
+
+IF ~~ THEN BEGIN N143
+  SAY @195
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N144
+  SAY @196
+  IF ~~ THEN REPLY @197 GOTO N145
+  IF ~~ THEN REPLY @198 GOTO N145
+END
+
+IF ~~ THEN BEGIN N145
+  SAY @199
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaBranch1","LOCALS",22)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N146
+  SAY @200
+  IF ~~ THEN REPLY @201 GOTO N147
+  IF ~~ THEN REPLY @202 GOTO N150
+  IF ~~ THEN REPLY @203 GOTO N154
+END
+
+IF ~~ THEN BEGIN N147
+  SAY @204
+  IF ~~ THEN REPLY @205 GOTO N148
+  IF ~~ THEN REPLY @206 GOTO N158
+  IF ~~ THEN REPLY @207 GOTO N153
+END
+
+IF ~~ THEN BEGIN N148
+  SAY @208
+  IF ~~ THEN REPLY @209 GOTO N149
+  IF ~~ THEN REPLY @210 GOTO N152
+  IF ~~ THEN REPLY @207 GOTO N153
+END
+
+IF ~~ THEN BEGIN N149
+  SAY @211
+  IF ~~ THEN GOTO N151
+END
+
+IF ~~ THEN BEGIN N150
+  SAY @212
+  IF ~~ THEN GOTO N147
+END
+
+IF ~~ THEN BEGIN N151
+  SAY @213
+  IF ~~ THEN REPLY @210 GOTO N152
+  IF ~~ THEN REPLY @207 GOTO N153
+END
+
+IF ~~ THEN BEGIN N152
+  SAY @214
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch1","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N153
+  SAY @215
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N154
+  SAY @216
+  IF ~~ THEN REPLY @217 GOTO N155
+  IF ~~ THEN REPLY @218 GOTO N156
+  IF ~~ THEN REPLY @219 GOTO N157
+END
+
+IF ~~ THEN BEGIN N155
+  SAY @220
+  IF ~~ THEN REPLY @205 GOTO N148
+  IF ~~ THEN REPLY @206 GOTO N158
+END
+
+IF ~~ THEN BEGIN N156
+  SAY @221
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N157
+  SAY @222
+  IF ~~ THEN GOTO N147
+END
+
+IF ~~ THEN BEGIN N158
+  SAY @223
+  IF ~~ THEN REPLY @210 GOTO N152
+  IF ~~ THEN REPLY @207 GOTO N153
+  IF ~~ THEN REPLY @205 GOTO N148
+END
+
+IF ~Global("NaliaBranch1","LOCALS",24)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N159
+  SAY @224
+  IF ~~ THEN GOTO N160
+END
+
+IF ~~ THEN BEGIN N160
+  SAY @225
+  IF ~~ THEN REPLY @226 GOTO N161
+  IF ~~ THEN REPLY @227 GOTO N164
+END
+
+IF ~~ THEN BEGIN N161
+  SAY @228
+  IF ~~ THEN REPLY @229 GOTO N162
+  IF ~Global("Marriage","GLOBAL",7)~ THEN REPLY @230 GOTO N163
+END
+
+IF ~~ THEN BEGIN N162
+  SAY @113
+  IF ~~ THEN DO ~SetGlobal("NaliaBranch1","LOCALS",50)~ EXIT
+END
+
+IF ~~ THEN BEGIN N163
+  SAY @231
+  IF ~~ THEN DO ~SetGlobal("NaliaBranch1","LOCALS",50)~ EXIT
+END
+
+IF ~~ THEN BEGIN N164
+  SAY @232
+  IF ~~ THEN REPLY @233 GOTO N165
+  IF ~~ THEN REPLY @234 GOTO N166
+  IF ~~ THEN REPLY @235 GOTO N169
+END
+
+IF ~~ THEN BEGIN N165
+  SAY @236
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N166
+  SAY @237
+  IF ~~ THEN REPLY @238 GOTO N167
+  IF ~~ THEN REPLY @239 GOTO N168
+  IF ~~ THEN REPLY @240 GOTO N169
+END
+
+IF ~~ THEN BEGIN N167
+  SAY @241
+  IF ~~ THEN DO ~SetGlobal("NaliaBranch1","LOCALS",50)~ EXIT
+END
+
+IF ~~ THEN BEGIN N168
+  SAY @242
+  IF ~~ THEN DO ~SetGlobal("NaliaBranch1","LOCALS",50)~ EXIT
+END
+
+IF ~~ THEN BEGIN N169
+  SAY @243
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaBranch2","LOCALS",4)
+Global("NaliaRomanceActive","GLOBAL",1)
+Global("Yeahyeah","LOCALS",0)~ THEN BEGIN N198
+  SAY @244
+  IF ~Global("FatherMystery","GLOBAL",1)~ THEN REPLY @245 DO ~SetGlobal("Yeahyeah","LOCALS",1)~ GOTO N199
+  IF ~~ THEN REPLY @246 DO ~SetGlobal("Yeahyeah","LOCALS",1)~ GOTO N202
+  IF ~Global("FatherMystery","GLOBAL",1)~ THEN REPLY @247 DO ~SetGlobal("Yeahyeah","LOCALS",1)~ GOTO N203
+  IF ~!Global("FatherMystery","GLOBAL",1)~ THEN REPLY @245 DO ~SetGlobal("Yeahyeah","LOCALS",1)~ GOTO N204
+  IF ~!Global("FatherMystery","GLOBAL",1)~ THEN REPLY @247 DO ~SetGlobal("Yeahyeah","LOCALS",1)~ GOTO N204
+END
+
+IF ~~ THEN BEGIN N199
+  SAY @248
+  IF ~~ THEN REPLY @249 GOTO N200
+  IF ~~ THEN REPLY @250 GOTO N202
+END
+
+IF ~~ THEN BEGIN N200
+  SAY @251
+  IF ~~ THEN REPLY @252 GOTO N206
+  IF ~~ THEN REPLY @253 GOTO N201
+END
+
+IF ~~ THEN BEGIN N201
+  SAY @254
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N202
+  SAY @255
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N203
+  SAY @256
+  IF ~~ THEN REPLY @257 GOTO N200
+  IF ~~ THEN REPLY @258 GOTO N202
+  IF ~~ THEN REPLY @259 GOTO N202
+END
+
+IF ~~ THEN BEGIN N204
+  SAY @260
+  IF ~~ THEN REPLY @261 GOTO N200
+  IF ~~ THEN REPLY @262 GOTO N205
+END
+
+IF ~~ THEN BEGIN N205
+  SAY @263
+  IF ~InParty("Jaheira")~ THEN EXTERN ~BJAHEIR~ N531
+  IF ~!InParty("Jaheira")~ THEN REPLY @264 GOTO N207
+END
+
+IF ~~ THEN BEGIN N206
+  SAY @265
+  IF ~~ THEN GOTO N211
+END
+
+IF ~~ THEN BEGIN N207
+  SAY @266
+  IF ~~ THEN REPLY @252 GOTO N206
+  IF ~~ THEN REPLY @253 GOTO N201
+END
+
+IF ~~ THEN BEGIN N208
+  SAY @267
+  IF ~~ THEN EXTERN ~BJAHEIR~ N532
+END
+
+IF ~~ THEN BEGIN N209
+  SAY @33
+  IF ~~ THEN GOTO N210
+END
+
+IF ~~ THEN BEGIN N210
+  SAY @268
+  IF ~~ THEN REPLY @252 GOTO N206
+  IF ~~ THEN REPLY @253 GOTO N201
+END
+
+IF ~~ THEN BEGIN N211
+  SAY @269
+  IF ~~ THEN EXIT
+END
+
+IF ~Global("Marriage","GLOBAL",2)~ THEN BEGIN N212
+  SAY @270
+  IF ~~ THEN REPLY @271 GOTO N213
+  IF ~~ THEN REPLY @272 GOTO N214
+  IF ~~ THEN REPLY @273 GOTO N217
+END
+
+IF ~~ THEN BEGIN N213
+  SAY @274
+  IF ~~ THEN REPLY @275 GOTO N214
+  IF ~~ THEN REPLY @276 GOTO N215
+END
+
+IF ~~ THEN BEGIN N214
+  SAY @277
+  IF ~~ THEN DO ~SetGlobal("Marriage","GLOBAL",3)
+RealSetGlobalTimer("NaliaBranch2","GLOBAL",1)
+RestParty()~ EXIT
+END
+
+IF ~~ THEN BEGIN N215
+  SAY @278
+  IF ~~ THEN REPLY @279 GOTO N214
+  IF ~~ THEN REPLY @280 GOTO N216
+END
+
+IF ~~ THEN BEGIN N216
+  SAY @281
+  IF ~~ THEN DO ~LeaveParty()
+GivePartyAllEquipment()
+SetGlobal("SPRITE_IS_DEADNalia","GLOBAL",1)
+EscapeArea()
+~ EXIT
+END
+
+IF ~~ THEN BEGIN N217
+  SAY @282
+  IF ~~ THEN REPLY @283 GOTO N214
+  IF ~~ THEN REPLY @284 GOTO N215
+END
+
+IF ~Global("Marriage","GLOBAL",5)~ THEN BEGIN N218
+  SAY @285
+  IF ~~ THEN DO ~IncrementGlobal("Marriage","GLOBAL",1)~ GOTO N219
+END
+
+IF ~~ THEN BEGIN N219
+  SAY @286
+  IF ~~ THEN DO ~StartCutSceneMode()
+StartCutScene("Marry09")~ EXIT
+END
+
+IF ~Global("Marriage","GLOBAL",6)~ THEN BEGIN N220
+  SAY @287 
+  IF ~~ THEN DO ~SetGlobal("Marriage","GLOBAL",7)~ GOTO N221
+END
+
+IF ~~ THEN BEGIN N221
+  SAY @288
+  IF ~~ THEN EXTERN ~ISAEA~ N33
+END
+
+IF ~~ THEN BEGIN N222
+  SAY @289
+  IF ~~ THEN EXTERN ~ISAEA~ N34
+END
+
+IF ~Global("NaliaBranch2","LOCALS",6)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N223
+  SAY @290
+  IF ~~ THEN REPLY @291 GOTO N224
+  IF ~~ THEN REPLY @292 GOTO N226
+END
+
+IF ~~ THEN BEGIN N224
+  SAY @293
+  IF ~~ THEN REPLY @294 GOTO N230
+  IF ~~ THEN REPLY @295 GOTO N225
+END
+
+IF ~~ THEN BEGIN N225
+  SAY @296
+  IF ~~ THEN GOTO N233
+END
+
+IF ~~ THEN BEGIN N226
+  SAY @297
+  IF ~~ THEN REPLY @298 GOTO N227
+  IF ~~ THEN REPLY @299 GOTO N228
+END
+
+IF ~~ THEN BEGIN N227
+  SAY @300
+  IF ~~ THEN REPLY @301 GOTO N229
+  IF ~~ THEN REPLY @302 GOTO N231
+  IF ~~ THEN REPLY @303 GOTO N232
+END
+
+IF ~~ THEN BEGIN N228
+  SAY @304
+  IF ~~ THEN REPLY @301 GOTO N229
+  IF ~~ THEN REPLY @302 GOTO N231
+  IF ~~ THEN REPLY @303 GOTO N232
+END
+
+IF ~~ THEN BEGIN N229
+  SAY @305
+  IF ~~ THEN REPLY @306 GOTO N230
+  IF ~~ THEN REPLY @307 GOTO N234
+END
+
+IF ~~ THEN BEGIN N230
+  SAY @308
+  IF ~~ THEN DO ~LeaveParty()
+GivePartyAllEquipment()
+SetGlobal("SPRITE_IS_DEADNalia","GLOBAL",1)
+EscapeArea()~ EXIT
+END
+
+IF ~~ THEN BEGIN N231
+  SAY @309
+  IF ~~ THEN GOTO N233
+END
+
+IF ~~ THEN BEGIN N232
+  SAY @310
+  IF ~~ THEN GOTO N233
+END
+
+IF ~~ THEN BEGIN N233
+  SAY @311
+  IF ~~ THEN GOTO N234
+END
+
+IF ~~ THEN BEGIN N234
+  SAY @312
+  IF ~~ THEN REPLY @313 GOTO N235
+END
+
+IF ~~ THEN BEGIN N235
+  SAY @314
+  IF ~~ THEN DO ~SetGlobal("NaliaQuest","GLOBAL",1)~ GOTO N236
+END
+
+IF ~~ THEN BEGIN N236
+  SAY @315
+  IF ~~ THEN REPLY @316 GOTO N237
+  IF ~~ THEN REPLY @317 GOTO N238
+  IF ~~ THEN REPLY @318 GOTO N238
+  IF ~~ THEN REPLY @319 GOTO N239
+END
+
+IF ~~ THEN BEGIN N237
+  SAY @320
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
+AddJournalEntry(75241,QUEST)~ EXIT
+END
+
+IF ~~ THEN BEGIN N238
+  SAY @321
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
+AddJournalEntry(75241,QUEST)~ EXIT
+END
+
+IF ~~ THEN BEGIN N239
+  SAY @322
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
+AddJournalEntry(75241,QUEST)~ EXIT
+END
+
+IF ~Global("NaliaBranch2","LOCALS",8)
+Global("NaliaRomanceActive","GLOBAL",1)
+!Global("AlreadySeenDocuments","LOCALS",1)~ THEN BEGIN N240
+  SAY @323
+  IF ~~ THEN DO ~SetGlobal("AlreadySeenDocuments","LOCALS",1)~ GOTO N241
+END
+
+IF ~~ THEN BEGIN N241
+  SAY @324
+  IF ~~ THEN DO ~AddJournalEntry(75244,QUEST)~ EXIT
+END
+
+IF ~Global("NaliaBranch2","LOCALS",10)
+Global("NaliaRomanceActive","GLOBAL",1)~ THEN BEGIN N242
+  SAY @325
+  IF ~~ THEN GOTO N243
+END
+
+IF ~~ THEN BEGIN N243
+  SAY @326
+  IF ~IsValidForPartyDialogue("Aerie")~ THEN EXTERN ~BAERIE~ N220
+  IF ~!IsValidForPartyDialogue("Aerie")
+IsValidForPartyDialogue("Viconia")~ THEN EXTERN ~BVICONI~ N184
+  IF ~!IsValidForPartyDialogue("Aerie")
+!IsValidForPartyDialogue("Viconia")
+IsValidForPartyDialogue("Jaheira")~ THEN EXTERN ~BJAHEIR~ N534
+  IF ~!IsValidForPartyDialogue("Aerie")
+!IsValidForPartyDialogue("Viconia")
+!IsValidForPartyDialogue("Jaheira")~ THEN REPLY @327 GOTO N244
+  IF ~!IsValidForPartyDialogue("Aerie")
+!IsValidForPartyDialogue("Viconia")
+!IsValidForPartyDialogue("Jaheira")~ THEN REPLY @328 GOTO N245
+  IF ~!IsValidForPartyDialogue("Aerie")
+!IsValidForPartyDialogue("Viconia")
+!IsValidForPartyDialogue("Jaheira")~ THEN REPLY @329 GOTO N248
+END
+
+IF ~~ THEN BEGIN N244
+  SAY @330
+  IF ~~ THEN DO ~SetGlobal("SleptNalia","GLOBAL",1)
+IncrementGlobal("NaliaBranch2","LOCALS",1)
+RestParty()~ EXIT
+END
+
+IF ~~ THEN BEGIN N245
+  SAY @331
+  IF ~~ THEN REPLY @332 GOTO N246
+  IF ~~ THEN REPLY @333 GOTO N247
+  IF ~~ THEN REPLY @334 GOTO N247
+END
+
+IF ~~ THEN BEGIN N246
+  SAY @335
+  IF ~~ THEN DO ~SetGlobal("SleptNalia","GLOBAL",1)
+IncrementGlobal("NaliaBranch2","LOCALS",1)
+RestParty()~ EXIT
+END
+
+IF ~~ THEN BEGIN N247
+  SAY @336
+  IF ~~ THEN DO ~SetGlobal("SleptNalia","GLOBAL",2)
+IncrementGlobal("NaliaBranch2","LOCALS",1)
+RestParty()~ EXIT
+END
+
+IF ~~ THEN BEGIN N248
+  SAY @337
+  IF ~~ THEN REPLY @338 GOTO N249
+  IF ~~ THEN REPLY @339 GOTO N251
+  IF ~~ THEN REPLY @340 GOTO N252
+  IF ~~ THEN REPLY @341 GOTO N249
+END
+
+IF ~~ THEN BEGIN N249
+  SAY @342
+  IF ~~ THEN REPLY @343 GOTO N245
+  IF ~~ THEN REPLY @344 GOTO N250
+END
+
+IF ~~ THEN BEGIN N250
+  SAY @345
+  IF ~~ THEN DO ~SetGlobal("SleptNalia","GLOBAL",1)
+IncrementGlobal("NaliaBranch2","LOCALS",1)
+RestParty()~ EXIT
+END
+
+IF ~~ THEN BEGIN N251
+  SAY @346
+  IF ~~ THEN REPLY @347 GOTO N250
+  IF ~~ THEN REPLY @348 GOTO N247
+END
+
+IF ~~ THEN BEGIN N252
+  SAY @349
+  IF ~~ THEN REPLY @347 GOTO N250
+  IF ~~ THEN REPLY @348 GOTO N247
+END
+
+IF ~~ THEN BEGIN N253
+  SAY @350
+  IF ~~ THEN GOTO N254
+END
+
+IF ~~ THEN BEGIN N254
+  SAY @351
+  IF ~~ THEN REPLY @327 GOTO N244
+  IF ~~ THEN REPLY @328 GOTO N245
+  IF ~~ THEN REPLY @329 GOTO N248
+END
+
+IF ~~ THEN BEGIN N255
+  SAY @352
+  IF ~~ THEN GOTO N254
+END
+
+IF ~~ THEN BEGIN N256
+  SAY @353
+  IF ~~ THEN GOTO N254
+END
+
+IF ~Global("NaliaBranch2","LOCALS",12)
+Global("NaliaRomanceActive","GLOBAL",1)
+Global("SleptNalia","GLOBAL",2)~ THEN BEGIN Nalia257
+  SAY @354
+  IF ~!IsValidForPartyDialog("Jaheira")
+!IsValidForPartyDialog("Viconia")
+!IsValidForPartyDialog("Keldorn")~ THEN GOTO Nalia259
+  IF ~IsValidForPartyDialog("Jaheira")~ THEN EXTERN ~BJAHEIR~ Nalia535
+  IF ~!IsValidForPartyDialog("Jaheira")
+IsValidForPartyDialog("Viconia")~ THEN EXTERN ~BVICONI~ Nalia185
+  IF ~!IsValidForPartyDialog("Jaheira")
+!IsValidForPartyDialog("Viconia")
+IsValidForPartyDialog("Keldorn")
+~ THEN EXTERN ~BKELDOR~ Nalia252
+END
+
+IF ~Global("NaliaBranch2","LOCALS",12)
+Global("NaliaRomanceActive","GLOBAL",1)
+Global("SleptNalia","GLOBAL",1)~ THEN BEGIN Nalia258
+  SAY @355
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ GOTO Nalia265
+END
+
+IF ~~ THEN BEGIN Nalia259
+  SAY @356
+  IF ~~ THEN REPLY @357 GOTO Nalia260
+  IF ~~ THEN REPLY @358 GOTO Nalia263
+  IF ~~ THEN REPLY @359 GOTO Nalia264
+END
+
+IF ~~ THEN BEGIN Nalia260
+  SAY @360
+  IF ~~ THEN GOTO Nalia261
+END
+
+IF ~~ THEN BEGIN Nalia261
+  SAY @361
+  IF ~~ THEN GOTO Nalia262
+END
+
+IF ~~ THEN BEGIN Nalia262
+  SAY @362
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
+RealSetGlobalTimer("NaliaBranch2","GLOBAL",900)~ EXIT
+END
+
+IF ~~ THEN BEGIN Nalia263
+  SAY @363
+  IF ~~ THEN GOTO Nalia262
+END
+
+IF ~~ THEN BEGIN Nalia264
+  SAY @364
+  IF ~~ THEN GOTO Nalia262
+END
+
+IF ~~ THEN BEGIN Nalia265
+  SAY @365
+  IF ~!IsValidForPartyDialog("Aerie")
+!IsValidForPartyDialog("Viconia")
+!IsValidForPartyDialog("Jaheira")
+!IsValidForPartyDialog("Edwin")~ THEN EXIT
+  IF ~IsValidForPartyDialog("Aerie")~ THEN EXTERN ~BAERIE~ N221
+  IF ~!IsValidForPartyDialog("Aerie")
+IsValidForPartyDialog("Viconia")~ THEN EXTERN ~BVICONI~ N186
+  IF ~!IsValidForPartyDialog("Aerie")
+!IsValidForPartyDialog("Viconia")
+IsValidForPartyDialog("Jaheira")~ THEN EXTERN ~BJAHEIR~ N536
+  IF ~!IsValidForPartyDialog("Aerie")
+!IsValidForPartyDialog("Viconia")
+!IsValidForPartyDialog("Jaheira")
+IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BEDWIN~ BEDWIN188
+END
+
+IF ~~ THEN BEGIN N266
+  SAY @366
+  IF ~~ THEN EXIT
+END
+
+IF ~Global("Isduel","GLOBAL",5)~ THEN BEGIN N267
+  SAY @367
+  IF ~~ THEN GOTO N268
+END
+
+IF ~~ THEN BEGIN N268
+  SAY @368
+  IF ~~ THEN GOTO N269
+END
+
+IF ~~ THEN BEGIN N269
+  SAY @369
+  IF ~!IsValidForPartyDialog("Korgan")
+!IsValidForPartyDialog("Keldorn")
+!IsValidForPartyDialog("Anomen")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
+AddJournalEntry(75246,QUEST)~ EXIT
+  IF ~IsValidForPartyDialog("Korgan")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
+AddJournalEntry(75246,QUEST)~ EXTERN ~BKORGAN~ N222
+  IF ~!IsValidForPartyDialog("Korgan")
+IsValidForPartyDialog("Keldorn")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
+AddJournalEntry(75246,QUEST)~ EXTERN ~BKELDOR~ N253
+  IF ~!IsValidForPartyDialog("Korgan")
+!IsValidForPartyDialog("Keldorn")
+IsValidForPartyDialog("Anomen")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
+AddJournalEntry(75246,QUEST)~ EXTERN ~BANOMEN~ N310
+END
+
+IF ~Global("Isduel","GLOBAL",9)~ THEN BEGIN N270
+  SAY @370
+  IF ~~ THEN GOTO N271
+END
+
+IF ~~ THEN BEGIN N271
+  SAY @371
+  IF ~~ THEN DO ~SetGlobal("NaliaBranch2","LOCALS",50)
+SetGlobal("Isduel","GLOBAL",10)
+EraseJournalEntry(75246)
+AddJournalEntry(75247,QUEST_DONE)~ EXIT
+END
+
+IF ~Global("NaliaRomanceActive","GLOBAL",1)
+Global("NaliaBranch3","LOCALS",2)~ THEN BEGIN N272
+  SAY @372
+  IF ~~ THEN GOTO N273
+END
+
+IF ~~ THEN BEGIN N273
+  SAY @373
+  IF ~~ THEN REPLY @374 GOTO N274
+  IF ~~ THEN REPLY @375 GOTO N274
+  IF ~~ THEN REPLY @376 GOTO N279
+END
+
+IF ~~ THEN BEGIN N274
+  SAY @377
+  IF ~~ THEN REPLY @378 GOTO N275
+  IF ~~ THEN REPLY @379 GOTO N278
+END
+
+IF ~~ THEN BEGIN N275
+  SAY @380
+  IF ~~ THEN REPLY @381 GOTO N276
+  IF ~~ THEN REPLY @382 GOTO N277
+END
+
+IF ~~ THEN BEGIN N276
+  SAY @383
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N277
+  SAY @384
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N278
+  SAY @385
+  IF ~~ THEN REPLY @381 GOTO N276
+  IF ~~ THEN REPLY @382 GOTO N277
+END
+
+IF ~~ THEN BEGIN N279
+  SAY @386
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaRomanceActive","GLOBAL",1)
+Global("NaliaBranch3","LOCALS",4)~ THEN BEGIN N280
+  SAY @387
+  IF ~~ THEN REPLY @388 GOTO N281
+  IF ~~ THEN REPLY @389 GOTO N285
+END
+
+IF ~~ THEN BEGIN N281
+  SAY @390
+  IF ~~ THEN REPLY @391 GOTO N282
+  IF ~~ THEN REPLY @392 GOTO N284
+END
+
+IF ~~ THEN BEGIN N282
+  SAY @393
+  IF ~~ THEN GOTO N283
+END
+
+IF ~~ THEN BEGIN N283
+  SAY @394
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N284
+  SAY @395
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N285
+  SAY @396
+  IF ~~ THEN REPLY @388 GOTO N286
+  IF ~~ THEN REPLY @397 GOTO N282
+END
+
+IF ~~ THEN BEGIN N286
+  SAY @398
+  IF ~~ THEN REPLY @391 GOTO N282
+  IF ~~ THEN REPLY @399 GOTO N287
+  IF ~~ THEN REPLY @400 GOTO N288
+END
+
+IF ~~ THEN BEGIN N287
+  SAY @401
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N288
+  SAY @402
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaRomanceActive","GLOBAL",1)
+Global("NaliaBranch3","LOCALS",6)~ THEN BEGIN N289
+  SAY @403
+  IF ~~ THEN REPLY @39 GOTO N290
+  IF ~~ THEN REPLY @404 GOTO N295
+  IF ~~ THEN REPLY @405 GOTO N296
+END
+
+IF ~~ THEN BEGIN N290
+  SAY @406
+  IF ~~ THEN GOTO N291
+END
+
+IF ~~ THEN BEGIN N291
+  SAY @407
+  IF ~~ THEN REPLY @408 GOTO N292
+  IF ~~ THEN REPLY @409 GOTO N293
+  IF ~~ THEN REPLY @410 GOTO N294
+END
+
+IF ~~ THEN BEGIN N292
+  SAY @411
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N293
+  SAY @412
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N294
+  SAY @413
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N295
+  SAY @414
+  IF ~~ THEN GOTO N290
+END
+
+IF ~~ THEN BEGIN N296
+  SAY @23
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaRomanceActive","GLOBAL",1)
+Global("NaliaBranch3","LOCALS",8)~ THEN BEGIN N297
+  SAY @415
+  IF ~~ THEN REPLY @416 GOTO N298
+  IF ~~ THEN REPLY @417 GOTO N299
+END
+
+IF ~~ THEN BEGIN N298
+  SAY @418
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N299
+  SAY @419
+  IF ~~ THEN GOTO N300
+END
+
+IF ~~ THEN BEGIN N300
+  SAY @420
+  IF ~~ THEN REPLY @421 GOTO N301
+  IF ~~ THEN REPLY @422 GOTO N308
+END
+
+IF ~~ THEN BEGIN N301
+  SAY @423
+  IF ~~ THEN GOTO N302
+END
+
+IF ~~ THEN BEGIN N302
+  SAY @424
+  IF ~~ THEN GOTO N303
+END
+
+IF ~~ THEN BEGIN N303
+  SAY @425
+  IF ~~ THEN REPLY @426 GOTO N304
+  IF ~~ THEN REPLY @427 GOTO N307
+END
+
+IF ~~ THEN BEGIN N304
+  SAY @428
+  IF ~~ THEN REPLY @429 GOTO N305
+  IF ~~ THEN REPLY @430 GOTO N306
+END
+
+IF ~~ THEN BEGIN N305
+  SAY @431
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)
+AddJournalEntry(75248,QUEST)~ EXIT
+END
+
+IF ~~ THEN BEGIN N306
+  SAY @432
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)
+AddJournalEntry(75248,QUEST)~ EXIT
+END
+
+IF ~~ THEN BEGIN N307
+  SAY @433
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N308
+  SAY @434
+  IF ~~ THEN GOTO N302
+END
+
+IF ~Global("NaliaRomanceActive","GLOBAL",1)
+Global("NaliaBranch3","LOCALS",10)~ THEN BEGIN N309
+  SAY @435
+  IF ~~ THEN GOTO N310
+END
+
+IF ~~ THEN BEGIN N310
+  SAY @436
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)
+CreateCreature("BADBAD01",[2762.3322],3)~ EXIT
+END
+
+IF ~Global("NaliaBranch3","LOCALS",16)~ THEN BEGIN N311
+  SAY @437
+  IF ~!IsValidForPartyDialog("Keldorn")~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)
+SetGlobal("JosephQuest","GLOBAL",1)
+AddJournalEntry(75249,QUEST)~ GOTO N312
+  IF ~IsValidForPartyDialog("Keldorn")~ THEN DO ~IncrementGlobal("NaliaBranch3","LOCALS",1)
+SetGlobal("JosephQuest","GLOBAL",1)
+AddJournalEntry(75249,QUEST)~ EXTERN ~BKELDOR~ N255
+END
+
+IF ~~ THEN BEGIN N312
+  SAY @438
+  IF ~~ THEN EXIT
+END
+
+IF ~Global("JosephQuest","GLOBAL",3)
+Global("NaliaBranch3","LOCALS",18)~ THEN BEGIN N313
+  SAY @439
+  IF ~~ THEN DO ~IncrementGlobal("JosephQuest","GLOBAL",1)
+IncrementGlobal("NaliaBranch3","LOCALS",1)
+RealSetGlobalTimer("JosephArrive","GLOBAL",15)~ EXIT
+END
+
+IF ~Global("JosephQuest","GLOBAL",8)~ THEN BEGIN N314
+  SAY @440
+  IF ~!IsValidForPartyDialog("Jaheira")~ THEN REPLY @441 DO ~SetGlobal("JosephQuest","GLOBAL",9)
+IncrementGlobal("NaliaBranch3","LOCALS",2)
+RealSetGlobalTimer("NaliaBranch3","GLOBAL",300)~ GOTO N315
+  IF ~IsValidForPartyDialog("Jaheira")~ THEN DO ~SetGlobal("JosephQuest","GLOBAL",9)
+IncrementGlobal("NaliaBranch3","LOCALS",2)
+RealSetGlobalTimer("NaliaBranch3","GLOBAL",300)~ EXTERN ~BJAHEIR~ N538
+END
+
+IF ~~ THEN BEGIN N315
+  SAY @442
+  IF ~~ THEN GOTO N316
+END
+
+IF ~~ THEN BEGIN N316
+  SAY @443
+  IF ~~ THEN DO ~EraseJournalEntry(75248)
+EraseJournalEntry(75249)
+EraseJournalEntry(75250)
+AddJournalEntry(75251,QUEST_DONE)
+StartCutSceneMode()
+StartCutScene("Getout")~ EXIT
+END
+
+IF ~Global("NaliaBranch3","LOCALS",22)~ THEN BEGIN N317
+  SAY @444
+  IF ~~ THEN REPLY @445 DO ~SetGlobal("NaliaBranch3","LOCALS",50)~ GOTO N318
+  IF ~~ THEN REPLY @446 DO ~SetGlobal("NaliaBranch3","LOCALS",50)~ GOTO N325
+END
+
+IF ~~ THEN BEGIN N318
+  SAY @447
+  IF ~~ THEN REPLY @448 GOTO N319
+  IF ~~ THEN REPLY @449 GOTO N321
+END
+
+IF ~~ THEN BEGIN N319
+  SAY @450
+  IF ~~ THEN REPLY @451 GOTO N320
+  IF ~~ THEN REPLY @452 GOTO N321
+END
+
+IF ~~ THEN BEGIN N320
+  SAY @453
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN N321
+  SAY @454
+  IF ~~ THEN REPLY @455 GOTO N322
+  IF ~~ THEN REPLY @456 GOTO N324
+END
+
+IF ~~ THEN BEGIN N322
+  SAY @457
+  IF ~~ THEN GOTO N323
+END
+
+IF ~~ THEN BEGIN N323
+  SAY @458
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN N324
+  SAY @459
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN N325
+  SAY @460
+  IF ~~ THEN REPLY @455 GOTO N322
+  IF ~~ THEN REPLY @456 GOTO N324
+END
+
+IF ~Global("NaliaBranch4","LOCALS",2)~ THEN BEGIN N326
+  SAY @461
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)~ GOTO N327
+END
+
+IF ~~ THEN BEGIN N327
+  SAY @462
+  IF ~~ THEN REPLY @463 GOTO N435
+  IF ~~ THEN REPLY @464 GOTO N436
+END
+
+IF ~~ THEN BEGIN N435
+  SAY @465
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N436
+  SAY @466
+  IF ~~ THEN REPLY @467 DO ~SetGlobal("NaliaRomanceActive","GLOBAL",2)
+RealSetGlobalTimer("NaliaBranch4","GLOBAL",10)
+SetGlobal("AerieRomanceActive","GLOBAL",3)
+SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+SetGlobal("ViconiaRomanceActive","GLOBAL",3)~ GOTO N437
+  IF ~~ THEN REPLY @468 DO ~SetGlobal("NaliaRomanceActive","GLOBAL",2)
+RealSetGlobalTimer("NaliaBranch4","GLOBAL",10)
+SetGlobal("AerieRomanceActive","GLOBAL",3)
+SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+SetGlobal("ViconiaRomanceActive","GLOBAL",3)~ GOTO N438
+  IF ~~ THEN REPLY @469 DO ~SetGlobal("NaliaRomanceActive","GLOBAL",2)
+RealSetGlobalTimer("NaliaBranch4","GLOBAL",10)
+SetGlobal("AerieRomanceActive","GLOBAL",3)
+SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+SetGlobal("ViconiaRomanceActive","GLOBAL",3)~ GOTO N439
+END
+
+IF ~~ THEN BEGIN N437
+  SAY @470
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN N438
+  SAY @471
+  IF ~~ THEN DO ~~ EXIT
+END
+
+IF ~~ THEN BEGIN N439
+  SAY @472
+  IF ~~ THEN EXIT
+END
+
+IF ~Global("NaliaBranch4","LOCALS",4)~ THEN BEGIN N328
+  SAY @473
+  IF ~~ THEN GOTO N329
+END
+
+IF ~~ THEN BEGIN N329
+  SAY @474
+  IF ~~ THEN REPLY @475 GOTO N330
+  IF ~~ THEN REPLY @476 GOTO N331
+  IF ~~ THEN REPLY @477 GOTO N332
+END
+
+IF ~~ THEN BEGIN N330
+  SAY @478
+  IF ~~ THEN REPLY @476 GOTO N331
+  IF ~~ THEN REPLY @477 GOTO N332
+END
+
+IF ~~ THEN BEGIN N331
+  SAY @479
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N332
+  SAY @480
+  IF ~~ THEN REPLY @481 GOTO N333
+  IF ~~ THEN REPLY @482 GOTO N331
+END
+
+IF ~~ THEN BEGIN N333
+  SAY @483
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~Global("NaliaBranch4","LOCALS",6)~ THEN BEGIN N334
+  SAY @484
+  IF ~~ THEN GOTO N335
+END
+
+IF ~~ THEN BEGIN N335
+  SAY @485
+  IF ~~ THEN GOTO N336
+END
+
+IF ~~ THEN BEGIN N336
+  SAY @486
+  IF ~~ THEN GOTO N337
+END
+
+IF ~~ THEN BEGIN N337
+  SAY @487
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaBranch4","LOCALS",10)~ THEN BEGIN N338
+  SAY @488
+  IF ~~ THEN REPLY @489 GOTO N339
+  IF ~~ THEN REPLY @490 GOTO N339
+END
+
+IF ~~ THEN BEGIN N339
+  SAY @491
+  IF ~~ THEN GOTO N340
+END
+
+IF ~~ THEN BEGIN N340
+  SAY @492
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)~ EXIT
+END
+
+IF ~Global("NaliaBranch4","LOCALS",12)~ THEN BEGIN 341
+  SAY @493
+  IF ~~ THEN REPLY @494 GOTO N342
+  IF ~~ THEN REPLY @495 GOTO N345
+  IF ~~ THEN REPLY @496 GOTO N346
+END
+
+IF ~~ THEN BEGIN N342
+  SAY @497
+  IF ~~ THEN REPLY @498 GOTO N343
+  IF ~~ THEN REPLY @499 GOTO N344
+END
+
+IF ~~ THEN BEGIN N343
+  SAY @500
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N344
+  SAY @501
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN N345
+  SAY @502
+  IF ~~ THEN GOTO N342
+END
+
+IF ~~ THEN BEGIN N346
+  SAY @503
+  IF ~~ THEN REPLY @498 GOTO N343
+  IF ~~ THEN REPLY @499 GOTO N344
+END
+
+IF ~Global("NaliaBranch4","LOCALS",14)~ THEN BEGIN N347
+  SAY @504
+  IF ~~ THEN REPLY @505 GOTO N348
+  IF ~~ THEN REPLY @506 GOTO N348
+END
+
+IF ~~ THEN BEGIN N348
+  SAY @507
+  IF ~~ THEN GOTO N349
+END
+
+IF ~~ THEN BEGIN N349
+  SAY @508
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)
+RestParty()~ EXIT
+END
+
+IF ~Global("NaliaBranch4","LOCALS",8)~ THEN BEGIN N350
+  SAY @509
+  IF ~~ THEN GOTO N351
+END
+
+IF ~~ THEN BEGIN N351
+  SAY @510
+  IF ~~ THEN REPLY @511 GOTO N352
+  IF ~~ THEN REPLY @512 GOTO N354
+END
+
+IF ~~ THEN BEGIN N352
+  SAY @513
+  IF ~~ THEN REPLY @514 DO ~IncrementGlobal("NaliaBranch4","LOCALS",1)
+RealSetGlobalTimer("NaliaBranch4","GLOBAL",2)
+RestParty()~ EXIT
+  IF ~~ THEN REPLY @515 GOTO N353
+END
+
+IF ~~ THEN BEGIN N353
+  SAY @516
+  IF ~~ THEN DO ~SetGlobal("NaliaRomanceActive","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN N354
+  SAY @517
+  IF ~~ THEN REPLY @518 GOTO N355
+  IF ~~ THEN REPLY @519 GOTO N356
+END
+
+IF ~~ THEN BEGIN N355
+  SAY @520
+  IF ~~ THEN DO ~IncrementGlobal("NaliaBranch4","LOCALS",1) RealSetGlobalTimer("NaliaBranch4","GLOBAL",2) RestParty()~ EXIT
+END
+
+IF ~~ THEN BEGIN N356
+  SAY @521
+  IF ~~ THEN REPLY @514 DO ~IncrementGlobal("NaliaBranch4","LOCALS",1) RealSetGlobalTimer("NaliaBranch4","GLOBAL",2) RestParty()~ EXIT
+  IF ~~ THEN REPLY @515 GOTO N353
+END
+
+IF ~Global("NaliaInteractionx","GLOBAL",2)~ THEN BEGIN N357
+  SAY @522
+  IF ~~ THEN GOTO N358
+END
+
+IF ~~ THEN BEGIN N358
+  SAY @523
+  IF ~~ THEN DO ~SetGlobal("NaliaInteractionx","GLOBAL",5)~ EXIT
+END
+
+IF ~Global("NaliaInteractionx","GLOBAL",4)~ THEN BEGIN N359
+  SAY @524
+  IF ~~ THEN GOTO N358
+END
+
+IF ~Global("NaliaInteractionx","GLOBAL",6)~ THEN BEGIN N360
+  SAY @525
+  IF ~~ THEN DO ~SetGlobal("NaliaInteractionx","GLOBAL",7)~ EXIT
+END
+
+IF ~Global("NaliaInteractionx","GLOBAL",8)~ THEN BEGIN N361
+  SAY @526
+  IF ~~ THEN GOTO N362
+END
+
+IF ~~ THEN BEGIN N362
+  SAY @527
+  IF ~~ THEN DO ~SetGlobal("NaliaInteractionx","GLOBAL",9)~ EXIT
+END
+
+END
+
+APPEND ~BKORGAN~
+
+IF ~~ THEN BEGIN N222
+  SAY @528
+  IF ~!IsValidForPartyDialog("Keldorn") !IsValidForPartyDialog("Anomen")~ THEN EXIT
+  IF ~IsValidForPartyDialog("Keldorn")~ THEN EXTERN ~BKELDOR~ N253
+  IF ~!IsValidForPartyDialog("Keldorn") IsValidForPartyDialog("Anomen")~ THEN EXTERN ~BANOMEN~ N310
+END
+
+END
+
+APPEND ~BAERIE~
+
+IF ~~ THEN BEGIN N220
+  SAY @529
+  IF ~IsValidForPartyDialogue("Viconia")~ THEN EXTERN ~BVICONI~ N184
+  IF ~!IsValidForPartyDialogue("Viconia") IsValidForPartyDialogue("Jaheira")~ THEN EXTERN ~BJAHEIR~ N534
+  IF ~!IsValidForPartyDialogue("Viconia") !IsValidForPartyDialogue("Jaheira")~ THEN EXTERN ~BNALIA~ N253
+END
+
+IF ~~ THEN BEGIN N221
+  SAY @530
+  IF ~!IsValidForPartyDialog("Viconia") !IsValidForPartyDialog("Jaheira")
+!IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BNALIA~ N266
+  IF ~IsValidForPartyDialog("Viconia")~ THEN EXTERN ~BVICONI~ N186
+  IF ~!IsValidForPartyDialog("Viconia")
+IsValidForPartyDialog("Jaheira")~ THEN EXTERN ~BJAHEIR~ N536
+  IF ~!IsValidForPartyDialog("Viconia")
+!IsValidForPartyDialog("Jaheira") IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BEDWIN~ BEDWIN188
+END
+
+END
+
+APPEND ~BEDWIN~
+
+IF ~~ THEN BEGIN BEDWIN188
+  SAY @531
+  IF ~~ THEN EXTERN ~BNALIA~ N266
+END
+
+END
+
+APPEND ~BKELDOR~
+
+IF ~~ THEN BEGIN Nalia252
+  SAY @532
+  IF ~~ THEN EXTERN ~BNALIA~ Nalia259
+END
+
+IF ~~ THEN BEGIN N253
+  SAY @533
+  IF ~!IsValidForPartyDialog("Anomen")~ THEN EXIT
+  IF ~IsValidForPartyDialog("Anomen")~ THEN EXTERN ~BANOMEN~ N310
+END
+
+IF ~~ THEN BEGIN N255
+  SAY @534
+  IF ~~ THEN EXIT
+END
+
+END
+
+APPEND ~BJAHEIR~
+
+IF ~~ THEN BEGIN N531
+  SAY @535
+  IF ~~ THEN EXTERN ~BNALIA~ N208
+END
+
+IF ~~ THEN BEGIN N532
+  SAY @536
+  IF ~~ THEN EXTERN ~BNALIA~ N209
+END
+
+IF ~~ THEN BEGIN N534
+  SAY @537
+  IF ~~ THEN EXTERN ~BNALIA~ N256
+END
+
+IF ~~ THEN BEGIN Nalia535
+  SAY @538
+  IF ~!IsValidForPartyDialog("Viconia") !IsValidForPartyDialog("Keldorn")~ THEN EXTERN ~BNALIA~ Nalia259
+  IF ~IsValidForPartyDialog("Viconia")~ THEN EXTERN ~BVICONI~ Nalia185
+  IF ~!IsValidForPartyDialog("Viconia")
+IsValidForPartyDialog("Keldorn")~ THEN EXTERN ~BKELDOR~ Nalia252
+END
+
+IF ~~ THEN BEGIN N536
+  SAY @539
+  IF ~~ THEN GOTO N537
+END
+
+IF ~~ THEN BEGIN N537
+  SAY @540
+  IF ~!IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BNALIA~ N266
+  IF ~IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BEDWIN~ BEDWIN188
+END
+
+IF ~~ THEN BEGIN N538
+  SAY @441
+  IF ~~ THEN EXTERN ~BNALIA~ N315
+END
+
+END
+
+APPEND ~BVICONI~
+
+IF ~~ THEN BEGIN N184
+  SAY @541
+  IF ~IsValidForPartyDialogue("Jaheira")~ THEN EXTERN ~BJAHEIR~ N534
+  IF ~!IsValidForPartyDialogue("Jaheira")~ THEN EXTERN ~BNALIA~ N255
+END
+
+IF ~~ THEN BEGIN Nalia185
+  SAY @542
+  IF ~!IsValidForPartyDialog("Keldorn")~ THEN EXTERN ~BNALIA~ Nalia259
+  IF ~IsValidForPartyDialog("Keldorn")~ THEN EXTERN ~BKELDOR~ Nalia252
+END
+
+IF ~~ THEN BEGIN N186
+  SAY @543
+  IF ~!IsValidForPartyDialog("Jaheira")
+!IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BNALIA~ N266
+  IF ~IsValidForPartyDialog("Jaheira")~ THEN EXTERN ~BJAHEIR~ N536
+  IF ~!IsValidForPartyDialog("Jaheira") IsValidForPartyDialog("Edwin")~ THEN EXTERN ~BEDWIN~ BEDWIN188
+END
+
+END
+
+APPEND ~ISAEA~
+
+IF ~~ THEN BEGIN N33
+  SAY @544
+  IF ~~ THEN EXTERN ~BNALIA~ N222
+END
+
+IF ~~ THEN BEGIN N34
+  SAY @545 
+  IF ~~ THEN DO ~EscapeArea()~ EXIT
+END
+
+END
+
+APPEND ~BANOMEN~
+
+IF ~~ THEN BEGIN N310
+  SAY @546
+  IF ~~ THEN EXIT
+END
+
+END
+

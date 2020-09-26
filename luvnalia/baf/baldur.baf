@@ -1,0 +1,42 @@
+IF
+  OR(2)
+    Global("NaliaRomanceActive","GLOBAL",1)
+    Global("NaliaRomanceActive","GLOBAL",2)
+  !InPartyAllowDead("Nalia")
+  Dead("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaRomanceActive","GLOBAL",3)
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaRomanceOut","GLOBAL",0)
+  !InPartyAllowDead("Nalia")
+  !Dead("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaRomanceOut","GLOBAL",1)
+    SetGlobalTimer("NaliaOutOfParty","GLOBAL",THREE_DAYS)
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaRomanceOut","GLOBAL",1)
+  GlobalTimerExpired("NaliaOutOfParty","GLOBAL")
+  !InPartyAllowDead("Nalia")
+  !Dead("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaRomanceActive","GLOBAL",3)
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaRomanceOut","GLOBAL",1)
+  !GlobalTimerExpired("NaliaOutOfParty","GLOBAL")
+  InPartyAllowDead("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaRomanceOut","GLOBAL",0)
+END

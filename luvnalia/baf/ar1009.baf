@@ -1,0 +1,12 @@
+IF
+  Global("Isduel","GLOBAL",6)
+  InParty("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("Isduel","GLOBAL",7)
+    CreateCreature("ISAEAX",[235.608],4)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("ISAEAF01")
+END
+

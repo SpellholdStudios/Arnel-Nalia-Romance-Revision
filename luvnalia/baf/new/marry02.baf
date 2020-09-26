@@ -1,0 +1,51 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([1053.898],VERY_FAST)
+    MoveToPointNoInterrupt([1053.898])
+    Wait(1)
+    ActionOverride("kpdomo01",StartDialogue("kpdomo02",Player1))
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    MoveToPointNoInterrupt([1088.862])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    MoveToPointNoInterrupt([1093.928])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    MoveToPointNoInterrupt([1130.890])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    MoveToPointNoInterrupt([1133.955])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    MoveToPointNoInterrupt([1170.919])
+END
+

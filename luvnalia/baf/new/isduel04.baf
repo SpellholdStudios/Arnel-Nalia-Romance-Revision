@@ -1,0 +1,30 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Attack("ISAEAX")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAX")
+    SmallWait(1)
+    EquipItem("ISAEASW")
+    Attack(Player1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    Wait(10)
+    ActionOverride("ISAEAX",Recoil())
+    ClearAllActions()
+    SmallWait(2)
+    ActionOverride("ISAEAX",StartDialogue("ISAEAX",Player1))
+END
+

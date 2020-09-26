@@ -1,0 +1,15 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    SmallWait(8)
+    CreateCreatureDoor("CSCOWL1",[1000.500],0)
+    CreateCreatureDoor("CSCOWL2",[1090.520],0)
+    Wait(3)
+    ActionOverride("CSCOWL1",FaceObject("ISAEAX"))
+    ActionOverride("CSCOWL2",FaceObject("ISAEAX"))
+    Wait(2)
+    StartCutScene("ISAEAF08")
+END
+

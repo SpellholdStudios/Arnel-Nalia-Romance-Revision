@@ -1,0 +1,218 @@
+IF
+  Global("BADBADGO","AR2000",1)
+  !Global("WHATEVER","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("WHATEVER","LOCALS",2)
+    Enemy()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  HPPercentLT(Myself,50)
+  HasItem("potn55",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn55",Myself)
+    Continue()
+END
+
+IF
+  HPPercentLT(Myself,50)
+  HasItem("potn52",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn52",Myself)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_HASTED)
+  HasItem("potn14",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn14",Myself)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HasItem("potn10",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn10",Myself)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,18,STR)
+  HasItem("potn03",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn03",Myself)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,18,STR)
+  HasItem("potn04",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn04",Myself)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,18,STR)
+  HasItem("potn04",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn03",Myself)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,18,STR)
+  HasItem("potn12",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@9)
+    UseItem("potn12",Myself)
+    Continue()
+END
+
+IF
+  OR(2)
+    Class(Myself,MAGE_ALL)
+    Class(Myself,BARD_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  !StateCheck(LastSeenBy(Myself),STATE_PANIC)
+  !HasBounceEffects(LastSeenBy(Myself))
+  !LevelGT(LastSeenBy(Myself),10)
+  HasItem("wand02",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand02",NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  OR(2)
+    Class(Myself,MAGE_ALL)
+    Class(Myself,BARD_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  !HasBounceEffects(LastSeenBy(Myself))
+  !StateCheck(LastSeenBy(Myself),STATE_STUNNED)
+  HasItem("wand04",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand04",NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  OR(2)
+    Class(Myself,MAGE_ALL)
+    Class(Myself,BARD_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  !HasBounceEffects(LastSeenBy(Myself))
+  HasItem("wand06",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand06",NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  OR(2)
+    Class(Myself,MAGE_ALL)
+    Class(Myself,BARD_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  !StateCheck(LastSeenBy(Myself),STATE_SLEEPING)
+  !HasBounceEffects(LastSeenBy(Myself))
+  !LevelGT(LastSeenBy(Myself),10)
+  HasItem("wand08",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand08",NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  OR(2)
+    Class(Myself,MAGE_ALL)
+    Class(Myself,BARD_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  !LevelGT(LastSeenBy(Myself),10)
+  !HasBounceEffects(LastSeenBy(Myself))
+  HasItem("wand09",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand09",NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  OR(2)
+    Class(Myself,MAGE_ALL)
+    Class(Myself,BARD_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  HasItem("wand10",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand10",Myself)
+    Continue()
+END
+
+IF
+  Class(Myself,CLERIC_ALL)
+  See(NearestEnemyOf(Myself))
+  !Dead("astSeenBy(Myself))")
+  OR(2)
+    !CheckStatGT(LastSeenBy(Myself),50,RESISTMAGICFIRE)
+    !HasImmunityEffects(LastSeenBy(Myself))
+  HasItem("wand11",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10)
+    UseItem("wand11",NearestEnemyOf(Myself))
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  HasItem("ring05",Myself)
+THEN
+  RESPONSE #100
+    UseItem("ring05",Myself)
+    Continue()
+END
+

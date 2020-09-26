@@ -1,0 +1,30 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAX")
+    SmallWait(2)
+    CreateCreatureDoor("ISAEAAS4",[719.464],12)
+    CreateCreatureDoor("ISAEAAS5",[779.506],12)
+    Wait(5)
+    StartCutScene("ISAEAF03")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    SmallWait(1)
+    JumpToPoint([794.401])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    SmallWait(1)
+    JumpToPoint([856.366])
+END
+

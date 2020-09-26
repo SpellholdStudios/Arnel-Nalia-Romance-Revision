@@ -1,0 +1,48 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAX")
+    Wait(1)
+    DisplayStringHead(Myself,@12)
+    Wait(2)
+    DisplayStringHead(Myself,@13)
+    SmallWait(5)
+    ForceSpell("CSCOWL1",WIZARD_FLAME_ARROW)
+    Wait(1)
+    ForceSpell("CSCOWL2",WIZARD_DISINTEGRATE2_IGNORE_RESISTANCE)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("CSCOWL1")
+    Wait(2)
+    DisplayStringHead(Myself,@14)
+    Wait(2)
+    ApplySpell(Myself,WIZARD_SPELL_TRAP)
+    ForceSpell("ISAEAX",WIZARD_MAGIC_MISSILE)
+    Wait(2)
+    ForceSpell("ISAEAX",CUTSCENE_FLESH_TO_STONE)
+    Wait(2)
+    ForceSpell("ISAEAX",WIZARD_FLAME_ARROW)
+    Wait(1)
+    SmallWait(5)
+    PlaySong(79)
+    ActionOverride("Nalia",Interact(Player1))
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("CSCOWL2")
+    Wait(4)
+    ForceSpell(Myself,WIZARD_IMPROVED_MANTLE)
+    Wait(1)
+    PlaySound("EFF_M23C")
+    CreateVisualEffectObject("SPROTECT",Myself)
+    ForceSpell(Myself,WIZARD_SHAPECHANGE)
+END
+

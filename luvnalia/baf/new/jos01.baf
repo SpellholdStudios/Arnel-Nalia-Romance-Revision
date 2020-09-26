@@ -1,0 +1,17 @@
+IF
+  Global("JosephQuest","GLOBAL",5)
+  Global("WHATEVER","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("WHATEVER","LOCALS",1)
+    RealSetGlobalTimer("DIEDIE","GLOBAL",6)
+END
+
+IF
+  RealGlobalTimerExpired("DIEDIE","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("WHATEVER","LOCALS",2)
+    PlayDead(9999)
+END
+

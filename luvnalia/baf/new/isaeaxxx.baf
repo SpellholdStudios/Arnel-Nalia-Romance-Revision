@@ -1,0 +1,25 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewObject("ISAEA",VERY_FAST)
+    Wait(1)
+    CreateCreatureDoor("CSCOWL1",[1044.487],11)
+    CreateCreatureDoor("CSCOWL2",[1172.494],6)
+    Wait(5)
+    ActionOverride("CSCOWL1",MoveToObject("ISAEA"))
+    ActionOverride("CSCOWL2",MoveToObject("ISAEA"))
+    Wait(1)
+    ActionOverride("CSCOWL1",ForceSpell("ISAEA",DRYAD_TELEPORT))
+    ActionOverride("CSCOWL1",ForceSpell("CSCOWL2",DRYAD_TELEPORT))
+    ActionOverride("CSCOWL1",ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(3)
+    ActionOverride("ISAEA",DestroySelf())
+    ActionOverride("CSCOWL1",DestroySelf())
+    ActionOverride("CSCOWL2",DestroySelf())
+    Wait(2)
+    MoveViewObject(Player1,VERY_FAST)
+    EndCutSceneMode()
+END
+

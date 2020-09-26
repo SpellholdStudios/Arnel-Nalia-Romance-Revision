@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    SmallWait(5)
+    ReallyForceSpell("ISAEAX",WIZARD_MAGIC_MISSILE)
+    SmallWait(6)
+    ActionOverride("ISAEAX",Recoil())
+    ReallyForceSpell("ISAEAX",WIZARD_MAGIC_MISSILE)
+    SmallWait(6)
+    ReallyForceSpell("ISAEAX",WIZARD_MAGIC_MISSILE)
+    SmallWait(6)
+    ForceSpell("ISAEAX",CUTSCENE_FLESH_TO_STONE)
+    SmallWait(6)
+    SpellNoDec("ISAEAX",WIZARD_FLAME_ARROW)
+    Wait(2)
+    SmallWait(5)
+    PlaySong(79)
+    Interact(Player1)
+END
+

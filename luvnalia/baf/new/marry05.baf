@@ -1,0 +1,30 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ClearAllActions()
+    SmallWait(5)
+    FadeToColor([30.0],0)
+    Wait(2)
+    ActionOverride("kpdomo01",MoveBetweenAreas("AR1305",[2235.546],10))
+    ActionOverride("Priestyr",MoveBetweenAreas("AR1305",[2270.580],10))
+    Wait(1)
+    LeaveAreaLUAPanic("AR1305","",[2167.562],10)
+    LeaveAreaLUA("AR1305","",[2167.562],10)
+    ActionOverride(Player2,LeaveAreaLUA("AR1305","",[2207.600],10))
+    ActionOverride(Player3,LeaveAreaLUA("AR1305","",[2242.640],10))
+    ActionOverride(Player4,LeaveAreaLUA("AR1305","",[2108.600],10))
+    ActionOverride(Player5,LeaveAreaLUA("AR1305","",[2148.640],10))
+    ActionOverride(Player6,LeaveAreaLUA("AR1305","",[2185.677],10))
+    MultiPlayerSync()
+    CreateCreature("kpbutl01",[2462.589],10)
+    CreateCreature("kpmaid01",[2318.466],10)
+    CreateCreature("kpmaid02",[2353.352],10)
+    ClearAllActions()
+    SmallWait(2)
+    FadeFromColor([30.0],0)
+    Wait(2)
+    ActionOverride("Priestyr",StartDialogue("Priestyr",Player1))
+END
+

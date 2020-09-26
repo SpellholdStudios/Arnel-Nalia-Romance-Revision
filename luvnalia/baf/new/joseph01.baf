@@ -1,0 +1,30 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([30.0],0)
+    Wait(2)
+    MoveViewPoint([3038.597],INSTANT)
+    JumpToPoint([3038.536])
+    ActionOverride(Player2,JumpToPoint([2985.567]))
+    ActionOverride(Player3,JumpToPoint([3090.567]))
+    ActionOverride(Player4,JumpToPoint([3038.597]))
+    ActionOverride(Player5,JumpToPoint([3006.652]))
+    ActionOverride(Player6,JumpToPoint([3067.652]))
+    Face(9)
+    ActionOverride(Player2,Face(9))
+    ActionOverride(Player3,Face(9))
+    ActionOverride(Player4,Face(9))
+    ActionOverride(Player5,Face(9))
+    ActionOverride(Player6,Face(9))
+    CreateCreature("Jos01",[3460.60],2)
+    CreateCreature("Josg01",[3425.25],2)
+    CreateCreature("Josg02",[3495.32],2)
+    CreateCreature("Josg03",[3490.91],2)
+    Wait(1)
+    FadeFromColor([30.0],0)
+    Wait(1)
+    StartCutScene("Joseph02")
+END
+

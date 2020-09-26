@@ -1,0 +1,14 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    CreateCreature("Priestyr",[1210.550],0)
+    ActionOverride("kpdomo01",JumpToPoint([1255.555]))
+    ActionOverride("kpdomo01",MoveToPointNoInterrupt([1003.873]))
+    Wait(1)
+    ActionOverride("Priestyr",MoveToPointNoInterrupt([1057.825]))
+    Wait(1)
+    ActionOverride("kpdomo01",StartDialogue("kpdomo02",Player1))
+END
+

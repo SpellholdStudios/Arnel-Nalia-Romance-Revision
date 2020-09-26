@@ -1,0 +1,14 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ClearAllActions()
+    SmallWait(2)
+    ActionOverride("kpdomo01",MoveToPointNoInterrupt([1255.555]))
+    ActionOverride("kpdomo01",JumpToPoint([550.550]))
+    Wait(5)
+    PlaySong(79)
+    ActionOverride("Nalia",Interact(Player1))
+END
+

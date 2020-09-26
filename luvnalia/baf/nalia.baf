@@ -1,0 +1,526 @@
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("Naliabranch1","GLOBAL")
+  Global("NaliaRomanceActive","GLOBAL",1)
+  !See([ENEMY])
+  CombatCounter(0)
+  OR(12)
+    Global("NaliaBranch1","LOCALS",1)
+    Global("NaliaBranch1","LOCALS",3)
+    Global("NaliaBranch1","LOCALS",5)
+    Global("NaliaBranch1","LOCALS",7)
+    Global("NaliaBranch1","LOCALS",9)
+    Global("NaliaBranch1","LOCALS",11)
+    Global("NaliaBranch1","LOCALS",13)
+    Global("NaliaBranch1","LOCALS",15)
+    Global("NaliaBranch1","LOCALS",17)
+    Global("NaliaBranch1","LOCALS",19)
+    Global("NaliaBranch1","LOCALS",21)
+    Global("NaliaBranch1","LOCALS",23)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch1","LOCALS",1)
+    RealSetGlobalTimer("Naliabranch1","GLOBAL",4800)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("Naliabranch2","GLOBAL")
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch2","LOCALS",1)
+  !See([ENEMY])
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch2","LOCALS",1)
+    RealSetGlobalTimer("NaliaBranch2","GLOBAL",ONE_DAY)
+    PlaySong(79)
+    ActionOverride(Player1,StartDialogue("LuvNalia",Player1))
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("Naliabranch2","GLOBAL")
+  Global("NaliaRomanceActive","GLOBAL",1)
+  !See([ENEMY])
+  CombatCounter(0)
+  OR(2)
+    Global("NaliaBranch2","LOCALS",3)
+    Global("NaliaBranch2","LOCALS",5)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch2","LOCALS",1)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  Global("Marriage","GLOBAL",3)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  RealGlobalTimerExpired("Naliabranch2","GLOBAL")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    StartCutScene("Marry04")
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch2","LOCALS",7)
+  PartyHasItem("ISEAPROF")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch2","LOCALS",1)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch2","LOCALS",11)
+  PartyRested()
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch2","LOCALS",1)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch2","LOCALS",13)
+  CombatCounter(0)
+  !See([ENEMY])
+  RealGlobalTimerExpired("Naliabranch2","GLOBAL")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch2","LOCALS",1)
+    PlaySong(79)
+    StartCutScene("ISDUEL01")
+END
+
+IF
+  InParty(Myself)
+  Global("Isduel","GLOBAL",4)
+  NumDead("ISAEAAS1",4)
+  Dead("ISAEAAS2")
+  Dead("ISAEAAS3")
+  CombatCounter(0)
+  !StateCheck(Player1,STATE_SLEEPING)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    PlaySong(79)
+    IncrementGlobal("Isduel","GLOBAL",1)
+    Interact(Player1)
+END
+
+IF
+  Global("Isduel","GLOBAL",6)
+  AreaCheck("AR1009")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    SetGlobal("Isduel","GLOBAL",7)
+    CreateCreature("ISAEAX",[235.608],4)
+    StartCutScene("ISAEAF01")
+END
+
+IF
+  Global("KeepPlot","GLOBAL",2)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch3","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaBranch3","LOCALS",1)
+    RealSetGlobalTimer("NaliaBranch3","GLOBAL",10)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("NaliaBranch3","GLOBAL")
+  Global("NaliaRomanceActive","GLOBAL",1)
+  !See([ENEMY])
+  CombatCounter(0)
+  OR(5)
+    Global("NaliaBranch3","LOCALS",1)
+    Global("NaliaBranch3","LOCALS",3)
+    Global("NaliaBranch3","LOCALS",5)
+    Global("NaliaBranch3","LOCALS",7)
+    Global("NaliaBranch3","LOCALS",21)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch3","LOCALS",1)
+    RealSetGlobalTimer("NaliaBranch3","GLOBAL",ONE_DAY)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch3","LOCALS",9)
+  AreaCheck("AR2000")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch3","LOCALS",1)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch3","LOCALS",11)
+  AreaCheck("AR2000")
+  See("John")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch3","LOCALS",1)
+    PlaySong(79)
+    StartDialogNoSet("John")
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaBranch3","LOCALS",15)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  !See([ENEMY])
+  CombatCounter(0)
+  Dead("BADBAD03")
+  Dead("BADBAD04")
+  Dead("BADBAD05")
+  Dead("BADBAD06")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch3","LOCALS",1)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("JosephQuest","GLOBAL",2)
+  AreaCheck("AR1700")
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch3","LOCALS",1)
+    SetGlobal("JosephQuest","GLOBAL",3)
+    PlaySong(79)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("JosephQuest","GLOBAL",4)
+  RealGlobalTimerExpired("JosephArrive","GLOBAL")
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    IncrementGlobal("JosephQuest","GLOBAL",1)
+    StartCutSceneMode()
+    ClearAllActions()
+    StartCutScene("Joseph01")
+END
+
+IF
+  InParty(Myself)
+  Global("JosephQuest","GLOBAL",5)
+  Dead("JOSE01")
+  Dead("JOSE02")
+  Dead("JOSE03")
+  Dead("JOSE04")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("JosephQuest","GLOBAL",1)
+    PlaySong(79)
+    StartCutScene("Joseph03")
+END
+
+IF
+  InParty(Myself)
+  Global("JosephQuest","GLOBAL",7)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("JosephQuest","GLOBAL",1)
+    Wait(1)
+    Kill("JOS01")
+    Wait(1)
+    ActionOverride("Josg01",EscapeArea())
+    ActionOverride("Josg02",EscapeArea())
+    ActionOverride("Josg03",EscapeArea())
+    Wait(2)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",1)
+  Global("NaliaBranch1","LOCALS",50)
+  Global("NaliaBranch2","LOCALS",50)
+  Global("NaliaBranch3","LOCALS",50)
+THEN
+  RESPONSE #100
+    IncrementGlobal("NaliaBranch1","LOCALS",5)
+    SetGlobal("NaliaBranch4","LOCALS",1)
+    RealSetGlobalTimer("NaliaBranch4","GLOBAL",300)
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  RealGlobalTimerExpired("NaliaBranch4","GLOBAL")
+  Global("NaliaBranch4","LOCALS",1)
+  !IfValidForPartyDialogue("Viconia")
+  !IfValidForPartyDialogue("Jaheira")
+  !IfValidForPartyDialogue("Aerie")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch4","LOCALS",1)
+    Interact(Player1)
+    Continue()
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  RealGlobalTimerExpired("NaliaBranch4","GLOBAL")
+  Global("NaliaBranch4","LOCALS",1)
+  IfValidForPartyDialogue("Viconia")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch4","LOCALS",2)
+    SetGlobal("NaliaConflict","GLOBAL",1)
+    ActionOverride("Viconia",StartDialogNoSet(Player1))
+    Continue()
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  RealGlobalTimerExpired("NaliaBranch4","GLOBAL")
+  Global("NaliaBranch4","LOCALS",1)
+  !IfValidForPartyDialogue("Viconia")
+  IfValidForPartyDialogue("Jaheira")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch4","LOCALS",2)
+    SetGlobal("NaliaConflict","GLOBAL",1)
+    ActionOverride("Jaheira",StartDialogNoSet(Player1))
+    Continue()
+END
+
+IF
+  Global("NaliaRomanceActive","GLOBAL",1)
+  RealGlobalTimerExpired("NaliaBranch4","GLOBAL")
+  Global("NaliaBranch4","LOCALS",1)
+  !IfValidForPartyDialogue("Viconia")
+  !IfValidForPartyDialogue("Jaheira")
+  IfValidForPartyDialogue("Aerie")
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaBranch4","LOCALS",2)
+    SetGlobal("NaliaConflict","GLOBAL",1)
+    ActionOverride("Aerie",StartDialogNoSet(Player1))
+    Continue()
+END
+
+IF
+  InParty(Myself)
+  CombatCounter(0)
+  !See([ENEMY])
+  Global("NaliaRomanceActive","GLOBAL",2)
+  RealGlobalTimerExpired("NaliaBranch4","GLOBAL")
+  OR(4)
+    Global("NaliaBranch4","LOCALS",3)
+    Global("NaliaBranch4","LOCALS",5)
+    Global("NaliaBranch4","LOCALS",9)
+    Global("NaliaBranch4","LOCALS",11)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    ClearAllActions()
+    PlaySong(79)
+    RealSetGlobalTimer("NaliaBranch4","GLOBAL",ONE_DAY)
+    IncrementGlobal("NaliaBranch4","LOCALS",1)
+    Interact(Player1)
+END
+
+IF
+  !InParty(Myself)
+  Global("NaliaVampire","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaVampire","GLOBAL",5)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("PhaereInnuendo","GLOBAL",1)
+  !Range("Phaere",6)
+  Global("NaliaMad1","LOCALS",0)
+  OR(2)
+    Global("NaliaRomanceActive","GLOBAL",1)
+    Global("NaliaRomanceActive","GLOBAL",2)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("PhaereInnuendo","GLOBAL",2)
+  !Range("Phaere",6)
+  Global("NaliaMad2","LOCALS",0)
+  OR(2)
+    Global("NaliaRomanceActive","GLOBAL",1)
+    Global("NaliaRomanceActive","GLOBAL",2)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("PhaereInnuendo","GLOBAL",3)
+  !Range("Phaere",6)
+  Global("NaliaMad3","LOCALS",0)
+  OR(2)
+    Global("NaliaRomanceActive","GLOBAL",1)
+    Global("NaliaRomanceActive","GLOBAL",2)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",2)
+  OR(3)
+    Global("AerieRomanceActive","GLOBAL",1)
+    Global("JaheiraRomanceActive","GLOBAL",1)
+    Global("ViconiaRomanceActive","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("AerieRomanceActive","GLOBAL",3)
+    SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+    SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+END
+
+IF
+  InParty(Myself)
+  OR(2)
+    Global("NaliaRomanceActive","GLOBAL",1)
+    Global("NaliaRomanceActive","GLOBAL",2)
+  OR(4)
+    Global("SleptViconia","GLOBAL",1)
+    Global("ViconiaRomanceActive","GLOBAL",2)
+    Global("JaheiraRomanceActive","GLOBAL",2)
+    Global("AerieRomanceActive","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaRomanceActive","GLOBAL",3)
+END
+
+IF
+  PartyHasItem("RUNENOTE")
+  Global("RuneJournal","LOCALS",0)
+THEN
+  RESPONSE #100
+    AddJournalEntry(75243,QUEST)
+    SetGlobal("RuneJournal","LOCALS",1)
+END
+
+IF
+  Global("KeepPlot","GLOBAL",3)
+  OR(2)
+    Global("NaliaInteractionx","GLOBAL",1)
+    Global("NaliaInteractionx","GLOBAL",3)
+THEN
+  RESPONSE #100
+    Wait(3)
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaInteractionx","GLOBAL",1)
+    Interact(Player1)
+END
+
+IF
+  Global("KeepPlot","GLOBAL",4)
+  Global("NaliaInteractionx","GLOBAL",5)
+THEN
+  RESPONSE #100
+    Wait(3)
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaInteractionx","GLOBAL",1)
+    Interact(Player1)
+END
+
+IF
+  Global("KeepPlot","GLOBAL",16)
+  Global("NaliaInteractionx","GLOBAL",7)
+THEN
+  RESPONSE #100
+    Wait(3)
+    StartCutSceneMode()
+    ClearAllActions()
+    IncrementGlobal("NaliaInteractionx","GLOBAL",1)
+    Interact(Player1)
+END
+
+IF
+  Global("Dungeonsound","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetPlayerSound(Myself,@1,AREA_DUNGEON)
+    SetGlobal("Dungeonsound","LOCALS",1)
+END
+

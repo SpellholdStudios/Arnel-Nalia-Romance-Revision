@@ -1,0 +1,42 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    SetGlobal("Isduel","GLOBAL",8)
+    ForceSpell("ISAEAAS4",FLASHY_3)
+    Wait(1)
+    ForceSpell("ISAEAAS5",FLASHY_4)
+    Wait(1)
+    ReallyForceSpell("ISAEAAS5",CUTSCENE_FLESH_TO_STONE)
+    SmallWait(3)
+    ForceSpell("ISAEAAS4",WIZARD_DISINTEGRATE2_IGNORE_RESISTANCE)
+    Wait(2)
+    ForceSpell("ISAEAAS5",WIZARD_FLAME_ARROW)
+    Wait(2)
+    ReallyForceSpell("ISAEAX",WIZARD_MAGIC_MISSILE)
+    SmallWait(4)
+    ActionOverride("ISAEAX",PlayDead(100000))
+    Wait(1)
+    StartDialogNoSet(Player1)
+    EndCutSceneMode()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAS4")
+    Wait(1)
+    ForceSpell("Nalia",FLASHY_1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAS5")
+    Wait(1)
+    ForceSpell("Nalia",FLASHY_2)
+END
+

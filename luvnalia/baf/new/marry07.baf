@@ -1,0 +1,27 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ClearAllActions()
+    SmallWait(5)
+    FadeToColor([30.0],0)
+    Wait(1)
+    MoveViewPoint([2428.475],INSTANT)
+    SmallWait(1)
+    JumpToPoint([2458.436])
+    ActionOverride(Player2,JumpToPoint([2352.533]))
+    ActionOverride(Player3,JumpToPoint([2390.573]))
+    ActionOverride(Player4,JumpToPoint([2254.533]))
+    ActionOverride(Player5,JumpToPoint([2293.573]))
+    ActionOverride(Player6,JumpToPoint([2333.610]))
+    ActionOverride("Nalia",JumpToPoint([2486.463]))
+    ActionOverride("kpdomo01",JumpToPoint([2428.475]))
+    ActionOverride("Priestyr",JumpToPoint([2508.428]))
+    SmallWait(2)
+    PlaySong(79)
+    FadeFromColor([30.0],0)
+    SmallWait(5)
+    StartCutScene("Marry08")
+END
+

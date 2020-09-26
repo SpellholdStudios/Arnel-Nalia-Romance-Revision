@@ -1,0 +1,28 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAX")
+    ApplySpell(Myself,WIZARD_IMPROVED_HASTE)
+    SetDialogue("ISAEAX")
+    MoveToPointNoInterrupt([705.516])
+    SmallWait(2)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveToPointNoInterrupt([794.401])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    MoveToPointNoInterrupt([856.366])
+END
+

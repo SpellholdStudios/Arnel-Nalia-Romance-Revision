@@ -1,0 +1,33 @@
+IF
+  Allegiance(Myself,ENEMY)
+  !Global("prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_DEFENSIVE_HARMONY)
+    ReallyForceSpell(Myself,CLERIC_RIGHTEOUS_MAGIC)
+    ReallyForceSpell(Myself,WIZARD_HASTE)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobal("prep","LOCALS",1)
+    SetGlobal("AnimDead","LOCALS",0)
+    Continue()
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  GlobalLT("AnimDead","LOCALS",5)
+THEN
+  RESPONSE #100
+    SmallWait(3)
+    IncrementGlobal("AnimDead","LOCALS",1)
+    ReallyForceSpell(Myself,CLERIC_ANIMATE_DEAD)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(CLERIC_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Wait(2)
+    ReallyForceSpell(NearestEnemyOf(Myself),CLERIC_FINGER_OF_DEATH)
+END
+

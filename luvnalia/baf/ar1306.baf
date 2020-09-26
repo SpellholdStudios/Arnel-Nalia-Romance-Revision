@@ -1,0 +1,8 @@
+IF
+  Global("Aratblacksmith","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Aratblacksmith","GLOBAL",2)
+    CreateCreature("KPCAPT04",[470.570],0)
+END
+

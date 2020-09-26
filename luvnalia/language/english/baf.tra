@@ -1,0 +1,35 @@
+@0 = ~The Final Battle with Bodhi.  Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one woman that is dearest to my heart: Nalia.  Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible.  I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+@1 = ~There is evil, here...but there is likely also magic that can help us, I'd bet.~
+
+// BADBADAI.BAF
+@2    = ~Help!~
+@3    = ~I require assistance!~
+@4    = ~Defend me!~
+@5    = ~Slay my attacker!~
+@6    = ~I can't take this!~
+@7    = ~No more!~
+@8    = ~Mercy!~
+
+// BADBADOG.BAF
+@9    = ~quaffs a potion~
+@10   = ~uses a wand~
+
+// ISAEAF03.BAF
+@11   = ~Nooooo! <CHARNAME>!~
+
+// ISAEAF08.BAF
+@12   = ~Stay back!~
+@13   = ~Not in the Nine Hells! Have at you!~
+@14   = ~You will come with us!~
+
+// ISDUEL05.BAF
+@15   = ~They will keep you busy!~
+
+// MARRY08.BAF
+@16   = ~Beneath the bright face of Tyr we are gathered here to join together this man and this woman.  Let their ways run together says I, a friend.~
+@17   = ~What say the people of the dale?  Shall their ways run together?~
+@18   = ~Aye!~
+@19   = ~And what say you two?~
+@20   = ~Then let them be joined.~
+@21   = ~Let no being tear apart this holy union, or face the dark face of Tyr forever more~
+@22   = ~A sign from the god! His blessing is up on this union!~

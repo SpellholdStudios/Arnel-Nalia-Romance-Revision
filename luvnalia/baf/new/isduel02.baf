@@ -1,0 +1,48 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAX")
+    Wait(1)
+    IncrementGlobal("Isduel","GLOBAL",1)
+    ForceSpell(Player1,DRYAD_TELEPORT)
+    ForceSpell(Player2,DRYAD_TELEPORT)
+    ForceSpell(Player3,DRYAD_TELEPORT)
+    ForceSpell(Player4,DRYAD_TELEPORT)
+    ForceSpell(Player5,DRYAD_TELEPORT)
+    ForceSpell(Player6,DRYAD_TELEPORT)
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    Wait(3)
+    ActionOverride("BOO",DestroySelf())
+    DestroySelf()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(4)
+    FadeToColor([30.0],0)
+    Wait(1)
+    LeaveAreaLUAPanic("AR1304","",[4444.3606],12)
+    LeaveAreaLUA("AR1304","",[4444.3606],12)
+    ActionOverride(Player2,LeaveAreaLUA("AR1304","",[4452.3546],12))
+    ActionOverride(Player3,LeaveAreaLUA("AR1304","",[4377.3624],12))
+    ActionOverride(Player4,LeaveAreaLUA("AR1304","",[4404.3512],12))
+    ActionOverride(Player5,LeaveAreaLUA("AR1304","",[4333.3526],12))
+    ActionOverride(Player6,LeaveAreaLUA("AR1304","",[4328.3588],12))
+    MultiPlayerSync()
+    Wait(1)
+    ForceSpell(Player2,DRYAD_TELEPORT)
+    ForceSpell(Player3,DRYAD_TELEPORT)
+    ForceSpell(Player4,DRYAD_TELEPORT)
+    ForceSpell(Player5,DRYAD_TELEPORT)
+    ForceSpell(Player6,DRYAD_TELEPORT)
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    FadeFromColor([30.0],0)
+    CreateCreatureDoor("ISAEAX",[4504.3606],4)
+    Wait(3)
+    ActionOverride("ISAEAX",StartDialogue("ISAEAX",Player1))
+END
+

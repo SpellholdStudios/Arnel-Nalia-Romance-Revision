@@ -1,0 +1,21 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    Wait(1)
+    IncrementGlobal("NaliaBranch3","LOCALS",1)
+    CreateCreatureDoor("BADBAD02",[2722.3265],1)
+    CreateCreatureDoor("BADBAD03",[2746.3242],2)
+    CreateCreatureDoor("BADBAD04",[2696.3292],5)
+    CreateCreature("BADBAD05",[2600.2700],0)
+    CreateCreature("BADBAD06",[2610.2710],0)
+    Wait(1)
+    ActionOverride("BADBAD05",ApplySpell(Myself,WIZARD_IMPROVED_INVISIBILITY))
+    ActionOverride("BADBAD06",ApplySpell(Myself,WIZARD_IMPROVED_INVISIBILITY))
+    ActionOverride("BADBAD05",JumpToPoint([2457.3339]))
+    ActionOverride("BADBAD06",JumpToPoint([2496.3338]))
+    Wait(4)
+    StartDialogNoSet("BADBAD02")
+END
+

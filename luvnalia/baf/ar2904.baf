@@ -1,0 +1,55 @@
+IF
+  OpenState("DOOR02",TRUE)
+  Global("OpenedDoor2","AR2904",0)
+  Global("OpenedDoor5","AR2904",0)
+  Global("OpenedDoor6","AR2904",0)
+  Global("NaliaTaken","AR2904",1)
+  NumInPartyGT(1)
+  InPartyAllowDead("Nalia")
+  InParty("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("OpenedDoor2","AR2904",1)
+    MoveViewPoint([502.1313],INSTANT)
+    Wait(1)
+    ReallyForceSpell("Nalia",HELL_DAMAGE_HALF)
+    Wait(1)
+    MoveViewObject(Player1,INSTANT)
+END
+
+IF
+  OpenState("DOOR04",TRUE)
+  Global("OpenedDoor4","AR2904",0)
+  Global("OpenedDoor5","AR2904",0)
+  Global("OpenedDoor6","AR2904",0)
+  Global("NaliaTaken","AR2904",1)
+  NumInPartyGT(1)
+  InPartyAllowDead("Nalia")
+  InParty("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("OpenedDoor4","AR2904",1)
+    MoveViewPoint([502.1313],INSTANT)
+    Wait(1)
+    ReallyForceSpell("Nalia",HELL_DAMAGE_HALF)
+    Wait(1)
+    MoveViewObject(Player1,INSTANT)
+END
+
+IF
+  OpenState("DOOR06",TRUE)
+  Global("OpenedDoor5","AR2904",0)
+  Global("OpenedDoor6","AR2904",0)
+  Global("NaliaTaken","AR2904",1)
+  NumInPartyGT(1)
+  InPartyAllowDead("Nalia")
+  InParty("Nalia")
+THEN
+  RESPONSE #100
+    SetGlobal("OpenedDoor6","AR2904",1)
+    MoveViewPoint([502.1313],INSTANT)
+    Wait(1)
+    ReallyForceSpell("Nalia",HELL_EXPLODE)
+    Wait(1)
+    MoveViewObject(Player1,INSTANT)
+END

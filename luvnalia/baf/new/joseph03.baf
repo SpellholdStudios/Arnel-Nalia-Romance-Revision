@@ -1,0 +1,9 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    MoveToObject("Jos01")
+    StartDialogNoSet("Jos01")
+END
+

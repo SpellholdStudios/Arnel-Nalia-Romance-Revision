@@ -1,0 +1,24 @@
+IF
+  InParty(Myself)
+  Global("NaliaBranch2","LOCALS",9)
+  Global("NaliaRomanceActive","GLOBAL",1)
+THEN
+  RESPONSE #100
+    PlaySong(79)
+    IncrementGlobal("NaliaBranch2","LOCALS",1)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("NaliaRomanceActive","GLOBAL",2)
+  OR(2)
+    Global("NaliaBranch4","LOCALS",7)
+    Global("NaliaBranch4","LOCALS",13)
+THEN
+  RESPONSE #100
+    PlaySong(79)
+    IncrementGlobal("NaliaBranch4","LOCALS",1)
+    Interact(Player1)
+END
+

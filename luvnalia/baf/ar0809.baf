@@ -1,0 +1,17 @@
+IF
+  Dead("C6Bodhi")
+  Global("udMind","GLOBAL",41)
+  Global("NaliaJournal","AR0809",0)
+THEN
+  RESPONSE #100
+    EraseJournalEntry(@0)
+    SetGlobal("NaliaJournal","AR0809",1)
+END
+
+IF
+  Global("NaliaVampire","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaVampire","GLOBAL",2)
+    CreateCreature("Vampnal",[1473.332],2)
+END

@@ -1,0 +1,38 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Jos01")
+    MoveToPointNoInterrupt([3198.391])
+    CreateCreatureDoor("Jose01",[3138.452],10)
+    CreateCreatureDoor("Jose02",[3100.362],14)
+    CreateCreatureDoor("Jose03",[3260.445],6)
+    CreateCreatureDoor("Jose04",[3222.315],1)
+    Wait(5)
+    ActionOverride("Jose01",StartDialogNoSet("JOS01"))
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Josg01")
+    MoveToPointNoInterrupt([3165.367])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Josg02")
+    MoveToPointNoInterrupt([3225.367])
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Josg03")
+    MoveToPointNoInterrupt([3225.411])
+END
+

@@ -1,0 +1,15 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(1)
+    SetGlobal("Isduel","GLOBAL",1)
+    CreateCreatureObjectDoor("ISAEAX",Player1,0,0,0)
+    CreateCreatureObject("BOO2",Player1,0,0,0)
+    Wait(1)
+    ActionOverride("ISAEAX",FaceObject(Player1))
+    Wait(4)
+    ActionOverride("ISAEAX",StartDialogue("ISAEAX",Player1))
+END
+

@@ -1,0 +1,23 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ClearAllActions()
+    SetGlobal("Marriage","GLOBAL",1)
+    SmallWait(5)
+    FadeToColor([30.0],0)
+    Wait(2)
+    LeaveAreaLUAPanic("AR1306","",[1375.1125],6)
+    LeaveAreaLUA("AR1306","",[1375.1125],6)
+    ActionOverride(Player2,LeaveAreaLUA("AR1306","",[1411.1088],6))
+    ActionOverride(Player3,LeaveAreaLUA("AR1306","",[1416.1154],6))
+    ActionOverride(Player4,LeaveAreaLUA("AR1306","",[1453.1118],6))
+    ActionOverride(Player5,LeaveAreaLUA("AR1306","",[1456.1182],6))
+    ActionOverride(Player6,LeaveAreaLUA("AR1306","",[1492.1145],6))
+    MultiPlayerSync()
+    FadeFromColor([30.0],0)
+    Wait(2)
+    StartCutScene("Marry02")
+END
+

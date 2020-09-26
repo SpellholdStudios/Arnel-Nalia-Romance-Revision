@@ -1,0 +1,185 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    SmallWait(5)
+    DisplayStringHead("Priestyr",@16)
+    Wait(4)
+    DisplayStringNoNameHead("Priestyr",@17)
+    Wait(3)
+    DisplayStringHead("kpdomo01",@18)
+    DisplayStringHead("kpbutl01",@18)
+    DisplayStringHead("kpmaid02",@18)
+    DisplayStringHead("kpmaid01",@18)
+    Wait(3)
+    DisplayStringHead("Priestyr",@19)
+    Wait(3)
+    DisplayStringHead(Myself,@18)
+    DisplayStringHead("Nalia",@18)
+    Wait(3)
+    DisplayStringHead("Priestyr",@20)
+    Wait(3)
+    DisplayStringHead("Priestyr",@21)
+    Wait(3)
+    CreateVisualEffect("SPGRWHRL",[2470.447])
+    Wait(1)
+    DisplayStringHead("Priestyr",@22)
+    Wait(3)
+    FadeToColor([30.0],0)
+    Wait(3)
+    FadeFromColor([30.0],0)
+    Wait(1)
+    ActionOverride("Nalia",Interact(Player1))
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Minsc")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Anomen")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Jaheira")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Yoshimo")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Imoen2")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Edwin")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Aerie")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Cernd")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Keldorn")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Korgan")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Mazzy")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Valygar")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  InParty("Jan")
+THEN
+  RESPONSE #100
+    CutSceneId("Jan")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Viconia")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Haerdalis")
+    SmallWait(5)
+    Wait(7)
+    DisplayStringHead(Myself,@18)
+END
+

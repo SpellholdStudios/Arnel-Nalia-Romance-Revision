@@ -1,0 +1,49 @@
+IF
+  Global("JosephQuest","GLOBAL",5)
+  !Dead("Jose01")
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate("Jose01",6)
+END
+
+IF
+  Global("JosephQuest","GLOBAL",5)
+  Dead("Jose01")
+  !Dead("Jose02")
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate("Jose02",6)
+END
+
+IF
+  Global("JosephQuest","GLOBAL",5)
+  Dead("Jose01")
+  Dead("Jose02")
+  !Dead("Jose03")
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate("Jose03",6)
+END
+
+IF
+  Global("JosephQuest","GLOBAL",5)
+  Dead("Jose01")
+  Dead("Jose02")
+  Dead("Jose03")
+  !Dead("Jose04")
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate("Jose04",6)
+END
+
+IF
+  Global("JosephQuest","GLOBAL",7)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+

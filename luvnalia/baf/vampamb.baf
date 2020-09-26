@@ -1,0 +1,44 @@
+IF
+  Global("CleanseVampire","AR1401",2)
+  Global("NaliaVampire","GLOBAL",3)
+  Name("Nalia",Myself)
+  AreaCheck("AR1401")
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaVampire","GLOBAL",4)
+    DialogueInterrupt(TRUE)
+    ChangeAIScript("Nalia",OVERRIDE)
+END
+
+IF
+  Global("CleanseVampire","AR1401",2)
+  Global("NaliaVampire","GLOBAL",3)
+  Name("Nalia",Myself)
+  AreaCheck("AR1401")
+THEN
+  RESPONSE #100
+    SetGlobal("NaliaVampire","GLOBAL",4)
+    DialogueInterrupt(TRUE)
+    ChangeAIScript("Nalia",OVERRIDE)
+END
+
+IF
+  Global("NaliaVampire","GLOBAL",1)
+  Global("RomanceVampire","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("RomanceVampire","GLOBAL",1)
+    Continue()
+END
+
+IF
+  Global("NaliaVampire","GLOBAL",1)
+  Global("RomanceVampire","GLOBAL",1)
+  Global("RomanceVampireTeleport","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("RomanceVampireTeleport","GLOBAL",1)
+    CreateVisualEffectObject("SPDIMNDR",Myself)
+    Wait(2)
+    DestroySelf()
+END

@@ -1,0 +1,11 @@
+IF
+  InParty(Myself)
+  Global("EdwinInteractionx","GLOBAL",1)
+  RealGlobalTimerExpired("EdwinTimerx","GLOBAL")
+  CombatCounter(0)
+  !See([ENEMY])
+THEN
+  RESPONSE #100
+    SetGlobal("EdwinInteractionx","GLOBAL",2)
+    StartDialogNoSet(Player1)
+END

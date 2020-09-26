@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([4700.3500],VERY_FAST)
+    MoveToPointNoInterrupt([4700.3500])
+    Wait(1)
+    Face(12)
+    ClearAllActions()
+    StartCutScene("ISDUEL04")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAX")
+    MoveToPointNoInterrupt([4750.3500])
+    Face(4)
+END
+

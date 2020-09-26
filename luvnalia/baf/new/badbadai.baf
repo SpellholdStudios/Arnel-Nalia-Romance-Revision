@@ -1,0 +1,69 @@
+IF
+  Global("BADBADGO","AR2000",1)
+  !Global("WHATEVER","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("WHATEVER","LOCALS",2)
+    Enemy()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  General(Myself,HUMANOID)
+  HPPercentLT(Myself,20)
+  HPGT(Myself,1)
+  !Dead("yself)")
+  Global("whined","LOCALS",0)
+  See(NearestMyGroupOfType)
+  Allegiance(Myself,ENEMY)
+  !Dead("astSeenBy(Myself))")
+THEN
+  RESPONSE #50
+    SetGlobal("whined","LOCALS",1)
+    DisplayStringHead(Myself,@2)
+    Shout(153)
+  RESPONSE #50
+    SetGlobal("whined","LOCALS",1)
+    DisplayStringHead(Myself,@3)
+    Shout(153)
+  RESPONSE #50
+    SetGlobal("whined","LOCALS",1)
+    DisplayStringHead(Myself,@4)
+    Shout(153)
+  RESPONSE #50
+    SetGlobal("whined","LOCALS",1)
+    DisplayStringHead(Myself,@5)
+    Shout(153)
+END
+
+IF
+  Heard([ANYONE],153)
+  InMyGroup(LastHeardBy(Myself))
+  !HaveAnySpells()
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReevaluate(LastAttackerOf(LastHeardBy(Myself)),30)
+END
+
+IF
+  BreakingPoint()
+  Global("Panic","LOCALS",0)
+THEN
+  RESPONSE #50
+    SetGlobal("Panic","LOCALS",1)
+    DisplayStringHead(Myself,@6)
+  RESPONSE #50
+    SetGlobal("Panic","LOCALS",1)
+    DisplayStringHead(Myself,@7)
+  RESPONSE #50
+    SetGlobal("Panic","LOCALS",1)
+    DisplayStringHead(Myself,@8)
+END
+
+IF
+  See([ENEMY])
+THEN
+  RESPONSE #100
+    Attack(LastSeenBy(Myself))
+END

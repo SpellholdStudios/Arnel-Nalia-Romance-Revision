@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("hellself")
+    Wait(1)
+    Explore()
+    CreateVisualEffectObject("SPFLESHS","Nalia")
+    CreateVisualEffectObject("SPFLESHS",Myself)
+    Wait(2)
+    ActionOverride("Nalia",JumpToPoint([502.1313]))
+    JumpToPoint([419.1311])
+    SmallWait(1)
+    ActionOverride("Nalia",MakeUnselectable(10))
+    ForceSpell("Nalia",HELL_HOLD)
+    MoveViewPoint([502.1313],INSTANT)
+    CreateVisualEffectObject("SPFLESHS","Nalia")
+    CreateVisualEffectObject("SPFLESHS",Myself)
+    Wait(1)
+    EndCutSceneMode()
+END
+

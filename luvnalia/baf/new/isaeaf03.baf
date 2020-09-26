@@ -1,0 +1,67 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAAS4")
+    SmallWait(5)
+    FaceObject(Player1)
+    PlaySound("EFF_M23C")
+    CreateVisualEffectObject("SPROTECT",Myself)
+    SmallWait(5)
+    ForceSpell(Player1,CUTSCENE_DAMAGE_1)
+    SmallWait(5)
+    PlaySound("EFF_M23C")
+    CreateVisualEffectObject("SPROTECT",Myself)
+    Wait(1)
+    ForceSpell(Player1,CUTSCENE_DAMAGE_1B)
+    PlaySound("EFF_M23C")
+    CreateVisualEffectObject("SPROTECT",Myself)
+    PlaySound("EFF_M23C")
+    CreateVisualEffectObject("SPROTECT",Myself)
+    Wait(1)
+    ForceSpell(Player1,CUTSCENE_DAMAGE_1C)
+    Wait(1)
+    CreateVisualEffectObject("SPHOLMIG",Myself)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(1)
+    SmallWait(19)
+    CreateVisualEffectObject("EXPLODE",Myself)
+    Wait(2)
+    CreateVisualEffectObject("SPFIREPI",Myself)
+    SmallWait(2)
+    CreateVisualEffectObject("SPFSTRMI",Myself)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("ISAEAAS5")
+    SmallWait(5)
+    FaceObject(Player1)
+    ForceSpell(Player1,SMALL_DAMAGE_SPELL)
+    Wait(3)
+    ForceSpell(Player1,FLASHY_4)
+    CreateVisualEffectObject("SPNWCHRM",Myself)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Nalia")
+    Wait(7)
+    ActionOverride(Player1,PlayDead(200))
+    DisplayStringHead(Myself,@11)
+    MoveToPointNoInterrupt([816.386])
+    SmallWait(5)
+    ClearAllActions()
+    StartCutScene("ISAEAF04")
+END
+

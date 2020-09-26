@@ -1,0 +1,25 @@
+IF
+	Contains("NalBdy",Myself)
+	!Global("CleanseVampire","AR1401",1)
+THEN
+	RESPONSE #100
+		SetGlobal("CleanseVampire","AR1401",1)
+END
+
+IF
+  Contains("Nalbdy",Myself)
+  Contains("MISCBP",Myself)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("CleanseVampire","AR1401",2)
+    DestroyItem("Nalbdy")
+    DestroyItem("MISCBP")
+    CreateVisualEffect("SPMETSW2",[2592.1701])
+    CreateVisualEffect("SPMETSW2",[2645.1742])
+    Wait(1)
+    CreateVisualEffect("SPFLESHS",[2565.1677])
+    Wait(1)
+    MoveGlobal("AR1401","Nalia",[2565.1677])
+    SetInterrupt(TRUE)
+END

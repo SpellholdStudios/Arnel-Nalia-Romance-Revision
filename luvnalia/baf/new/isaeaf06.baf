@@ -1,0 +1,25 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    SmallWait(5)
+    FadeToColor([30.0],0)
+    Wait(1)
+    Kill("ISAEAX")
+    SmallWait(1)
+    LeaveAreaLUAPanic("AR1002","",[1053.519],10)
+    LeaveAreaLUA("AR1002","",[1053.519],10)
+    ActionOverride(Player2,LeaveAreaLUA("AR1002","",[1101.553],10))
+    ActionOverride(Player3,LeaveAreaLUA("AR1002","",[983.534],10))
+    ActionOverride(Player4,LeaveAreaLUA("AR1002","",[1093.612],10))
+    ActionOverride(Player5,LeaveAreaLUA("AR1002","",[978.595],10))
+    ActionOverride(Player6,LeaveAreaLUA("AR1002","",[1026.631],10))
+    MultiPlayerSync()
+    CreateCreature("ISAEAX",[1035.570],10)
+    ActionOverride("ISAEAX",SetDialogue("ISAEAX"))
+    FadeFromColor([30.0],0)
+    SmallWait(8)
+    ActionOverride("HABREGA",StartDialogNoSet(Player1))
+END
+
