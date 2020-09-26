@@ -1,6 +1,12 @@
 //tp2 Instructions
 BACKUP ~luvnalia/backup~
-AUTHOR ~Sir_BillyBob~
+//AUTHOR ~Sir_BillyBob~
+SUPPORT ~Spellhold Studios at TODO link~
+
+VERSION ~2.0.0~
+
+README ~luvnalia/readme/luvnalia-readme-english.txt~
+
 
 ALWAYS
 
@@ -46,6 +52,9 @@ LANGUAGE ~Russian (Translation : Lessar & aerie.ru)~
  *  Arnel's Nalia Romance Revision for ToB  *
  * ======================================== */
 BEGIN @0
+DESIGNATED 0 LABEL "arnel_nalia_romance"
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @101	// ~This mod is not available for your game.~
+
 
 /* ------------------ *
  *  Installing items  *
@@ -132,6 +141,12 @@ COPY ~luvnalia/cre/vampnal.cre~  ~override~
  * ---------------------- */
 PRINT @13
 SILENT
+
+ACTION_IF GAME_IS "bg2ee eet" BEGIN
+	// If a EE-version is installed, change the journal entries to adapt it
+	ADD_JOURNAL @2 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/naliaj.tra~
+END 
+
 COMPILE ~luvnalia/d~
 
 
@@ -275,5 +290,3 @@ EXTEND_BOTTOM ~nalia.bcs~    ~luvnalia/baf/nalia.baf~ USING ~luvnalia/lang/%s/ba
 EXTEND_BOTTOM ~vampamb.bcs~  ~luvnalia/baf/vampamb.baf~
 
 COMPILE ~luvnalia/baf/new~ USING ~luvnalia/lang/%s/baf.tra~
-
-AT_INTERACTIVE_EXIT ~View luvnalia\Readme-luvnalia.txt~

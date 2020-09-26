@@ -5,7 +5,7 @@
 
 <div align="center"><h1></a>Arnel's Nalia Romance Revision for ToB (WIP)</h1>
 
-<h3>A mod hosted by Spellhold Studios for Baldur's Gate II and ToB (classical and EE games),<br>
+<h3>A mod hosted by Spellhold Studios for Baldur's Gate II: ToB (classical and EE games),<br>
 Baldur's Gate Trilogy and EET<h3>
 
 </div><br />
@@ -13,14 +13,17 @@ Baldur's Gate Trilogy and EET<h3>
 
 **Original Author:** Armel  
 **Mod Website:** <a href="TODO link">Spellhold Studios</a>  
-**Mod Forum:** <a href="TODO link">TODO</a>  
+**Mod Forum:** <a href="TODO link">TODO</a><br>
 
+**Note:** This mod was first released at <a href=http://web.starman.ee/arnel/nalia/">starman</a> and has been officially mirrored at <a href="TODO link">Spellhold Studios Clan DLAN mirror</a> by <a href="http://www.shsforums.net/user/3046-sir-billybob/">Sir BillyBob</a>.<br>
+
+## 
 
 [Read the mod's readme](https://spellholdstudios.github.io/readmes/luvnalia-readme-english.txt)
 
 [Download the mod at Spellhold Studios](http://www.shsforums.net/files/file/94-sir-billybobs-revisions-arnels-nalia-romance/)<br>
 
-&nbsp;
+## 
 
 <div align="center">
 <a href="#intro">Overview</a> &#x2B25; <a href="#compat">Compatibility</a> &#x2B25; <a href="#installation">Installation</a> &#x2B25; <a href="#credits">Credits</a> &#x2B25; <a href="#versions">Versions History</a></br>
@@ -31,23 +34,23 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## <a name="intro" id="intro"></a>Overview
 
+This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions. Having Minsc in the party is recommended... :wink:
 
+<details><summary><strong><ins>Yeslick's Dispel Magic ability</ins></strong></summary>
+<br><p>
+For people who remember Yeslick in Baldur's Gate, the authors have made the decision that the dwarf may still cast his Dispel Magic ability in SoA-ToB. :smile:
+</p>
+</details><br>
 
-The idea here is that older mods, whether TeamBG's TBG format or IAP or even older Weidu mods, will get a refresh to become more compatible with other mods.
-So what is here? Well, any mod that I can "fix". Mods that don't seem to be supported by their owner anymore, and mods that you all ask me to update. The last one doesn't mean that every old mod out there can be updated. I do have one I have updated that isn't here. The owner is hosting on their own site (which is fine since it is his mod, not mine).
-If you have dug up any old mods that don't work with other mods, give me a link to it, and I will try to see about updating the mod. After all, isn't having as many mods installed as possible the goal of all players?
+<details><summary>Original note from the author</summary>
+<p>
 
-ARNEL'S NALIA ROMANCE:
+###### The idea here is that older mods, whether TeamBG's TBG format or IAP or even older Weidu mods, will get a refresh to become more compatible with other mods.
 
-
-This is a Weidu-based version of the original mod. This mod is now in a Weidu format and can be installed with other mods for BG2.
-
-Contact me at the Spellhold Studios forum if you have issues/problems.
-
-The original mod can still be found at http://web.starman.ee/arnel/nalia/.
-
-By the way, there is another Nalia romance mod in the works. It is called de'Arnise Romance and is hosted by the PocketPlaneGroup. I don't know if it has been released yet or not. 
-
+###### So what is here? Well, any mod that I can "fix". Mods that don't seem to be supported by their owner anymore, and mods that you all ask me to update. The last one doesn't mean that every old mod out there can be updated. I do have one I have updated that isn't here. The owner is hosting on their own site (which is fine since it is his mod, not mine).
+</p>
+</details><br>
+<div align="right"><a href="#top">Back to top</a></div>
 
 
 <hr>
@@ -58,6 +61,9 @@ By the way, there is another Nalia romance mod in the works. It is called de'Arn
 This mod is designed to work on the following Infinity Engine games: the original Baldur's Gate II (BG2 or just SoA) with the Throne of Bhaal (ToB) expansion, Baldur's Gate II: Enhanced Edition (BG2:EE), the conversion projects <a href="http://www.shsforums.net/forum/261-bgt-weidu/">Baldur's Gate Trilogy (BGT)</a> and <a href="https://github.com/K4thos/EET/releases">Enhanced Edition Trilogy (EET)</a>.
 
 This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. If you encounter any bugs, please <a href="TODO link">report them on the forum</a>!
+
+By the way, there is another Nalia romance mod in the works. It is called de'Arnise Romance and is hosted by the PocketPlaneGroup.
+
 
 >Although it is not required for the Nalia Romance Mod to function properly, classical game players are strongly recommended to download and install the latest version of the <a href="http://www.gibberlings3.net/bg2fixpack/">BG2 Fixpack</a> before proceeding with the installation of this mod.<br>
 <div align="right"><a href="#top">Back to top</a></div>
@@ -180,22 +186,23 @@ In addition to the methods above for removing individual components, you can com
 ##### Version 2.0.0 (September nn, 2020)
 
 - TODO Added *luvnalia.ini* metadata file to support AL|EN's "Project Infinity".
-- TODO Renamed *setup-luvnalia.tp2* -> *luvnalia.tp2* and moved it to mod top folder to support AL|EN's "Project Infinity".
+- Renamed *setup-luvnalia.tp2* -> *luvnalia.tp2* and moved it to mod top folder to support AL|EN's "Project Infinity".
 - TODO Replaced `AUTHOR` keyword with `SUPPORT`.
+- TODO Added `VERSION` flag.
+- TODO Replaced `AT_INTERACTIVE_EXIT` deprecated command with `README`.
 - Added `HANDLE_CHARSETS` function to convert string entries for EE games.
 - TODO Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
-- TODO Added component `DESIGNATED` number and "*armel_nalia_romance*" `LABEL`.
+- TODO Added component `DESIGNATED` number and "*arnel_nalia_romance*" `LABEL`.
 - TODO Added native BG2:EE and EET compatibility.
-- TODO Commented code as much as possible.
-- Included BWP Fixpack patch <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements `!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`</a> (badbadai.baf and badbadog.baf).
-- Included BWP Fixpack patch <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements `!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`</a> (badbadai.baf and badbadog.baf).
-- AR2904.bcs patching: Included BWP Fixpack compatibility issues with "BG2 Fixpack".
+- Commented code as much as possible.
+- *badbadai.baf* and *badbadog.baf*: Included BWP Fixpack <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements patch</a> (`!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`).
+- *AR2904.bcs* patching: Included BWP Fixpack compatibility issues with "BG2 Fixpack".
 - BG2:EE compatibility: Replaced script patching with `GET_SCRIPT_BLOCK` WeiDU function (courtesy of Argent77). @74337 @74394
 - Hardcoded items' names.
 - Fixed typos.
 - Split setup.tra files into separate thematic files for more comfortable readability.
 - TODO Updated and renamed readme file to *luvnalia-readme-english.txt*, then moved it into new "*readme*" folder.
-- TODO Removed useless files and "*backup*" folder.
+- Removed useless files and "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
 - TODO Included Linux and Mac Os X versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
