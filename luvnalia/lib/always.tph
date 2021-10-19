@@ -1,0 +1,115 @@
+/* ============================================ *
+ *                                              *
+ *                 ALWAYS BLOCK                 *
+ *                                              *
+ * ============================================ */
+
+// Concept borrowed from DavidW's Immutability and encapsulation in mod design ( https://github.com/Gibberlings3/immutable )
+
+/* =================================================================== *
+ *  This code only runs once, even if you install lots of components.  *
+ * =================================================================== */
+
+ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once per install!
+
+	SILENT
+
+	/* -------------------------------------------------------------------------------- *
+	 *    Determines which game is installed and if the game is an Enhanced Edition.    *
+	 * -------------------------------------------------------------------------------- */
+
+	OUTER_SET is_tob   = (GAME_IS ~bgt tob~) ? 1 : 0     // based on vanilla ToB engine
+	OUTER_SET is_bg2ee = (GAME_IS "bg2ee") ? 1 : 0       // b2gee
+	OUTER_SET is_eet   = (GAME_IS "eet") ? 1 : 0         // eet
+	OUTER_SET is_ee    = (GAME_IS ~bg2ee eet~) ? 1 : 0   // EE game
+
+
+	/* ------------------------------------------------------- *
+	 *    Sets default variables if they're not set already    *
+	 * ------------------------------------------------------- */
+
+	// Required because of non-standard BACKUP path
+	OUTER_TEXT_SPRINT MOD_FOLDER "luvnalia"
+
+	// Sets variables for the external locations
+	OUTER_SPRINT tra_base     "lang"
+	OUTER_SPRINT marker_loc   "weidu_external/markers"
+	OUTER_SPRINT ext_lang_loc EVAL "weidu_external/lang/%MOD_FOLDER%"
+	OUTER_SPRINT marker_name  EVAL "%marker_loc%/sh#%MOD_FOLDER%_languages_installed.mrk"
+
+
+	/* ---------------------------------- *
+	 *    Creates the external folders    *
+	 * ---------------------------------- */
+
+	ACTION_FOR_EACH folder IN ~weidu_external~ ~%marker_loc%~ ~weidu_external/lang/~ ~%ext_lang_loc%~ BEGIN
+		ACTION_IF (NOT DIRECTORY_EXISTS ~%folder%~) BEGIN
+			MKDIR ~%folder%~
+		END
+	END
+
+
+	/* ------------------------------------------- *
+	 *    EET chapters continuity compatibility    *
+	 * ------------------------------------------- */
+
+		ACTION_IF is_eet BEGIN
+			OUTER_SET bg2_chapter = 12
+		END ELSE BEGIN
+			OUTER_SET bg2_chapter = 0
+		END
+		OUTER_FOR (i = 1 ; i <= 10 ; ++i) BEGIN
+			OUTER_SET bg2_chapter = bg2_chapter + 1
+			OUTER_SPRINT name_source ~bg2_chapter_%i%~
+			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+		END
+
+
+	/* -------------------------------------------- *
+	 *    Loads in any shared function libraries    *
+	 * -------------------------------------------- */
+
+	INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+
+
+	/* -------------------------- *
+	 *    Creates a blank file    *
+	 * -------------------------- */
+
+	<<<<<<<< .../luvnalia-inline/blank
+
+>>>>>>>>
+
+
+	/* --------------------------------------------- *
+	 *    Convert strings to UTF-8 for BGEE/BG2EE    *
+	 * --------------------------------------------- */
+
+	ACTION_IF (!FILE_EXISTS "%marker_name%") BEGIN
+
+		COPY ~.../luvnalia-inline/blank~ ~%marker_name%~
+
+		MKDIR "%ext_lang_loc%/%LANGUAGE%"
+		COPY ~%MOD_FOLDER%/lang/%LANGUAGE%~	~%ext_lang_loc%/%LANGUAGE%~
+
+		/* Converts tra files to UTF-8 */
+		ACTION_IF is_ee BEGIN  // Do conversions (EE only)
+		
+			ACTION_DEFINE_ARRAY sh#noconvert BEGIN setup END
+			ACTION_DEFINE_ARRAY sh#reload BEGIN misc journal END
+			LAF HANDLE_CHARSETS 
+				INT_VAR infer_charsets  = 1
+				STR_VAR tra_path        = EVAL ~%MOD_FOLDER%/lang~
+                        out_path        = EVAL ~%ext_lang_loc%~
+                        iconv_path      = EVAL ~%MOD_FOLDER%/lang/iconv~
+                        noconvert_array = sh#noconvert
+                        reload_array    = sh#reload
+			END
+
+		END
+	END // of ACTION_IF (!FILE_EXISTS "%marker_name%")
+
+	// TRAs declared in LANGUAGE must be reloaded - by hand, because of the copying (for non-EE version)
+	LOAD_TRA "%ext_lang_loc%/%LANGUAGE%/setup.tra" "%ext_lang_loc%/%LANGUAGE%/misc.tra" "%ext_lang_loc%/%LANGUAGE%/journal.tra"
+
+END	// of ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN

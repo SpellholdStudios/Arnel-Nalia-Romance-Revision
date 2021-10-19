@@ -1,4 +1,4 @@
-BACKUP ~luvnalia/backup~
+BACKUP ~weidu_external/backup/luvnalia~
 //AUTHOR ~Sir_BillyBob~
 SUPPORT ~Spellhold Studios at TODO link~
 
@@ -9,45 +9,24 @@ README ~luvnalia/readme/luvnalia-readme-english.txt~
 
 ALWAYS
 
-	/* -------------------------------- *
-	 *    Loads macros and functions    *
-	 * -------------------------------- */
-	INCLUDE ~luvnalia/lib/functions.tph~
-
-
-	/* --------------------------------------------------------------------------------------------- *
-	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
-	 *    No exception, everything needs to be converted                                             *
-	 * -----------------------------------------------------------------------*--------------------- */
-	ACTION_DEFINE_ARRAY sh#noconvert BEGIN END
-	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-	ACTION_DEFINE_ARRAY sh#reload BEGIN setup misc journal END
-
-	LAF HANDLE_CHARSETS
-		INT_VAR
-			infer_charsets = 1
-		STR_VAR
-			tra_path = EVAL ~%MOD_FOLDER%/lang~
-			noconvert_array = sh#noconvert
-			reload_array = sh#reload
-	END
+	INCLUDE ~luvnalia/lib/always.tph~
 
 END
 
 
-AUTO_TRA ~luvnalia/lang/%s~
+AUTO_TRA ~weidu_external/lang/butchery/%s~
 
 LANGUAGE ~English~
          ~english~
          ~luvnalia/lang/english/setup.tra~
-         ~luvnalia/lang/english/misc.tra~
-         ~luvnalia/lang/english/journal.tra~
+         ~weidu_external/lang/butchery/english/misc.tra~
+         ~weidu_external/lang/butchery/english/journal.tra~
 
 LANGUAGE ~Russian (Translation : Lessar & aerie.ru)~
          ~russian~
          ~luvnalia/lang/russian/setup.tra~
-         ~luvnalia/lang/russian/misc.tra~
-         ~luvnalia/lang/russian/journal.tra~
+         ~weidu_external/lang/butchery/russian/misc.tra~
+         ~weidu_external/lang/butchery/russian/journal.tra~
 
 
 /* ======================================== *
@@ -146,9 +125,9 @@ PRINT @13
 SILENT
 
 // If a EE-version is installed, change the journal entries to adapt it
-ACTION_IF GAME_IS "bg2ee eet" BEGIN
-	ADD_JOURNAL @2 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/naliaj.tra~
-	ADD_JOURNAL @7000 @7001 @7002 @7003 @7004 @7005 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/journal.tra~ 
+ACTION_IF is_ee BEGIN
+	ADD_JOURNAL @2 USING ~weidu_external/lang/butchery/%LANGUAGE%/naliaj.tra~
+	ADD_JOURNAL @7000 @7001 @7002 @7003 @7004 @7005 USING ~weidu_external/lang/butchery/%LANGUAGE%/journal.tra~ 
 END 
 
 COMPILE ~luvnalia/d~
@@ -278,7 +257,7 @@ BUT_ONLY*/
 
 // Expend existing scripts
 // -----------------------
-EXTEND_BOTTOM ~ar0809.bcs~ ~luvnalia/baf/ar0809.baf~ USING ~luvnalia/lang/%LANGUAGE%/baf.tra~
+EXTEND_BOTTOM ~ar0809.bcs~ ~luvnalia/baf/ar0809.baf~ USING ~weidu_external/lang/butchery/%LANGUAGE%/baf.tra~
 
 COPY_EXISTING ~ar1009.are~ ~override~
 	WRITE_ASCII 0x94 ~AR1009~
@@ -291,7 +270,7 @@ EXTEND_BOTTOM ~baldur.bcs~   ~luvnalia/baf/baldur.baf~
 EXTEND_BOTTOM ~bodhiamb.bcs~ ~luvnalia/baf/bodhiamb.baf~
 EXTEND_BOTTOM ~cleanse.bcs~  ~luvnalia/baf/cleanse.baf~
 EXTEND_BOTTOM ~edwin.bcs~    ~luvnalia/baf/edwin.baf~
-EXTEND_BOTTOM ~nalia.bcs~    ~luvnalia/baf/nalia.baf~ USING ~luvnalia/lang/%LANGUAGE%/baf.tra~
+EXTEND_BOTTOM ~nalia.bcs~    ~luvnalia/baf/nalia.baf~ USING ~weidu_external/lang/butchery/%LANGUAGE%/baf.tra~
 EXTEND_BOTTOM ~vampamb.bcs~  ~luvnalia/baf/vampamb.baf~
 
-COMPILE ~luvnalia/baf/new~ USING ~luvnalia/lang/%LANGUAGE%/baf.tra~
+COMPILE ~luvnalia/baf/new~ USING ~weidu_external/lang/butchery/%LANGUAGE%/baf.tra~
