@@ -816,7 +816,7 @@ END
 
 IF ~Global("Marriage","GLOBAL",6)~ THEN BEGIN N220
   SAY @287 
-  IF ~~ THEN DO ~SetGlobal("Marriage","GLOBAL",7)~ GOTO N221
+  IF ~~ THEN DO ~SetGlobal("Marriage","GLOBAL",7) ClearAllActions()~ GOTO N221
 END
 
 IF ~~ THEN BEGIN N221
@@ -826,7 +826,7 @@ END
 
 IF ~~ THEN BEGIN N222
   SAY @289
-  IF ~~ THEN EXTERN ~ISAEA~ N34
+  IF ~~ THEN DO ~ActionOverride("isamng1",EscapeArea()) ActionOverride("isamng2",EscapeArea())~ EXTERN ~ISAEA~ N34
 END
 
 IF ~Global("NaliaBranch2","LOCALS",6)
