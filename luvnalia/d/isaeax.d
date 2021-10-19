@@ -30,7 +30,7 @@ IF ~~ THEN BEGIN 5
   IF ~!IsValidForPartyDialog("Minsc")~ THEN REPLY @6 GOTO 6
   IF ~!IsValidForPartyDialog("Minsc")~ THEN REPLY @7 GOTO 7
   IF ~!IsValidForPartyDialog("Minsc")~ THEN REPLY @8 GOTO 8
-  IF ~IsValidForPartyDialog("Minsc")~ THEN EXTERN ~NRBOO~ 0
+  IF ~IsValidForPartyDialog("Minsc")~ THEN EXTERN ~MINSCJ~ IsaeaBoo
 END
 
 IF ~~ THEN BEGIN 6
