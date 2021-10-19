@@ -474,7 +474,7 @@ IF
   Global("RuneJournal","LOCALS",0)
 THEN
   RESPONSE #100
-    AddJournalEntry(75243,QUEST)
+    AddJournalEntry(@7001,QUEST)
     SetGlobal("RuneJournal","LOCALS",1)
 END
 

@@ -21,7 +21,7 @@ ALWAYS
 	 * -----------------------------------------------------------------------*--------------------- */
 	ACTION_DEFINE_ARRAY sh#noconvert BEGIN END
 	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-	ACTION_DEFINE_ARRAY sh#reload BEGIN setup misc END
+	ACTION_DEFINE_ARRAY sh#reload BEGIN setup misc journal END
 
 	LAF HANDLE_CHARSETS
 		INT_VAR
@@ -41,11 +41,13 @@ LANGUAGE ~English~
          ~english~
          ~luvnalia/lang/english/setup.tra~
          ~luvnalia/lang/english/misc.tra~
+         ~luvnalia/lang/english/journal.tra~
 
 LANGUAGE ~Russian (Translation : Lessar & aerie.ru)~
          ~russian~
          ~luvnalia/lang/russian/setup.tra~
          ~luvnalia/lang/russian/misc.tra~
+         ~luvnalia/lang/russian/journal.tra~
 
 
 /* ======================================== *
@@ -146,6 +148,7 @@ SILENT
 // If a EE-version is installed, change the journal entries to adapt it
 ACTION_IF GAME_IS "bg2ee eet" BEGIN
 	ADD_JOURNAL @2 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/naliaj.tra~
+	ADD_JOURNAL @7000 @7001 @7002 @7003 @7004 @7005 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/journal.tra~ 
 END 
 
 COMPILE ~luvnalia/d~

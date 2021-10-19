@@ -26,11 +26,11 @@ IF ~~ THEN BEGIN N38
 ClearAllActions()
 StartCutSceneMode()
 StartCutScene("ISAEAXXX")
-EraseJournalEntry(75241)
+EraseJournalEntry(@7000)
 EraseJournalEntry(75242)
-EraseJournalEntry(75243)
-EraseJournalEntry(75244)
-AddJournalEntry(75245,QUEST_DONE)~ EXIT
+EraseJournalEntry(@7001)
+EraseJournalEntry(@7002)
+AddJournalEntry(@7003,QUEST_DONE)~ EXIT
 END
 
 END

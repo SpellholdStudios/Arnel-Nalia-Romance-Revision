@@ -917,19 +917,19 @@ END
 IF ~~ THEN BEGIN N237
   SAY @320
   IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
-AddJournalEntry(75241,QUEST)~ EXIT
+AddJournalEntry(@7000,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN N238
   SAY @321
   IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
-AddJournalEntry(75241,QUEST)~ EXIT
+AddJournalEntry(@7000,QUEST)~ EXIT
 END
 
 IF ~~ THEN BEGIN N239
   SAY @322
   IF ~~ THEN DO ~IncrementGlobal("NaliaBranch2","LOCALS",1)
-AddJournalEntry(75241,QUEST)~ EXIT
+AddJournalEntry(@7000,QUEST)~ EXIT
 END
 
 IF ~Global("NaliaBranch2","LOCALS",8)
@@ -941,7 +941,7 @@ END
 
 IF ~~ THEN BEGIN N241
   SAY @324
-  IF ~~ THEN DO ~AddJournalEntry(75244,QUEST)~ EXIT
+  IF ~~ THEN DO ~AddJournalEntry(@7002,QUEST)~ EXIT
 END
 
 IF ~Global("NaliaBranch2","LOCALS",10)
@@ -1146,16 +1146,16 @@ IF ~~ THEN BEGIN N269
   IF ~!IsValidForPartyDialog("Korgan")
 !IsValidForPartyDialog("Keldorn")
 !IsValidForPartyDialog("Anomen")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
-AddJournalEntry(75246,QUEST)~ EXIT
+AddJournalEntry(@7004,QUEST)~ EXIT
   IF ~IsValidForPartyDialog("Korgan")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
-AddJournalEntry(75246,QUEST)~ EXTERN ~BKORGAN~ N222
+AddJournalEntry(@7004,QUEST)~ EXTERN ~BKORGAN~ N222
   IF ~!IsValidForPartyDialog("Korgan")
 IsValidForPartyDialog("Keldorn")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
-AddJournalEntry(75246,QUEST)~ EXTERN ~BKELDOR~ N253
+AddJournalEntry(@7004,QUEST)~ EXTERN ~BKELDOR~ N253
   IF ~!IsValidForPartyDialog("Korgan")
 !IsValidForPartyDialog("Keldorn")
 IsValidForPartyDialog("Anomen")~ THEN DO ~IncrementGlobal("Isduel","GLOBAL",1)
-AddJournalEntry(75246,QUEST)~ EXTERN ~BANOMEN~ N310
+AddJournalEntry(@7004,QUEST)~ EXTERN ~BANOMEN~ N310
 END
 
 IF ~Global("Isduel","GLOBAL",9)~ THEN BEGIN N270
@@ -1167,8 +1167,8 @@ IF ~~ THEN BEGIN N271
   SAY @371
   IF ~~ THEN DO ~SetGlobal("NaliaBranch2","LOCALS",50)
 SetGlobal("Isduel","GLOBAL",10)
-EraseJournalEntry(75246)
-AddJournalEntry(75247,QUEST_DONE)~ EXIT
+EraseJournalEntry(@7004)
+AddJournalEntry(@7005,QUEST_DONE)~ EXIT
 END
 
 IF ~Global("NaliaRomanceActive","GLOBAL",1)
