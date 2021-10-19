@@ -1,4 +1,6 @@
-@0 = ~The Final Battle with Bodhi.  Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one woman that is dearest to my heart: Nalia. Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible. I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
+@0 = ~The final battle with Bodhi
+
+Bodhi appeared in an ambush shortly before I reached her haven, warning me that she was aware of my pursuit and stealing from me the one woman that is dearest to my heart: Nalia. Before she vanished and unleashed more of her undead creations upon me, Bodhi warned me that if I continue I will lose even more than I thought possible. I cannot give up on the Rhynn Lanthorn... but now the life and immortal soul of the one I love is at stake, as well!~
 
 /* ----------- *
  *  nalia.baf  *
@@ -31,7 +33,7 @@
  *  isaeaf08.baf  *
  * -------------- */
 @41   = ~Stay back!~
-@41   = ~Not in the Nine Hells! Have at you!~
+@42   = ~Not in the Nine Hells! Have at you!~
 @43   = ~You will come with us!~
 
 /* -------------- *
