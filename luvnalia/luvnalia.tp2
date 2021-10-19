@@ -14,6 +14,7 @@ ALWAYS
 	 * -------------------------------- */
 	INCLUDE ~luvnalia/lib/functions.tph~
 
+
 	/* --------------------------------------------------------------------------------------------- *
 	 *    Convert strings to UTF-8 for BGEE/BG2EE                                                    *
 	 *    No exception, everything needs to be converted                                             *
@@ -34,7 +35,7 @@ ALWAYS
 END
 
 
-AUTO_TRA ~luvnalia/language/%s~
+AUTO_TRA ~luvnalia/lang/%s~
 
 LANGUAGE ~English~
          ~english~
@@ -52,7 +53,7 @@ LANGUAGE ~Russian (Translation : Lessar & aerie.ru)~
  * ======================================== */
 BEGIN @0
 DESIGNATED 0 LABEL "arnel_nalia_romance"
-REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @1	// ~You must have ToB, BGT, BG2:EE or EET installed to install this mod.~
+REQUIRE_PREDICATE GAME_INCLUDES ~tob~ @1  // ~You must have ToB, BGT, BG2:EE or EET installed to install this mod.~
 
 
 /* ------------------ *
@@ -109,30 +110,31 @@ COPY ~luvnalia/cre/badbad02.cre~ ~override~
 	SAY NAME2 @1003
 
 COPY ~luvnalia/cre/badbad03.cre~ ~override~
-COPY ~luvnalia/cre/badbad04.cre~ ~override~
-COPY ~luvnalia/cre/badbad05.cre~ ~override~
-COPY ~luvnalia/cre/badbad06.cre~ ~override~
-COPY ~luvnalia/cre/boo2.cre~     ~override~
-COPY ~luvnalia/cre/isaeaas1.cre~ ~override~
-COPY ~luvnalia/cre/isaeaas2.cre~ ~override~
-COPY ~luvnalia/cre/isaeaas3.cre~ ~override~
-COPY ~luvnalia/cre/isaeaas4.cre~ ~override~
-COPY ~luvnalia/cre/isaeaas5.cre~ ~override~
-COPY ~luvnalia/cre/isaeax.cre~   ~override~
-COPY ~luvnalia/cre/isaeaxx.cre~  ~override~
-COPY ~luvnalia/cre/jos01.cre~    ~override~
-COPY ~luvnalia/cre/jose01.cre~   ~override~
-COPY ~luvnalia/cre/jose02.cre~   ~override~
-COPY ~luvnalia/cre/jose03.cre~   ~override~
-COPY ~luvnalia/cre/jose04.cre~   ~override~
-COPY ~luvnalia/cre/josg01.cre~   ~override~
-COPY ~luvnalia/cre/josg02.cre~   ~override~
-COPY ~luvnalia/cre/josg03.cre~   ~override~
-COPY ~luvnalia/cre/kpcapt04.cre~ ~override~
+     ~luvnalia/cre/badbad04.cre~ ~override~
+     ~luvnalia/cre/badbad05.cre~ ~override~
+     ~luvnalia/cre/badbad06.cre~ ~override~
+     ~luvnalia/cre/boo2.cre~     ~override~
+     ~luvnalia/cre/isaeaas1.cre~ ~override~
+     ~luvnalia/cre/isaeaas2.cre~ ~override~
+     ~luvnalia/cre/isaeaas3.cre~ ~override~
+     ~luvnalia/cre/isaeaas4.cre~ ~override~
+     ~luvnalia/cre/isaeaas5.cre~ ~override~
+     ~luvnalia/cre/isaeax.cre~   ~override~
+     ~luvnalia/cre/isaeaxx.cre~  ~override~
+     ~luvnalia/cre/jos01.cre~    ~override~
+     ~luvnalia/cre/jose01.cre~   ~override~
+     ~luvnalia/cre/jose02.cre~   ~override~
+     ~luvnalia/cre/jose03.cre~   ~override~
+     ~luvnalia/cre/jose04.cre~   ~override~
+     ~luvnalia/cre/josg01.cre~   ~override~
+     ~luvnalia/cre/josg02.cre~   ~override~
+     ~luvnalia/cre/josg03.cre~   ~override~
+     ~luvnalia/cre/kpcapt04.cre~ ~override~
+     ~luvnalia/cre/vampnal.cre~  ~override~
+
 COPY ~luvnalia/cre/priestyr.cre~ ~override~
 	SAY NAME1 @1004 // Priest of Tyr
 	SAY NAME2 @1004
-COPY ~luvnalia/cre/vampnal.cre~  ~override~
 
 
 /* ---------------------- *
@@ -141,8 +143,8 @@ COPY ~luvnalia/cre/vampnal.cre~  ~override~
 PRINT @13
 SILENT
 
+// If a EE-version is installed, change the journal entries to adapt it
 ACTION_IF GAME_IS "bg2ee eet" BEGIN
-	// If a EE-version is installed, change the journal entries to adapt it
 	ADD_JOURNAL @2 USING ~%MOD_FOLDER%/lang/%LANGUAGE%/naliaj.tra~
 END 
 
@@ -158,11 +160,11 @@ SILENT
 // Add Nalia to some conditions
 // ----------------------------
 COPY_EXISTING ~ar2904.bcs~ ~override~
-/*	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\AR2904A.BCS~ ~luvnalia/baf\BCS\AR2904B.BCS~
-	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\AR2904C.BCS~ ~luvnalia/baf\BCS\AR2904D.BCS~
-	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\AR2904E.BCS~ ~luvnalia/baf\BCS\AR2904F.BCS~*/
+/*	REPLACE_BCS_BLOCK ~luvnalia/baf/BCS/AR2904A.BCS~ ~luvnalia/baf/BCS/AR2904B.BCS~
+	REPLACE_BCS_BLOCK ~luvnalia/baf/BCS/AR2904C.BCS~ ~luvnalia/baf/BCS/AR2904D.BCS~
+	REPLACE_BCS_BLOCK ~luvnalia/baf/BCS/AR2904E.BCS~ ~luvnalia/baf/BCS/AR2904F.BCS~*/
 	DECOMPILE_AND_PATCH BEGIN
-		LPF GET_SCRIPT_BLOCK
+		LPF ~GET_SCRIPT_BLOCK~
 			STR_VAR search_regexp = ~ReallyForceSpell(Player2,HELL_DAMAGE_HALF)~
 			RET script_block start_offset end_offset
 		END
@@ -180,7 +182,7 @@ COPY_EXISTING ~ar2904.bcs~ ~override~
 			SET end_offset += len + 1
 		END
 
-		LPF GET_SCRIPT_BLOCK
+		LPF ~GET_SCRIPT_BLOCK~
 			INT_VAR start_offset = end_offset
 			STR_VAR search_regexp = ~ReallyForceSpell(Player2,HELL_DAMAGE_HALF)~
 			RET script_block start_offset end_offset
@@ -199,7 +201,7 @@ COPY_EXISTING ~ar2904.bcs~ ~override~
 			SET end_offset += len + 1
 		END
     
-		LPF GET_SCRIPT_BLOCK
+		LPF ~GET_SCRIPT_BLOCK~
 			INT_VAR start_offset = end_offset
 			STR_VAR search_regexp = ~ReallyForceSpell(Player2,HELL_EXPLODE)~
 			RET script_block start_offset end_offset
@@ -220,12 +222,12 @@ COPY_EXISTING ~ar2904.bcs~ ~override~
 	END
 BUT_ONLY
 
-//A dd Nalia to some conditions
+/* Add Nalia to some conditions
 // ----------------------------
 COPY_EXISTING ~isaea.bcs~ ~override~
-/*	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\ISAEAA.BCS~ ~luvnalia/baf\BCS\ISAEAB.BCS~*/
+//	REPLACE_BCS_BLOCK ~luvnalia/baf/BCS/ISAEAA.BCS~ ~luvnalia/baf/BCS/ISAEAB.BCS~
 	DECOMPILE_AND_PATCH BEGIN
-	 	LPF GET_SCRIPT_BLOCK
+	 	LPF ~GET_SCRIPT_BLOCK~
 			STR_VAR search_regexp = ~Global("NaliaArrested","GLOBAL",0)~
 			RET script_block start_offset end_offset
 	    END
@@ -248,15 +250,16 @@ BUT_ONLY
 // Add Nalia to some conditions
 // ----------------------------
 COPY_EXISTING ~nalia.bcs~ ~override~
-/*	REPLACE_BCS_BLOCK ~luvnalia/baf\BCS\NALIAA.BCS~ ~luvnalia/baf\BCS\NALIAB.BCS~*/
+//	REPLACE_BCS_BLOCK ~luvnalia/baf/BCS/NALIAA.BCS~ ~luvnalia/baf/BCS/NALIAB.BCS~
 	DECOMPILE_AND_PATCH BEGIN
-	 	LPF GET_SCRIPT_BLOCK
+	 	LPF ~GET_SCRIPT_BLOCK~
 			STR_VAR search_regexp = ~SetGlobal("NaliaJamie","GLOBAL",1)~
 			RET script_block start_offset end_offset
 	    END
 	    PATCH_IF ( start_offset >= 0 ) BEGIN
 	    	DELETE_BYTES start_offset ( end_offset - start_offset )
 	    	SET end_offset = start_offset
+// This fragment was causing bugs in the game - Isaea did not kidnap Nalia because the NaliaRomanceActive variable was active			
 	    	INNER_PATCH_SAVE block_final ~%script_block%~ BEGIN
 				REPLACE_TEXTUALLY ~CombatCounter(0)~ ~CombatCounter(0) !Global("NaliaRomanceActive","GLOBAL",1) !Global("NaliaRomanceActive","GLOBAL",2)~
 	        END
@@ -268,11 +271,11 @@ COPY_EXISTING ~nalia.bcs~ ~override~
 	        SET end_offset += len + 1
 	    END
     END
-BUT_ONLY
+BUT_ONLY*/
 
 // Expend existing scripts
 // -----------------------
-EXTEND_BOTTOM ~ar0809.bcs~ ~luvnalia/baf/ar0809.baf~ USING ~luvnalia/lang/%s/baf.tra~
+EXTEND_BOTTOM ~ar0809.bcs~ ~luvnalia/baf/ar0809.baf~ USING ~luvnalia/lang/%LANGUAGE%/baf.tra~
 
 COPY_EXISTING ~ar1009.are~ ~override~
 	WRITE_ASCII 0x94 ~AR1009~
@@ -285,7 +288,7 @@ EXTEND_BOTTOM ~baldur.bcs~   ~luvnalia/baf/baldur.baf~
 EXTEND_BOTTOM ~bodhiamb.bcs~ ~luvnalia/baf/bodhiamb.baf~
 EXTEND_BOTTOM ~cleanse.bcs~  ~luvnalia/baf/cleanse.baf~
 EXTEND_BOTTOM ~edwin.bcs~    ~luvnalia/baf/edwin.baf~
-EXTEND_BOTTOM ~nalia.bcs~    ~luvnalia/baf/nalia.baf~ USING ~luvnalia/lang/%s/baf.tra~
+EXTEND_BOTTOM ~nalia.bcs~    ~luvnalia/baf/nalia.baf~ USING ~luvnalia/lang/%LANGUAGE%/baf.tra~
 EXTEND_BOTTOM ~vampamb.bcs~  ~luvnalia/baf/vampamb.baf~
 
-COMPILE ~luvnalia/baf/new~ USING ~luvnalia/lang/%s/baf.tra~
+COMPILE ~luvnalia/baf/new~ USING ~luvnalia/lang/%LANGUAGE%/baf.tra~
