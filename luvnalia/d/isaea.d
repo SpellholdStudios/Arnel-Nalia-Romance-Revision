@@ -27,7 +27,7 @@ ClearAllActions()
 StartCutSceneMode()
 StartCutScene("ISAEAXXX")
 EraseJournalEntry(@7000)
-EraseJournalEntry(75242)
+EraseJournalEntry(@7006)
 EraseJournalEntry(@7001)
 EraseJournalEntry(@7002)
 AddJournalEntry(@7003,QUEST_DONE)~ EXIT

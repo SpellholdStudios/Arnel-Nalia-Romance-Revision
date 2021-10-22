@@ -52,7 +52,7 @@ ActionOverride("hlketta",DestroySelf())
 SetGlobal("TalkedToHlsion","GLOBAL",2)
 SetGlobal("TalkedToHlketta","GLOBAL",2)
 ForceSpell(Myself,DRYAD_TELEPORT)
-AddJournalEntry(75242,QUEST)~ EXIT
+AddJournalEntry(@7006,QUEST)~ EXIT
 END
 
 END
