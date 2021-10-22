@@ -230,7 +230,6 @@ In addition to the methods above for removing individual components, you can com
 - Fixed the bug interrupting the dialog when Isaea proposes a duel and Minsc is in the group.
 - Fixed the Isaea's guards not leaving the keep after wedding bugs (<a href="http://www.shsforums.net/topic/24467-romance-glitching-or-did-i-do-something-wrong-semi-spoilers-i-guess/">here</a>).
 - Fixed the bug where Isaea did not kidnap Nalia in some cases (if NaliaRomanceActive variable was set to 1 or 2).
-- ...
 - *badbadai.baf* and *badbadog.baf*: Included BWP Fixpack <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements patch</a> (replaced `!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`).
 - *AR2904.bcs* patching: Included BWP Fixpack compatibility issues with "BG2 Fixpack".
 - BG2:EE compatibility: Replaced script patching with `GET_SCRIPT_BLOCK` WeiDU function (courtesy of Argent77).
@@ -238,25 +237,14 @@ In addition to the methods above for removing individual components, you can com
 - Added missing journal entries.
 - Fixed typos.
 - Split setup.tra files into separate thematic files for more comfortable readability.
-- TODO Updated and renamed readme file to *luvnalia-readme-english.html*, then moved it into new :file_folder: "*readme*" folder.
+- Updated and renamed readme file to *luvnalia-readme-english.html*, then moved it into new :file_folder: "*readme*" folder.
 - Removed useless files and :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
-- TODO Included Linux and Mac OS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
+- Included Linux and Mac OS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
-
-
-
-Added a function that allows you to remove script errors when installing on the EE-version ("warnings" were due to the modified script of Nalia in EE - as a result, the REPLACE_BCS_BLOCK command did not work in several cases, now this has been fixed)
-
-tipun also changed the processing of scripts - so that bcs.-files from the baf/bcs folder are no longer required and all their contents are installed via .tp2 and functions.tph. Otherwise, there would be problems when installing on EE.
-His explanation:
-"With this way of changing bcs, as I did, it doesn't matter whether a mod adds triggers or not. All the same, the necessary additions from this mod will be registered. If you leave it as it was before, via REPLACE_BCS_BLOCK, then the installer will not find the necessary block from naliaa.bcs in EE (since it is very different there). And if you use the naliaa.bcs-file from BW-Fixpack, it will not find this block, if NeJ is not installed. And with this method, everything will now work anyway."
-
-http://www.shsforums.net/topic/23056-error-with-nalia-rejoining/
-
 
 ## 
 
