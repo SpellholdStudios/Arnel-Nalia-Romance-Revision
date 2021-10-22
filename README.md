@@ -43,7 +43,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## <a name="intro" id="intro"></a>Overview
 
-<img style="float: left;" src="luvalia/readme/images/nnaliam.png"> This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions.<br><br>
+<img style="float: left;" src="luvnalia/readme/images/nnaliam.png"> This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions.<br><br>
 Having Minsc in the party is recommended... :wink:<br><br>
 
 <details><summary><ins>Original note from Sir BillyBob</ins></summary>
