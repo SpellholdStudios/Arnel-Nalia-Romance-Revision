@@ -90,7 +90,7 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 		COPY ~.../luvnalia-inline/blank~ ~%marker_name%~
 
 		MKDIR "%ext_lang_loc%/%LANGUAGE%"
-		COPY ~%MOD_FOLDER%/lang/%LANGUAGE%~	~%ext_lang_loc%/%LANGUAGE%~
+		COPY ~%MOD_FOLDER%/lang/%LANGUAGE%~ ~%ext_lang_loc%/%LANGUAGE%~
 
 		/* Converts tra files to UTF-8 */
 		ACTION_IF is_ee BEGIN  // Do conversions (EE only)
@@ -100,10 +100,10 @@ ACTION_IF !VARIABLE_IS_SET bg2_chapter BEGIN // Always block must run only once 
 			LAF HANDLE_CHARSETS 
 				INT_VAR infer_charsets  = 1
 				STR_VAR tra_path        = EVAL ~%MOD_FOLDER%/lang~
-                        out_path        = EVAL ~%ext_lang_loc%~
-                        iconv_path      = EVAL ~%MOD_FOLDER%/lang/iconv~
-                        noconvert_array = sh#noconvert
-                        reload_array    = sh#reload
+				        out_path        = EVAL ~%ext_lang_loc%~
+				        iconv_path      = EVAL ~%MOD_FOLDER%/lang/iconv~
+				        noconvert_array = sh#noconvert
+				        reload_array    = sh#reload
 			END
 
 		END

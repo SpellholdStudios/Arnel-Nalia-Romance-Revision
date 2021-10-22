@@ -14,9 +14,9 @@ Baldur's Gate Trilogy and EET<h3>
 
 **Original Author:** Arnel  
 **Mod Website:** <a href="http://www.shsforums.net/forum/278-sir-bbs-revisions/">Spellhold Studios</a>  
-**Mod Forum:** <a href="TODO link">TODO</a><br>
+**Mod Forum:** <a href="http://www.shsforums.net/topic/61119-arnels-nalia-romance-revision-updated-to-v200-ee-compatible/">Arnel's Nalia Romance Revision for ToB</a><br>
 
-**Note:** This mod was first released at <a href="http://web.starman.ee/arnel/nalia/">starman</a> and has been officially mirrored at <a href="TODO link">Spellhold Studios mirror</a> by <a href="http://www.shsforums.net/user/3046-sir-billybob/">Sir BillyBob</a>.<br>
+**Note:** This mod was first released at <a href="http://web.starman.ee/arnel/nalia/">starman</a> and has been officially mirrored at <a href="http://www.shsforums.net/files/file/94-sir-billybobs-revisions-arnels-nalia-romance/">Spellhold Studios mirror</a> by <a href="http://www.shsforums.net/user/3046-sir-billybob/">Sir BillyBob</a>.<br>
 
 ## 
 
@@ -28,7 +28,7 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## 
 
-:page_facing_up: [Read the mod's readme](https://spellholdstudios.github.io/readmes/luvnalia-readme-english.txt)
+:page_facing_up: [Read the mod's readme](https://spellholdstudios.github.io/readmes/luvnalia-readme-english.html)
 
 :inbox_tray: [Download the mod at Spellhold Studios](http://www.shsforums.net/files/file/94-sir-billybobs-revisions-arnels-nalia-romance/)<br>
 
@@ -43,18 +43,26 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## <a name="intro" id="intro"></a>Overview
 
-This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions.
-
+<img style="float: left;" src="luvalia/readme/images/nnaliam.png"> This mod adds a complete romance with Nalia, including the tree of life dialogs, beloved one in danger, Nalia's abduction by Bodhi, and other love related quests. It also adds some new quests and character interactions.<br><br>
 Having Minsc in the party is recommended... :wink:<br><br>
 
-<details><summary><strong><ins>Original note from Sir BillyBob</ins></strong></summary>
+<details><summary><ins>Original note from Sir BillyBob</ins></summary>
 <p>
 
-###### The idea here is that older mods, whether TeamBG's TBG format or IAP or even older Weidu mods, will get a refresh to become more compatible with other mods.
+###### I simply decided that I wanted another mod to add to my game, so I converted this mod from its original format (which made it incompatible with everything else).
+
+###### You can install it at any time after patching your SoA/ToB game.
+
+###### The idea here is that older mods, whether TeamBG's TBG format or IAP or even older WeiDU mods, will get a refresh to become more compatible with other mods.
 
 ###### So what is here? Well, any mod that I can "fix". Mods that don't seem to be supported by their owner anymore, and mods that you all ask me to update. The last one doesn't mean that every old mod out there can be updated. I do have one I have updated that isn't here. The owner is hosting on their own site (which is fine since it is his mod, not mine).
 </p>
 </details><br>
+
+&nbsp;
+
+**Note:** This is a WeiDU-based version of the original mod that was first released at <a href="http://web.starman.ee/arnel/nalia/">starman.ee</a>. As this site is no more available since many years, it was time to save it from disappearance. It is now hosted at Spellhold Studios with Arnel authorization.
+
 <div align="right"><a href="#top">Back to top</a></div>
 
 
@@ -75,9 +83,9 @@ This mod is designed to work on the following Infinity Engine games:
 
 #### Other Mods Compatibility
 
-This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. If you encounter any bugs, please <a href="TODO link">report them on the forum</a>!
+This is a WeiDU mod, and therefore should be compatible with all WeiDU mods. If you encounter any bugs, please <a href="http://www.shsforums.net/forum/278-sir-bbs-revisions/">report them on the forum</a>!
 
-By the way, there is another Nalia romance mod in the works. It is called de'Arnise Romance and is hosted by the PocketPlaneGroup.
+:warning: Don't install Arnel's Nalia Romance Revision alongside with the <a href="https://www.pocketplane.net/dearnise-romance/">de'Arnise Romance mod</a> (from jcompton and Kulyok) hosted at the Pocket Plane Group, because installing two dedicated PC/Nalia romances would be a poor idea.
 
 ## 
 
@@ -115,7 +123,7 @@ The Enhanced Editions are actively supported games. Please note that every patch
 
 #### Windows
 
-Arnel's Nalia Romance for Windows is distributed as an extractable compressed archive and includes a WeiDU installer.
+Arnel's Nalia Romance Revision for Windows is distributed as an extractable compressed archive and includes a WeiDU installer.
 
 Extract the contents of the mod archive into the folder of the game you wish to modify (*the folder which contains the "CHITIN.KEY" file*), using <a href="https://www.7-zip.org/download.html">7zip</a>, <a href="https://www.rarlab.com/download.htm">WinRAR</a>, or another file compression utility that handles .zip files. On successful extraction, there should be a :file_folder: luvnalia folder and a setup-luvnalia.exe file in your game folder. To install, simply double-click **`setup-luvnalia.exe`** and follow the instructions on screen.
 
@@ -125,7 +133,7 @@ Run **`setup-luvnalia.exe`** in your game folder to reinstall, un-install or oth
 
 #### Mac OS
 
-Arnel's Nalia Romance for Mac OS is distributed is distributed in the same compressed archive and includes a WeiDU installer.
+Arnel's Nalia Romance Revision for Mac OS is distributed is distributed in the same compressed archive and includes a WeiDU installer.
 
 First, extract the files from the archive into your game directory. On successful extraction, there should be a :file_folder: luvnalia folder, setup-luvnalia and setup-luvnalia.command files in your game folder. To install, simply double-click **`setup-luvnalia.command`** and follow the instructions on screen.
 
@@ -135,7 +143,7 @@ Run **`setup-luvnalia.command`** in your game folder to reinstall, un-install or
 
 #### Linux
 
-Arnel's Nalia Romance for Linux is distributed in the same compressed archive and does not include a WeiDU installer.
+Arnel's Nalia Romance Revision for Linux is distributed in the same compressed archive and does not include a WeiDU installer.
 
 Extract the contents of the mod to the folder of the game you wish to modify.
 
@@ -166,10 +174,10 @@ In addition to the methods above for removing individual components, you can com
 - <a href="http://www.spellholdstudios.net/">Spellhold Studios</a> team for hosting the mod (<a href="http://www.shsforums.net">Forums</a>)
 - TheWizard for also hosting this mod.
 - Arnel, where ever you are, for creating this mod.
-- Russian translation: Lessar & aerie.ru.
+- Russian translation: Badgert, Lessar & aerie.ru.
 - Native EE compatibility: tipun and Austin (Arcanecoast Team), and Gwendolyne.
 - Argent77: WeiDU library to dynamically patch scripts.
-- ...
+- AL|EN for his Infinity Auto Packager tool.
 - Everyone else from <a href="https://www.gibberlings3.net/forums/">The Gibberlings Three</a>, <a href="http://www.shsforums.net/">Spellhold Studios</a> forums, and the other Infinity Engine gaming and modding communities who offered their help and support.
 
 ## 
@@ -189,7 +197,7 @@ In addition to the methods above for removing individual components, you can com
 
 #### Copyrights Information
 
-###### The Nalia Romance mod is not developed, supported, or endorsed by BioWare&trade; or Interplay/BlackIsle, Overhaul, Beamdog or the Wizards of the Coast. It was developed by Arnel, based on material from the game Baldur's Gate and its expansion.
+###### The Arnel's Nalia Romance Revision mod is not developed, supported, or endorsed by BioWare&trade; or Interplay/BlackIsle, Overhaul, Beamdog or the Wizards of the Coast. It was developed by Arnel, based on material from the game Baldur's Gate and its expansion.
 ###### All mod content is &copy;Arnel.
 ###### Baldur's Gate, Baldur's Gate II: Shadows of Amn and Baldur's Gate II: Throne of Bhaal &copy; TSR, Inc. The BioWare Infinity Engine is &copy; BioWare Corp. All other trademarks and copyrights are property of their respective owners.
 
@@ -214,7 +222,7 @@ In addition to the methods above for removing individual components, you can com
 - Added `VERSION` flag.
 - Replaced `AT_INTERACTIVE_EXIT` deprecated command with `README`.
 - Added Immutability concept.
-- Added `HANDLE_CHARSETS` function to convert string entries for EE games.
+- Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
 - Added `REQUIRE_PREDICATE` conditions to avoid installing the mod in inaccurate games.
 - Added component `DESIGNATED` number and "*arnel_nalia_romance*" `LABEL`.
 - Added native BG2:EE and EET compatibility.
@@ -223,21 +231,21 @@ In addition to the methods above for removing individual components, you can com
 - Fixed the Isaea's guards not leaving the keep after wedding bugs (<a href="http://www.shsforums.net/topic/24467-romance-glitching-or-did-i-do-something-wrong-semi-spoilers-i-guess/">here</a>).
 - Fixed the bug where Isaea did not kidnap Nalia in some cases (if NaliaRomanceActive variable was set to 1 or 2).
 - ...
-- *badbadai.baf* and *badbadog.baf*: Included BWP Fixpack <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements patch</a> (`!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`).
+- *badbadai.baf* and *badbadog.baf*: Included BWP Fixpack <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/?p=48352">Lollorian's replacements patch</a> (replaced `!Dead(Myself)` with `!StateCheck(Myself,STATE_REALLY_DEAD)`).
 - *AR2904.bcs* patching: Included BWP Fixpack compatibility issues with "BG2 Fixpack".
-- BG2:EE compatibility: Replaced script patching with `GET_SCRIPT_BLOCK` WeiDU function (courtesy of Argent77). @74337 @74394
+- BG2:EE compatibility: Replaced script patching with `GET_SCRIPT_BLOCK` WeiDU function (courtesy of Argent77).
 - Hardcoded items' names.
 - Added missing journal entries.
 - Fixed typos.
 - Split setup.tra files into separate thematic files for more comfortable readability.
-- TODO Updated and renamed readme file to *luvnalia-readme-english.txt*, then moved it into new "*readme*" folder.
-- Removed useless files and "*backup*" folder.
+- TODO Updated and renamed readme file to *luvnalia-readme-english.html*, then moved it into new :file_folder: "*readme*" folder.
+- Removed useless files and :file_folder: "*backup*" folder.
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
 - TODO Included Linux and Mac OS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
-- TODO Uploaded mod to official Spellhold Studios GitHub mirror account.
+- Uploaded mod to official Spellhold Studios GitHub mirror account.
 
 
 
@@ -254,13 +262,14 @@ http://www.shsforums.net/topic/23056-error-with-nalia-rejoining/
 
 ##### Version 1.0.6 &nbsp;(April 25, 2007)
 
+- Added Russian translation (by Badgert).
 - Traified the files and ran all dialogs through MS-Word for spell checking.
 
 ## 
 
-##### Version 1.0.5
+##### Version 1.0.5 &nbsp;(January 5, 2006)
 
-- First conversion to WeiDu.
+- First conversion to WeiDU.
 
 ## 
 
