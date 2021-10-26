@@ -1,10 +1,11 @@
 
-![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/Arnel-Nalia-Romance-Revision?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/Arnel-Nalia-Romance-Revision?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/Arnel-Nalia-Romance-Revision?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
 ![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20Russian&color=limegreen)
 
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII:ToB%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
-<div align="center"><h1></a>Arnel's Nalia Romance Revision for ToB (WIP)</h1>
+<div align="center"><h1></a>Arnel's Nalia Romance Revision for ToB</h1>
 
 <h3>A mod hosted at Spellhold Studios for Baldur's Gate II: ToB (original and EE games),<br>
 Baldur's Gate Trilogy and EET<h3>
@@ -20,11 +21,11 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## 
 
-[![Created Badge](https://badges.pufler.dev/created/GwendolyneFreddy/Arnel-Nalia-Romance-Revision?style=plastic)](https://badges.pufler.dev)
-![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/Arnel-Nalia-Romance-Revision?style=plastic)
-[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/Arnel-Nalia-Romance-Revision?color=cyan&style=plastic)](https://badges.pufler.dev) 
+[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/Arnel-Nalia-Romance-Revision?style=plastic)](https://badges.pufler.dev)
+![GitHub repo size](https://img.shields.io/github/repo-size/SpellholdStudios/Arnel-Nalia-Romance-Revision?style=plastic)
+[![Visits Badge](https://badges.pufler.dev/visits/SpellholdStudios/Arnel-Nalia-Romance-Revision?color=cyan&style=plastic)](https://badges.pufler.dev) 
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
-![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/Arnel-Nalia-Romance-Revision?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/Arnel-Nalia-Romance-Revision?size=30&padding=5&bots=true)](https://badges.pufler.dev)
+![GitHub contributors](https://img.shields.io/github/contributors/SpellholdStudios/Arnel-Nalia-Romance-Revision?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/SpellholdStudios/Arnel-Nalia-Romance-Revision?size=30&padding=5&bots=true)](https://badges.pufler.dev)
 
 ## 
 
@@ -58,8 +59,6 @@ Having Minsc in the party is recommended... :wink:<br><br>
 ###### So what is here? Well, any mod that I can "fix". Mods that don't seem to be supported by their owner anymore, and mods that you all ask me to update. The last one doesn't mean that every old mod out there can be updated. I do have one I have updated that isn't here. The owner is hosting on their own site (which is fine since it is his mod, not mine).
 </p>
 </details><br>
-
-&nbsp;
 
 **Note:** This is a WeiDU-based version of the original mod that was first released at <a href="http://web.starman.ee/arnel/nalia/">starman.ee</a>. As this site is no more available since many years, it was time to save it from disappearance. It is now hosted at Spellhold Studios with Arnel authorization.
 
@@ -214,7 +213,7 @@ In addition to the methods above for removing individual components, you can com
 
 ## <a name="versions" id="versions"></a>Version History
 
-##### Version 2.0.0 (October nn, 2021)
+##### Version 2.0.0 (October 26, 2021)
 
 - Added *luvnalia.ini* metadata file (including dynamic install order syntax and global `LABELS`) to support AL|EN's "Project Infinity".
 - Renamed *setup-luvnalia.tp2* -> *luvnalia.tp2* and moved it to mod top folder to support AL|EN's "Project Infinity".
@@ -242,7 +241,7 @@ In addition to the methods above for removing individual components, you can com
 - Reorganized mod architecture tree: created or renamed folders to sort files according to their types.
 - Lower cased files.
 - Included Linux and Mac OS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
-- Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
+- Added archive libiconv-1.9.2-1-src.7z with iconv license info.
 - Updated WeiDU installer to v247.
 - Uploaded mod to official Spellhold Studios GitHub mirror account.
 
